@@ -1,9 +1,22 @@
+
 *{
 	margin:0;
 	padding:0;
 }
+
+
+html{
+	box-sizing: border-box;
+}
+body{
+	box-sizing: inherit;
+}
 .overflow{
 	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 }
 
 /*contenedor del formulario*/
@@ -35,4 +48,18 @@ input{
 
 #content {
 	display: none;
+}
+
+/*Footer*/
+footer {
+	display:flex;
+	background-color: lightblue;
+	justify-content: space-around;
+	padding: 9px;
+}
+footer div{
+	background-color: yellow;
+}
+.map{
+	padding: 15px;
 }
