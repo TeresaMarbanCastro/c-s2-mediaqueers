@@ -1,9 +1,7 @@
-
 *{
 	margin:0;
 	padding:0;
 }
-
 
 html{
 	box-sizing: border-box;
@@ -38,16 +36,25 @@ body{
 }
 .section{
 	margin-bottom: 20px;
+	border: 1px solid grey;
+}
+
+.info{
 	background-color: grey;
-	padding: 20px;
+	padding:10px;
 }
 
 input{
 	display: block;
 }
 
+input[type=button]{
+	display: inline-block;
+}
+
 #content {
 	display: none;
+	padding:10px;
 }
 
 /*Footer*/

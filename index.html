@@ -10,22 +10,24 @@
 	<title>Curriculo interactivo</title>
 </head>
 <body>
-	<header>
+	<div class="overflow">
+		<header>
 
-	</header>
+		</header>
 
-	<main>
-		<div class="overflow">
+		<main>
 			<div class="cover-container">
 				<img src="http://placehold.it/1300x500" alt="foto de portada">
 			</div>
 
-			<div class="resume-container">
+			<div class="resume-container"> <!--container formulario-->
 				<form class="resume-form" action="" method="post">
-					<div class="profile section">
-						<h2 class="section-title">Perfil</h2>
-						<input type="button" value="editar" onclick="editar()">
 
+					<div class="profile section">
+						<div class="info">
+							<h2 class="section-title">Perfil</h2>
+							<input type="button" value="editar" onclick="editar()">
+						</div>
 						<div id="content"> <!--SECCION OCULTA-->
 							<label for="name">Nombre</label>
 							<input type="text" name="name" id="name">
@@ -36,12 +38,15 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
+							<input type="button" value="cerrar" onclick="cerrar()">
 						</div>
 					</div>
 
 					<div class="contact-information section">
-						<h2 class="section-title">Datos de contacto</h2>
-						<input type="button" value="editar" onclick="editar()">
+						<div class="info">
+							<h2 class="section-title">Datos de contacto</h2>
+							<input type="button" value="editar" onclick="editar()">
+						</div>
 
 						<div id="content"><!--SECCION OCULTA-->
 							<label for="telephone">Teléfono</label>
@@ -55,8 +60,10 @@
 					</div>
 
 					<div class="summary section">
-						<h2 class="section-title">Extracto</h2>
-						<input type="button" value="editar" onclick="editar()">
+						<div class="info">
+							<h2 class="section-title">Extracto</h2>
+							<input type="button" value="editar" onclick="editar()">
+						</div>
 
 						<div id="content"><!--SECCION OCULTA-->
 							<label for="summary">Extracto</label>
@@ -67,27 +74,29 @@
 						</div>
 					</div>
 
-					<div class="experience">
-						<div>
-							<span id="intro">EXPERIENCIA LABORAL</span>
+					<div class="experience section">
+						<div class="info">
+							<h2 class="section-title">Experiencia laboral</h2>
+							<input type="button" value="editar" onclick="editar()">
 						</div>
-						<div class="container">
-							<div>
-								<label for="work">Trabajo</label>
-								<input id="work" type="text" name="username">
-							</div>
-							<div>
-								<label for="position">Cargo</label>
-								<input id="position" type="text" name="username">
-							</div>
-							<div>
-								<label for="extension">Extensión</label>
-								<input for="extension" type="number" name="age">
-							</div>
 
-				</form>
-			</div>
-		</main>
+						<div id="content"><!--SECCION OCULTA-->
+							<label for="work">Trabajo</label>
+							<input type="text" name="work" id="work">
+							<label for="position">Cargo</label>
+							<input type="text" name="position" id="position" >
+							<label for="extension">Extensión</label>
+							<input type="number" name="extension" id="extension">
+							<input type="button" name="save" value="Guardar">
+							<input type="button" name="cancel" value="Cancelar">
+							<input type="button" name="delete" value="Borrar">
+						</div>
+					</div>
+
+				</div><!--fin container formulario-->
+			</form>
+		</div>
+	</main>
 
 		<footer>
 			<div class="itemsfooter">
@@ -104,8 +113,7 @@
 			<div class="itemsfooter">
 				<a href="formulario.html" class="form" target="_blank">¿Qué tal lo hemos hecho?</a>
 			</div>
-
 		</footer>
-	</div>
+	</div> <!--FIN DIV OVERFLOW-->
 </body>
 </html>
