@@ -1,0 +1,38 @@
+*{
+	margin:0;
+	padding:0;
+}
+.overflow{
+	overflow-x: hidden;
+}
+
+/*contenedor del formulario*/
+.resume-container{
+	width: 100%;
+	display: flex;
+	margin:0 auto;
+	justify-content: center;
+	padding: 20px 0;
+
+}
+
+/*formulario*/
+.resume-form{
+	padding: 20px 0;
+	/*background-color: grey;*/
+	width: 80%;
+	margin: 0 auto;
+}
+.section{
+	margin-bottom: 20px;
+	background-color: grey;
+	padding: 20px;
+}
+
+input{
+	display: block;
+}
+
+#content {
+	display: none;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/main.js">
+
+	</script>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Curriculo interactivo</title>
+</head>
+<body>
+	<header>
+
+	</header>
+
+	<main>
+		<div class="overflow">
+			<div class="cover-container">
+				<img src="http://placehold.it/1300x500" alt="foto de portada">
+			</div>
+
+			<div class="resume-container">
+				<form class="resume-form" action="" method="post">
+					<div class="profile section">
+						<h2 class="section-title">Perfil</h2>
+						<input type="button" value="editar" onclick="editar()">
+
+						<div id="content"> <!--SECCION OCULTA-->
+							<label for="name">Nombre</label>
+							<input type="text" name="name" id="name">
+							<label for="lastname">Apellidos</label>
+							<input type="text" name="lastname" id="lastname">
+							<label for="profession">Profesión</label>
+							<input type="text" name="profession" id="profession">
+							<input type="button" name="save" value="Guardar">
+							<input type="button" name="cancel" value="Cancelar">
+							<input type="button" name="delete" value="Borrar">
+						</div>
+					</div>
+
+					<div class="contact-information section">
+						<h2 class="section-title">Datos de contacto</h2>
+						<input type="button" value="editar" onclick="editar()">
+
+						<div id="content"><!--SECCION OCULTA-->
+							<label for="telephone">Teléfono</label>
+							<input type="tel" name="telephone" id="telephone">
+							<label for="email">Correo electrónico</label>
+							<input type="email" name="email" id="email">
+							<input type="button" name="save" value="Guardar">
+							<input type="button" name="cancel" value="Cancelar">
+							<input type="button" name="delete" value="Borrar">
+						</div>
+					</div>
+
+					<div class="summary section">
+						<h2 class="section-title">Extracto</h2>
+						<input type="button" value="editar" onclick="editar()">
+
+						<div id="content"><!--SECCION OCULTA-->
+							<label for="summary">Extracto</label>
+							<textarea name="summary" id="summary" rows="8" cols="80"></textarea>
+							<input type="button" name="save" value="Guardar">
+							<input type="button" name="cancel" value="Cancelar">
+							<input type="button" name="delete" value="Borrar">
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</main>
+
+		<footer>
+
+		</footer>
+	</div>
+</body>
+</html>
