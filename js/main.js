@@ -1,7 +1,14 @@
 //función para desplegar sección
-function editar(){
-document.getElementById('content').style.display = 'block';}
+
+
+function editar(idContent){
+
+document.getElementById(idContent).style.display = 'block';
+
+}
+
 
 //función para cerrar sección
-function cerrar(){
-document.getElementById('content').style.display = 'none';}
+function ocultar(idContent){
+	document.getElementById(idContent).style.display = 'none';
+}
