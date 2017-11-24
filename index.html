@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="js/main.js">
-	</script>
+
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
+
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Curriculo interactivo</title>
 </head>
@@ -18,14 +19,12 @@
       <nav>
         <ul class="menu">
           <li class="seccion editor"><a href="#basico">Editor básico</a></li>
-
           <li class="seccion vista"><a href="#vista">Vista previa</a>
               <ul class="submenu-items">
                 <li class="submenu"><a href="#imprimir">Imprimir</a></li>
                 <li class="submenu"><a href="#compartir">Compartir</a></li>
               </ul>
           </li>
-
         </ul>
       </nav>
     </header>
@@ -41,9 +40,9 @@
 					<div class="profile section">
 						<div class="info">
 							<h2 class="section-title">Perfil</h2>
-							<input type="button" value="editar" onclick="editar()">
+							<input type="button" value="editar" onclick="editar('content-profile')">
 						</div>
-						<div id="content"> <!--SECCION OCULTA-->
+						<div id="content-profile" class="content"> <!--SECCION OCULTA-->
 							<label for="name">Nombre</label>
 							<input type="text" name="name" id="name">
 							<label for="lastname">Apellidos</label>
@@ -53,17 +52,17 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
-							<input type="button" value="cerrar" onclick="cerrar()">
+							<input type="button" value="cerrar" onclick="ocultar('content-profile')">
 						</div>
 					</div>
 
 					<div class="contact-information section">
 						<div class="info">
 							<h2 class="section-title">Datos de contacto</h2>
-							<input type="button" value="editar" onclick="editar()">
+							<input type="button" value="editar" onclick="editar('content-contact-info')">
 						</div>
 
-						<div id="content"><!--SECCION OCULTA-->
+						<div id="content-contact-info" class="content"><!--SECCION OCULTA-->
 							<label for="telephone">Teléfono</label>
 							<input type="tel" name="telephone" id="telephone">
 							<label for="email">Correo electrónico</label>
@@ -71,31 +70,33 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
+							<input type="button" value="cerrar" onclick="ocultar('content-contact-info')">
 						</div>
 					</div>
 
 					<div class="summary section">
 						<div class="info">
 							<h2 class="section-title">Extracto</h2>
-							<input type="button" value="editar" onclick="editar()">
+							<input type="button" value="editar" onclick="editar('content-summary')">
 						</div>
 
-						<div id="content"><!--SECCION OCULTA-->
+						<div id="content-summary" class="content"><!--SECCION OCULTA-->
 							<label for="summary">Extracto</label>
 							<textarea name="summary" id="summary" rows="8" cols="80"></textarea>
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
+							<input type="button" value="cerrar" onclick="ocultar('content-summary')">
 						</div>
 					</div>
 
 					<div class="experience section">
 						<div class="info">
 							<h2 class="section-title">Experiencia laboral</h2>
-							<input type="button" value="editar" onclick="editar()">
+							<input type="button" value="editar" onclick="editar('content-experience')">
 						</div>
 
-						<div id="content"><!--SECCION OCULTA-->
+						<div id="content-experience" class="content"><!--SECCION OCULTA-->
 							<label for="experience">Experiencia Profesional</label>
 							<input id="experience" type="text" name="name">
 							<label for="position">Cargo</label>
@@ -106,6 +107,7 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
+							<input type="button" value="cerrar" onclick="ocultar('content-experience')">
 						</div>
 					</div>
 
@@ -156,5 +158,7 @@
 			</div>
 		</footer>
 	</div> <!--FIN DIV OVERFLOW-->
+
+	<script type="text/javascript" src="js/main.js">	</script>
 </body>
 </html>

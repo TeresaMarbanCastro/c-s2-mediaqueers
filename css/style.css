@@ -1,6 +1,7 @@
 *{
 	margin:0;
 	padding:0;
+	font-family: 'Montserrat', sans-serif;
 }
 
 html{
@@ -17,7 +18,7 @@ body{
 }
 /*HEADER*/
 .cabecera {
-  background-color: grey;
+  background-color: #599675;
   display: flex;
   justify-content: space-between;
 
@@ -32,10 +33,13 @@ body{
 .seccion a{
   display: block;
 	padding: 2em;
-	background-color: #F9B53C;
 	text-decoration: none;
-	color: black;
+	color: white;
 	}
+
+.seccion a:hover {
+	background-color: #022F40;
+}
 
 .submenu-items {
   display: none;
@@ -50,7 +54,7 @@ body{
 }
 
 .vista:hover .submenu-items {
-  background-color: blue;
+  background-color: #599675;
   display: block;
 }
 
@@ -89,7 +93,7 @@ input[type=button]{
 	display: inline-block;
 }
 
-#content {
+.content {
 	display: none;
 	padding:10px;
 }
@@ -97,13 +101,50 @@ input[type=button]{
 /*Footer*/
 footer {
 	display:flex;
-	background-color: lightblue;
+	background-color: #022F40;
 	justify-content: space-around;
 	padding: 9px;
+	color:white;
+	flex-direction: column;
 }
 footer div{
-	background-color: yellow;
+	/*background-color: yellow;*/
 }
+
 .map{
 	padding: 15px;
+}
+iframe{
+	width: 250px;
+	height: 150px;
+}
+
+
+/*Cuestionario feeback*/
+form {
+	padding: 20px;
+	text-align: justify;
+}
+.fields{
+	display: flex;
+	flex-direction: column;
+}
+.options{
+	display: flex;
+}
+form *{
+	padding: 5px;
+	margin: 5px;
+}
+
+@media all and (min-width: 500px){
+	iframe{
+		width: 400px;
+		height: 300px;
+	}
+	footer{
+		flex-direction: row;
+	}
+
+	}
 }
