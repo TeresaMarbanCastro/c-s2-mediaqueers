@@ -13,8 +13,45 @@ body{
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 	justify-content: center;
+}
+/*HEADER*/
+.cabecera {
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.menu{
+  display: flex;
+	padding: 0;
+	list-style: none;
+}
+
+.seccion a{
+  display: block;
+	padding: 2em;
+	background-color: #F9B53C;
+	text-decoration: none;
+	color: black;
+	}
+
+.submenu-items {
+  display: none;
+  position: absolute;
+  top:100%;
+  right: 0;
+  list-style: none;
+}
+
+.vista {
+  position: relative;
+}
+
+.vista:hover .submenu-items {
+  background-color: blue;
+  display: block;
 }
 
 /*contenedor del formulario*/
