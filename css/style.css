@@ -107,3 +107,21 @@ footer div{
 .map{
 	padding: 15px;
 }
+
+
+/*Cuestionario feeback*/
+form {
+	padding: 20px;
+	text-align: justify;
+}
+.fields{
+	display: flex;
+	flex-direction: column;
+}
+.options{
+	display: flex;
+}
+form *{
+	padding: 5px;
+	margin: 5px;
+}
