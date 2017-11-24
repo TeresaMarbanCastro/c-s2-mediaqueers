@@ -100,10 +100,47 @@ footer {
 	background-color: lightblue;
 	justify-content: space-around;
 	padding: 9px;
+	display: flex;
+	flex-direction: column;
 }
 footer div{
 	background-color: yellow;
 }
+
 .map{
 	padding: 15px;
+}
+iframe{
+	width: 250px;
+	height: 150px;
+}
+
+
+/*Cuestionario feeback*/
+form {
+	padding: 20px;
+	text-align: justify;
+}
+.fields{
+	display: flex;
+	flex-direction: column;
+}
+.options{
+	display: flex;
+}
+form *{
+	padding: 5px;
+	margin: 5px;
+}
+
+@media all and (min-width: 500px){
+	iframe{
+		width: 400px;
+		height: 300px;
+	}
+	footer{
+		flex-direction: row;
+	}
+
+	}
 }
