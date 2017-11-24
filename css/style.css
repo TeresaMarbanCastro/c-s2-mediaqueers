@@ -1,9 +1,7 @@
-
 *{
 	margin:0;
 	padding:0;
 }
-
 
 html{
 	box-sizing: border-box;
@@ -15,8 +13,45 @@ body{
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 	justify-content: center;
+}
+/*HEADER*/
+.cabecera {
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.menu{
+  display: flex;
+	padding: 0;
+	list-style: none;
+}
+
+.seccion a{
+  display: block;
+	padding: 2em;
+	background-color: #F9B53C;
+	text-decoration: none;
+	color: black;
+	}
+
+.submenu-items {
+  display: none;
+  position: absolute;
+  top:100%;
+  right: 0;
+  list-style: none;
+}
+
+.vista {
+  position: relative;
+}
+
+.vista:hover .submenu-items {
+  background-color: blue;
+  display: block;
 }
 
 /*contenedor del formulario*/
@@ -38,16 +73,25 @@ body{
 }
 .section{
 	margin-bottom: 20px;
+	border: 1px solid grey;
+}
+
+.info{
 	background-color: grey;
-	padding: 20px;
+	padding:10px;
 }
 
 input{
 	display: block;
 }
 
+input[type=button]{
+	display: inline-block;
+}
+
 #content {
 	display: none;
+	padding:10px;
 }
 
 /*Footer*/
