@@ -34,6 +34,15 @@
 				<img src="http://placehold.it/1300x500" alt="foto de portada">
 			</div>
 
+		<div class="preview" id="preview">
+			<h2>perfil</h2>
+			<div><span>Nombre: </span><span id="datos-nombre"></span></div>
+			<p id="datos-apellido">Apellido:</p>
+
+		</div>
+		<div> <span>Teléfono:</span> <span id="datos-telefono"></span></div>
+		<div> <span>Email:</span> <span id="datos-email"></span></div>
+
 			<div class="resume-container"> <!--container formulario-->
 				<form class="resume-form" action="" method="post">
 
@@ -41,7 +50,9 @@
 						<div class="info">
 							<h2 class="section-title">Perfil</h2>
 							<input type="button" value="editar" onclick="editar('content-profile')">
+							<input type="button" value="rellenar" onclick="rellenar()">
 						</div>
+
 						<div id="content-profile" class="content"> <!--SECCION OCULTA-->
 							<label for="name">Nombre</label>
 							<input type="text" name="name" id="name">
@@ -52,14 +63,16 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
-							<input type="button" value="cerrar" onclick="ocultar('content-profile')">
+							<input type="button" value="cerrar" onclick="cerrar('content-profile')">
 						</div>
 					</div>
+
 
 					<div class="contact-information section">
 						<div class="info">
 							<h2 class="section-title">Datos de contacto</h2>
 							<input type="button" value="editar" onclick="editar('content-contact-info')">
+							<input type="button" value="rellenar" onclick="rellenarcontacto()">
 						</div>
 
 						<div id="content-contact-info" class="content"><!--SECCION OCULTA-->
@@ -70,7 +83,7 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
-							<input type="button" value="cerrar" onclick="ocultar('content-contact-info')">
+							<input type="button" value="cerrar" onclick="cerrar('content-contact-info')">
 						</div>
 					</div>
 
@@ -86,7 +99,7 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
-							<input type="button" value="cerrar" onclick="ocultar('content-summary')">
+							<input type="button" value="cerrar" onclick="cerrar('content-summary')">
 						</div>
 					</div>
 
@@ -101,23 +114,26 @@
 							<input id="experience" type="text" name="name">
 							<label for="position">Cargo</label>
 							<input id="position" type="text" name="name">
-							<label for="period">Periodo</label>
-							<select id="date" name="date">
-  						</select>
+							<label for="period">Periodo Desde</label>
+							<select class="year" name="year1" id="year"></select>
+							<label for="period">Periodo Hasta</label>
+							<select class="year" name="year" id="year2"></select>
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
-							<input type="button" value="cerrar" onclick="ocultar('content-experience')">
+							<input type="button" value="cerrar" onclick="cerrar('content-experience')">
 						</div>
 					</div>
 
-					<div class="additional section">
+					<!-- <div class="additional section">
 						<div class="info">
 							<h2 class="section-title">Más información</h2>
 							<input type="button" value="editar" onclick="editar()">
-						</div>
+						</div> -->
 
-						<div id="content"><!--SECCION OCULTA-->
+
+						<!--SECCION OCULTA-->
+						<!-- <div id="content">
 							<label for="education">Estudios</label>
 							<input id="education" type="text" name="name">
 							<label for="languages">Idiomas</label>
@@ -135,7 +151,7 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
-						</div>
+						</div> -->
 					</div>
 				</form>
 			</div><!--fin container formulario-->
