@@ -87,6 +87,7 @@ body{
 
 input{
 	display: block;
+
 }
 
 input[type=button]{
@@ -96,6 +97,7 @@ input[type=button]{
 .content {
 	display: none;
 	padding:10px;
+	
 }
 
 /*Footer*/

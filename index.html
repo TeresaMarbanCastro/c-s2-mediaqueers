@@ -80,7 +80,7 @@
 							<h2 class="section-title">Extracto</h2>
 							<input type="button" value="editar" onclick="editar('content-summary')">
 						</div>
-						
+
 						<div id="content-summary" class="content"><!--SECCION OCULTA-->
 							<label for="summary">Extracto</label>
 							<textarea name="summary" id="summary" rows="8" cols="80"></textarea>
@@ -102,9 +102,12 @@
 							<input id="experience" type="text" name="name">
 							<label for="position">Cargo</label>
 							<input id="position" type="text" name="name">
-							<label for="period">Periodo</label>
-							<select id="date" name="date">
-  						</select>
+							<label for="period">Periodo de inicio</label>
+							<select class="month" name="month" id="month"></select>
+							<select class="year" name="year" id="year"></select>
+							<label for="period">Periodo de fín</label>
+							<select class="month" name="month" id="month"></select>
+							<select class="year" name="year" id="year"></select>
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
@@ -115,27 +118,22 @@
 					<div class="additional section">
 						<div class="info">
 							<h2 class="section-title">Más información</h2>
-							<input type="button" value="editar" onclick="editar()">
+							<input type="button" value="editar" onclick="editar('content-aditional')">
 						</div>
 
-						<div id="content"><!--SECCION OCULTA-->
+						<div id="content-aditional" class="content"><!--SECCION OCULTA-->
 							<label for="education">Estudios</label>
 							<input id="education" type="text" name="name">
 							<label for="languages">Idiomas</label>
 							<input id="languages" type="text" name="name">
 							<label for="level">Nivel</label>
-							<select id="level" name="level">
-								<option>A1</option>
-								<option>A2</option>
-					  		<option>B1</option>
-					  		<option>B2</option>
-								<option>C</option>
-					  	</select>
+							<select class=" level" id="level" name="level"></select>
 							<label for="skills">Habilidades</label>
 							<input for="skills" type="text" name="name">
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
+							<input type="button" value="cerrar" onclick="ocultar('content-aditional')">
 						</div>
 					</div>
 				</form>
