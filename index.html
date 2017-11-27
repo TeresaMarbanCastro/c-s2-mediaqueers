@@ -33,8 +33,8 @@
 			<div class="cover-container">
 				<img src="http://placehold.it/1300x500" alt="foto de portada">
 			</div>
-
-			<div class="resume-container"> <!--container formulario-->
+			<!--container formulario-->
+			<div class="resume-container">
 				<form class="resume-form" action="" method="post">
 
 					<div class="profile section">
@@ -42,6 +42,7 @@
 							<h2 class="section-title">Perfil</h2>
 							<input type="button" value="editar" onclick="editar('content-profile')">
 						</div>
+
 						<div id="content-profile" class="content"> <!--SECCION OCULTA-->
 							<label for="name">Nombre</label>
 							<input type="text" name="name" id="name">
@@ -79,7 +80,7 @@
 							<h2 class="section-title">Extracto</h2>
 							<input type="button" value="editar" onclick="editar('content-summary')">
 						</div>
-
+						
 						<div id="content-summary" class="content"><!--SECCION OCULTA-->
 							<label for="summary">Extracto</label>
 							<textarea name="summary" id="summary" rows="8" cols="80"></textarea>
