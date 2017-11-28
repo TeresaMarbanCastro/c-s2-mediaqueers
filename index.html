@@ -112,10 +112,8 @@
 							<select class="month" name="month" id="month"></select>
 							<select class="year" name="year" id="year"></select>
 							<label for="period">Periodo de fín</label>
-							<select class="month" name="month" id="month"></select>
-							<!-- <select class="year" name="year" id="year"></select> -->
-
-
+							<select class="months" name="months" id="months"></select>
+							<select class="years" name="years" id="years"></select>
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
@@ -126,14 +124,10 @@
 					<div class="additional section">
 						<div class="info">
 							<h2 class="section-title">Más información</h2>
-							<input type="button" value="editar" onclick="editar()">
-						</div> -->
-						<!--SECCION OCULTA-->
-						<div id="content">
-							<input type="button" value="editar" onclick="editar('content-aditional')">
+							<input type="button" value="editar" onclick="editar('content-additional')">
 						</div>
-						<div id="content-aditional" class="content"> <!--SECCION OCULTA-->
-
+						<!--SECCION OCULTA-->
+						<div id="content-additional" class="content">
 							<label for="education">Estudios</label>
 							<input id="education" type="text" name="name">
 							<label for="languages">Idiomas</label>
@@ -145,10 +139,9 @@
 							<input type="button" name="save" value="Guardar">
 							<input type="button" name="cancel" value="Cancelar">
 							<input type="button" name="delete" value="Borrar">
+							<input type="button" value="cerrar" onclick="cerrar('content-additional')">
 						</div>
-
-							<input type="button" value="cerrar" onclick="ocultar('content-aditional')">
-						</div>
+					</div>
 
 					</div>
 				</form>
@@ -161,7 +154,7 @@
 					<div> <span>Teléfono:</span> <span id="datos-telefono"></span></div>
 					<div> <span>Email:</span> <span id="datos-email"></span></div>
 				</div>
-				
+
 			</div><!--fin container formulario-->
 		</main>
 

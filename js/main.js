@@ -29,7 +29,7 @@ function rellenarcontacto(){
 }
 
 
-//función para periodo de incio y fin
+//función para periodo de incio
 var options = '<option value="Enero">Enero</option>';
 options = options + '<option value="Febrero"> Febrero</option>';
 options = options + '<option value="Marzo">Marzo</option>';
@@ -50,29 +50,41 @@ var years = 100;
 var options = ''; //almacena options de html que van en el select
 
 for (var i=0; i<years; i++) {
-  options = options + '<option>' + (initialYear+i) + '</option>';
+  options = options + '<option value=">' + (initialYear+i) + '</option>';
 }
 document.querySelector('#year').innerHTML = options;
 
-// var initialYear = 1950;
-// var years = 150;
-// var options = '';
-// //var option = '<option value=""></option>'
-//
-// for (i = 0; i < years; i++) {
-//   options = options + '<option value="' + (initialYear+i) + '">' + (initialYear+i) + '</option>';
-// }
-// document.querySelector('#year').innerHTML = options;
+//función para periodo de fin
+var options = '<option value="Enero">Enero</option>';
+options = options + '<option value="Febrero"> Febrero</option>';
+options = options + '<option value="Marzo">Marzo</option>';
+options = options + '<option value="Abril">Abril</option>';
+options = options + '<option value="Mayo">Mayo</option>';
+options = options + '<option value="Junio">Junio</option>';
+options = options + '<option value="Julio">Julio</option>';
+options = options + '<option value="Agosto">Agosto</option>';
+options = options + '<option value="Septiembre">Septiembre</option>';
+options = options + '<option value="Octubre">Octubre</option>';
+options = options + '<option value="Noviembre">Noviembre</option>';
+options = options + '<option value="Diciembre">Diciembre</option>';
+
+document.querySelector('#months').innerHTML = options;
+
+var initialYear = 1950;
+var years = 100;
+var options = ''; //almacena options de html que van en el select
+
+for (var i=0; i<years; i++) {
+  options = options + '<option value=">' + (initialYear+i) + '</option>';
+}
+document.querySelector('#years').innerHTML = options;
 
 //función para nivel de idiomas
-var initialLevel = "A1";
-initialMonth = parseInt(initialLevel);
-var option = '<option value="A2"></option>'
-var option = '<option value="B1"></option>'
-var option = '<option value="B2"></option>'
-var option = '<option value="C"></option>'
+var options = '<option value ="A1">A1</option>';
+var options = options + '<option value ="A2">A2</option>';
+var options = options + '<option value ="B1">B1</option>';
+var options = options + '<option value ="B2">B2</option>';
+var options = options + '<option value ="C1">C1</option>';
+var options = options + '<option value ="C2">C2</option>';
 
-for (var k = 0; k < months; k++) {
-  options = options + '<option value="' + (initialLevel+j) + '">' + (initialLevel+j) + '</option>';
-}
-document.querySelector('#month').innerHTML = options;
+document.querySelector('#level').innerHTML = options;

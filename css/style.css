@@ -112,6 +112,11 @@ background-color: white;
 
 }
 
+select {
+	display: flex;
+	flex-direction: column;
+}
+
 
 /*preview*/
 
