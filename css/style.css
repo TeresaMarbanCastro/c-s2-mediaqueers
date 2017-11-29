@@ -70,7 +70,29 @@ body{
   background-color: #599675;
   display: block;
 }*/
-
+.cover{
+	background: url('../images/cover.jpg');
+	background-size: cover;
+	width: 100vw;
+	height: 50vh;
+	background-position: center center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+.create{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+.button-create{
+	width: 30%;
+}
+.create h1{
+	font-size: 24px;
+}
 /*contenedor del formulario*/
 .resume-container{
 	width: 100%;
