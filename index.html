@@ -19,12 +19,9 @@
       <nav>
         <ul class="menu">
           <li class="seccion editor"><a href="#basico">Editor básico</a></li>
-          <li class="seccion vista"><a href="#vista">Vista previa</a>
-              <ul class="submenu-items">
-                <li class="submenu"><a href="#imprimir">Imprimir</a></li>
-                <li class="submenu"><a href="#compartir">Compartir</a></li>
-              </ul>
-          </li>
+          <li class="seccion vista"><a href="#vista" onclick="vistaPrevia('preview')">Vista previa</a>
+          <li class="seccion print"><a href="#imprimir"><img src="images/printer.png" alt ="impresora"></a></li>
+          <li class="seccion share"><a href="#compartir"><img src="images/share.png" alt="compartir"></a></li>
         </ul>
       </nav>
     </header>
@@ -37,7 +34,7 @@
 
 			<div class="resume-container"> <!--container formulario-->
 
-				<form class="resume-form" action="" method="post">
+				<form class="resume-form" action="/signup" method="post">
 
 					<div class="profile section">
 						<div class="info">
@@ -148,11 +145,13 @@
 
 				<!-- DIV OCULTO VISTA PREVIA-->
 				<div class="preview" id="preview">
-					<h2>perfil</h2>
-					<div><span>Nombre: </span><span id="datos-nombre"></span></div>
-					<div><span>Apellido: </span><span id="datos-apellido"></span></div>
-					<div> <span>Teléfono:</span> <span id="datos-telefono"></span></div>
-					<div> <span>Email:</span> <span id="datos-email"></span></div>
+					<div class="showpreview">
+						<h2>Perfil</h2>
+						<div><span>Nombre: </span><span id="datos-nombre"></span></div>
+						<div><span>Apellido: </span><span id="datos-apellido"></span></div>
+						<div> <span>Teléfono:</span> <span id="datos-telefono"></span></div>
+						<div> <span>Email:</span> <span id="datos-email"></span></div>
+					</div>
 				</div>
 
 			</div><!--fin container formulario-->

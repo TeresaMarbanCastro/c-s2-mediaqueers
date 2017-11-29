@@ -21,43 +21,55 @@ body{
 .cabecera {
   background-color: #599675;
   display: flex;
-  justify-content: space-between;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
 }
 
 .menu{
   display: flex;
-	padding: 0;
+	flex-direction: row;
+	justify-content: space-around;
 	list-style: none;
-}
 
+}
+.menu li{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	padding: 5px;
+}
 .seccion a{
-  display: block;
-	padding: 2em;
+	display: block;
 	text-decoration: none;
 	color: white;
+
 	}
 
 .seccion a:hover {
 	background-color: #C1EDCC;
 	color: #263D42;
 }
+.logo-menu{
+	display: block;
+}
 
-.submenu-items {
+/*.submenu-items {
   display: none;
   position: absolute;
   top:100%;
   right: 0;
   list-style: none;
-}
+}*/
 
 .vista {
   position: relative;
 }
 
-.vista:hover .submenu-items {
+/*.vista:hover .submenu-items {
   background-color: #599675;
   display: block;
-}
+}*/
 
 /*contenedor del formulario*/
 .resume-container{
@@ -93,7 +105,7 @@ h2.section-title {
 
 input{
 	display: block;
-	    width: 40%;
+	width: 40%;
 
 }
 
@@ -124,14 +136,17 @@ select {
     padding: 5px;
 }
 
-#preview{
+.preview{
+	display: none;
+}
 
+.showpreview{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 80%;
 	margin: 0 auto;
-	border: 1px solid blue;
+	border: 1px solid black;
 	padding-top: 20px;
 }
 
