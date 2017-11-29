@@ -149,8 +149,10 @@ select {
 	border: 1px solid black;
 	padding-top: 20px;
 }
-
-
+.hide {
+	display: flex;
+	align-self: flex-end;
+}
 /*Footer*/
 footer {
 	display:flex;
