@@ -77,19 +77,26 @@ body{
 	display: flex;
 	margin:0 auto;
 	justify-content: center;
-	padding: 20px 0;
 	flex-direction: column;
 }
 
-/*formulario*/
-form *{
-	padding: 5px;
-	margin: 5px;
+.split-div{
+	display: flex;
+	flex-direction: row;
+
 }
+
+/*formulario*/
+
 .resume-form{
 	padding: 20px 0;
 	width: 80%;
 	margin: 0 auto;
+}
+
+.resume-form *{
+	padding: 5px;
+	margin: 5px;
 }
 
 h2.section-title {
@@ -104,6 +111,7 @@ h2.section-title {
 .info{
 	background-color: #B0C0BC;
 	padding:10px;
+	border-radius: 5px;
 }
 
 .section-buttons{
@@ -233,6 +241,32 @@ form {
 }
 
 @media all and (min-width: 769px){
+	.resume-form {
+    padding: 20px 0;
+    width: 45%;
+		margin-left: 0;
+    min-width: 500px;
+	}
+
+	.preview {
+    padding: 39px 0;
+    width: 45%;
+	}
+
+	.showpreview {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    margin: 0 auto;
+	    border: 1px solid black;
+	    padding-top: 20px;
+	}
+
+	.horizontal-line{
+		width: 100%;
+		color:red;
+	}
+
 	iframe{
 		width: auto;
 		height: auto;

@@ -10,14 +10,12 @@ function cerrar(idContent){
 	document.getElementById(idContent).style.display = 'none';
 }
 
-
-
 function rellenar(){
-	var datosNombre = prompt("Nombre:");
-	var datosApellido = prompt("Apellido:");
+    var datosNombre = prompt("Nombre:");
+    var datosApellido = prompt("Apellido:");
 
-	document.querySelector("#datos-nombre").innerHTML = datosNombre;
-	document.querySelector("#datos-apellido").innerHTML = datosApellido;
+    document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
+    // document.querySelector("#datos-apellido").innerHTML = datosApellido;
 }
 
 function rellenarcontacto(){
