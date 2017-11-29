@@ -27,8 +27,11 @@
     </header>
 
 		<main>
-			<div class="cover-container">
-				<img src="http://placehold.it/1300x500" alt="foto de portada">
+			<div class="cover">
+				<div class="create">
+					<h1>Crea tu propio CV</h1>
+					<input type="button" class="button-create" value="Empezar" onclick="Create()">
+				</div>
 			</div>
 
 			<div class="resume-container"> <!--container formulario-->
@@ -140,8 +143,14 @@
 				<!-- DIV OCULTO VISTA PREVIA-->
 				<div class="preview" id="preview">
 					<div class="showpreview">
+
 						<h2 class="section-title">Perfil</h2>
 						<div><span id="datos-perfil"class="section-title"></span></div>
+
+						<img class="hide" src="images/cancel.png" alt="boton cerrar" onclick="cerrar('preview')">
+						<h2>Perfil</h2>
+						<div><span>Nombre: </span><span id="datos-nombre"></span></div>
+
 						<div><span>Apellido: </span><span id="datos-apellido"></span></div>
 						<div><span>Profesión: </span><span id="datos-profesion"></span></div>
 						<div><span>Extracto: </span><span id="datos-extracto"></span></div>
