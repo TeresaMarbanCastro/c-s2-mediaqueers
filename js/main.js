@@ -29,7 +29,7 @@ function rellenarextracto(){
 	var datosExtracto = prompt("Escribe una pequeña descripción:");
 
 	document.querySelector("#datos-extracto").innerHTML = datosExtracto;
-	
+
 }
 
 function rellenarcontacto(){
@@ -100,7 +100,7 @@ var options = options + '<option value ="C1">C1</option>';
 var options = options + '<option value ="C2">C2</option>';
 
 document.querySelector('#level').innerHTML = options;
-<<<<<<< HEAD
+
 
 //función añadir mas información
 var education = document.getElementById ("education");
@@ -116,5 +116,3 @@ more.onclick = function () {
 function vistaPrevia(idContent){
 document.getElementById(idContent).style.display = 'block';
 }
-=======
->>>>>>> 13d756445961ae3d3590860bbd10eddbff18d654
