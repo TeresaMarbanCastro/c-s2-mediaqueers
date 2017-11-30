@@ -102,11 +102,6 @@ body{
 	flex-direction: column;
 }
 
-.split-div{
-	display: flex;
-	flex-direction: row;
-
-}
 
 /*formulario*/
 
@@ -121,7 +116,7 @@ body{
 	margin: 5px;
 }
 
-h2.section-title {
+.section-title {
     text-align: center;
 		color:#263D42;
 }
@@ -178,7 +173,7 @@ input.button-info {
 
 .content {
 	display: none;
-	    background-color: rgba(226, 226, 226, 0.17);
+	    background-color: rgba(226, 226, 226, 0.42);
 }
 
 select {
@@ -210,6 +205,44 @@ select {
 	display: flex;
 	align-self: flex-end;
 }
+
+.top-line{
+	border: 1px solid red;
+	width:80%;
+}
+
+.bottom-line{
+	border: 1px solid red;
+	width:100%;
+}
+.section-title-line{
+	width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+width: 96%;
+align-items: flex-start;
+}
+
+
+
+.section-preview{
+	display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: flex-start;
+
+}
+.titles{
+	color: white;
+	background-color: red;
+	text-align: left;
+
+}
+
+
+
 /*Footer*/
 footer {
 	display:flex;
@@ -265,6 +298,13 @@ form {
 }
 
 @media all and (min-width: 769px){
+
+	.split-div{
+		display: flex;
+		flex-direction: row;
+
+	}
+
 	.resume-form {
     padding: 20px 0;
     width: 45%;
