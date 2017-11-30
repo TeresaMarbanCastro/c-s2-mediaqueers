@@ -46,9 +46,11 @@ body{
 
 	}
 
-.seccion a:hover {
+.seccion:hover {
 	background-color: #C1EDCC;
 	color: #263D42;
+	border-radius: 10px;
+
 }
 .logo-menu{
 	display: block;
@@ -75,7 +77,8 @@ body{
 	background-size: cover;
 	width: 100vw;
 	height: 50vh;
-	background-position: center center;
+	background-position: top center;
+	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
 	justify-content: center;
@@ -86,9 +89,23 @@ body{
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
+	color: white;
+	padding-top: 50px;
+
+}
+.create h1{
+font-family: 'Share Tech Mono', monospace;
+/*font-family: 'css/fuente/TravelingTypewriter.txt';*/
 }
 .button-create{
-	width: 30%;
+	width: 40%;
+	border-radius: 4px;
+	background-color: #E3C18B;
+	padding: 5px;
+	text-align: center;
+	margin-top: 20px;
+	color: black;
+
 }
 .create h1{
 	font-size: 24px;
@@ -102,11 +119,6 @@ body{
 	flex-direction: column;
 }
 
-.split-div{
-	display: flex;
-	flex-direction: row;
-
-}
 
 /*formulario*/
 
@@ -121,7 +133,7 @@ body{
 	margin: 5px;
 }
 
-h2.section-title {
+.section-title {
     text-align: center;
 		color:#263D42;
 }
@@ -178,7 +190,7 @@ input.button-info {
 
 .content {
 	display: none;
-	    background-color: rgba(226, 226, 226, 0.17);
+	    background-color: rgba(226, 226, 226, 0.42);
 }
 
 select {
@@ -214,6 +226,44 @@ select {
 	display: flex;
 	align-self: flex-end;
 }
+
+.top-line{
+	border: 1px solid red;
+	width:80%;
+}
+
+.bottom-line{
+	border: 1px solid red;
+	width:100%;
+}
+.section-title-line{
+	width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+width: 96%;
+align-items: flex-start;
+}
+
+
+
+.section-preview{
+	display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: flex-start;
+
+}
+.titles{
+	color: white;
+	background-color: red;
+	text-align: left;
+
+}
+
+
+
 /*Footer*/
 footer {
 	display:flex;
@@ -223,7 +273,7 @@ footer {
 	color:white;
 	flex-direction: column;
 	align-items: center;
-	 text-align: center;
+	text-align: center;
 }
 .itemsfooter{
 	padding: 8px 0;
@@ -232,7 +282,11 @@ footer {
 	text-decoration: none;
 	color:white;
 }
-
+.itemsfooter:hover{
+	background-color: #C1EDCC;
+	color: #263D42;
+	border-radius: 10px;
+}
 .map{
 	padding: 15px;
 }
@@ -240,6 +294,11 @@ iframe{
 	width: 250px;
 	height: 150px;
 }
+/*.feedback:hover{
+	background-color: #C1EDCC;
+	color: #263D42;
+	border-radius: 10px;
+}*/
 
 
 /*Cuestionario feeback*/
@@ -256,7 +315,7 @@ form {
 }
 
 
-@media all and (min-width: 481px)and (max-width:768px){
+@media all and (min-width: 481px){
 	iframe{
 		width: auto;
 		height: auto;
@@ -266,9 +325,20 @@ form {
 		align-items: flex-start;
 		    text-align: center;
 	}
+
+.cover{
+	background-position: center 2%;
+}
 }
 
 @media all and (min-width: 769px){
+
+	.split-div{
+		display: flex;
+		flex-direction: row;
+
+	}
+
 	.resume-form {
     padding: 20px 0;
     width: 45%;
@@ -294,7 +364,12 @@ form {
 		width: 100%;
 		color:red;
 	}
-
+	.cover{
+		background-position: center 2%;
+		color: white;
+		align-items: flex-end;
+		padding-bottom: 20px;
+	}
 	iframe{
 		width: auto;
 		height: auto;
