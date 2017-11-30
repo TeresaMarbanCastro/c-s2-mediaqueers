@@ -104,6 +104,8 @@ font-family: 'Share Tech Mono', monospace;
 	padding: 5px;
 	text-align: center;
 	margin-top: 20px;
+	color: black;
+
 }
 .create h1{
 	font-size: 24px;
@@ -276,7 +278,7 @@ form {
 }
 
 
-@media all and (min-width: 481px)and (max-width:768px){
+@media all and (min-width: 481px){
 	iframe{
 		width: auto;
 		height: auto;
@@ -290,7 +292,6 @@ form {
 .cover{
 	background-position: center 2%;
 }
-
 }
 
 @media all and (min-width: 769px){
