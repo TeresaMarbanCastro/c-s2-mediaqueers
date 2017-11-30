@@ -46,9 +46,11 @@ body{
 
 	}
 
-.seccion a:hover {
+.seccion:hover {
 	background-color: #C1EDCC;
 	color: #263D42;
+	border-radius: 10px;
+
 }
 .logo-menu{
 	display: block;
@@ -75,7 +77,8 @@ body{
 	background-size: cover;
 	width: 100vw;
 	height: 50vh;
-	background-position: center center;
+	background-position: top center;
+	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
 	justify-content: center;
@@ -86,9 +89,21 @@ body{
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
+	color: white;
+	padding-top: 50px;
+
+}
+.create h1{
+font-family: 'Share Tech Mono', monospace;
+/*font-family: 'css/fuente/TravelingTypewriter.txt';*/
 }
 .button-create{
-	width: 30%;
+	width: 40%;
+	border-radius: 4px;
+	background-color: #E3C18B;
+	padding: 5px;
+	text-align: center;
+	margin-top: 20px;
 }
 .create h1{
 	font-size: 24px;
@@ -219,7 +234,7 @@ footer {
 	color:white;
 	flex-direction: column;
 	align-items: center;
-	 text-align: center;
+	text-align: center;
 }
 .itemsfooter{
 	padding: 8px 0;
@@ -228,7 +243,11 @@ footer {
 	text-decoration: none;
 	color:white;
 }
-
+.itemsfooter:hover{
+	background-color: #C1EDCC;
+	color: #263D42;
+	border-radius: 10px;
+}
 .map{
 	padding: 15px;
 }
@@ -236,6 +255,11 @@ iframe{
 	width: 250px;
 	height: 150px;
 }
+/*.feedback:hover{
+	background-color: #C1EDCC;
+	color: #263D42;
+	border-radius: 10px;
+}*/
 
 
 /*Cuestionario feeback*/
@@ -262,6 +286,11 @@ form {
 		align-items: flex-start;
 		    text-align: center;
 	}
+
+.cover{
+	background-position: center 2%;
+}
+
 }
 
 @media all and (min-width: 769px){
@@ -290,7 +319,12 @@ form {
 		width: 100%;
 		color:red;
 	}
-
+	.cover{
+		background-position: center 2%;
+		color: white;
+		align-items: flex-end;
+		padding-bottom: 20px;
+	}
 	iframe{
 		width: auto;
 		height: auto;
