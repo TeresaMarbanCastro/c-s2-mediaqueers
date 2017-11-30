@@ -126,11 +126,15 @@
 							</div>
 							<!--SECCION OCULTA-->
 							<div id="content-additional" class="content">
-								<input id="education" type="text" name="name" placeholder="Estudios">
+								<div class="newbutton">
+									<input id="education" type="text" name="name" placeholder="Estudios">
+									<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="suma('more')">
+								</div>
 								<input id="languages" type="text" name="name" placeholder="Idiomas">
 								<label for="level">Nivel</label>
 								<select class=" level" id="level" name="level"></select>
 								<input for="skills" type="text" name="name" placeholder="Habilidades">
+								<input id="interest" type="text" name="name" placeholder="Intereses">
 								<input type="button" name="save" value="Guardar">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">

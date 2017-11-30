@@ -186,6 +186,10 @@ select {
 	flex-direction: column;
 }
 
+.newbutton {
+	display: flex;
+	align-self: flex-end;
+}
 
 /*preview*/
 

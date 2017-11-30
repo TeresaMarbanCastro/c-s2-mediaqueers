@@ -87,6 +87,16 @@ var options = options + '<option value ="C2">C2</option>';
 
 document.querySelector('#level').innerHTML = options;
 
+//función añadir mas información
+var education = document.getElementById ("education");
+var more = document.getElementById ("more");
+
+more.onclick = function () {
+	var s = document.createElement("education");
+	s.src = "images/more.png";
+	document.querySelector ("education").appenChild (s);
+}
+
 //función para desplegar vista previa
 function vistaPrevia(idContent){
 document.getElementById(idContent).style.display = 'block';
