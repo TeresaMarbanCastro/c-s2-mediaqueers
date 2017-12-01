@@ -15,8 +15,8 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-bottom: 25px;
 }
+
 /*HEADER*/
 .cabecera {
   background-color: #599675;
@@ -25,13 +25,11 @@ body{
 	align-items: center;
 	width: 100%;
 }
-
 .menu{
   display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	list-style: none;
-
 }
 .menu li{
 	display: flex;
@@ -43,35 +41,18 @@ body{
 	display: block;
 	text-decoration: none;
 	color: white;
-
-	}
-
+}
 .seccion:hover {
 	background-color: #C1EDCC;
 	color: #263D42;
 	border-radius: 10px;
-
 }
 .logo-menu{
 	display: block;
 }
-
-/*.submenu-items {
-  display: none;
-  position: absolute;
-  top:100%;
-  right: 0;
-  list-style: none;
-}*/
-
 .vista {
   position: relative;
 }
-
-/*.vista:hover .submenu-items {
-  background-color: #599675;
-  display: block;
-}*/
 .cover{
 	background: url('../images/cover.jpg');
 	background-size: cover;
@@ -91,13 +72,12 @@ body{
 	text-align: center;
 	color: white;
 	padding-top: 50px;
-
+	height: 100%;
 }
 .create h1{
 font-family: 'Share Tech Mono', monospace;
-/*font-family: 'css/fuente/TravelingTypewriter.txt';*/
 }
-.button-create{
+.create a{
 	width: 40%;
 	border-radius: 4px;
 	background-color: #E3C18B;
@@ -105,11 +85,12 @@ font-family: 'Share Tech Mono', monospace;
 	text-align: center;
 	margin-top: 20px;
 	color: black;
-
 }
 .create h1{
 	font-size: 24px;
 }
+
+
 /*contenedor del formulario*/
 .resume-container{
 	width: 100%;
@@ -119,53 +100,39 @@ font-family: 'Share Tech Mono', monospace;
 	flex-direction: column;
 }
 
-
 /*formulario*/
-
 .resume-form{
 	padding: 20px 0;
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 }
-
 .resume-form *{
 	padding: 5px;
 	margin: 5px;
 }
-
 .section-title {
     text-align: center;
 		color:#263D42;
 }
 .section{
 	margin-bottom: 20px;
-	/*border: 1px solid grey;*/
 }
-
 .info{
 	background-color: #B0C0BC;
 	padding:10px;
 	border-radius: 5px;
 }
-
 .section-buttons{
 	display: flex;
 	justify-content: center;
 }
-
 input{
-	display: block;
-  width: 87%;
-			border: none;
+	width: 96%;
+	border: none;
 }
-
 textarea#summary {
   width: 90%;
-	    border: none;
-}
-
-label {
-    font-size: 14px;
+	border: none;
 }
 
 .content>input[type=button]{
@@ -185,19 +152,15 @@ input.button-info {
 		flex-direction: column;*/
 		border-radius: 5px;
 		background-color: white;
-
 }
-
 .content {
 	display: none;
-	    background-color: rgba(226, 226, 226, 0.42);
+	background-color: rgba(226, 226, 226, 0.72);
 }
-
 select {
 	display: flex;
 	flex-direction: column;
 }
-
 .newbutton {
 	display: flex;
 	align-self: flex-end;
@@ -207,66 +170,73 @@ select {
 	background: grey;
 }
 
+
 /*preview*/
-
 #preview div, #preview span {
-    padding: 5px;
+  padding: 5px;
 }
-
 .preview{
 	display: none;
 }
-
 .showpreview{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 80%;
 	margin: 0 auto;
-	border: 1px solid black;
+	border: 1px solid #b0c0bc!important;
 	padding-top: 20px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	margin-bottom: 20px;
 }
 .hide {
 	display: flex;
 	align-self: flex-end;
 }
-
+.resume-title{
+	text-align: center;
+	color:#263D42;
+	font-size: 38px;
+}
+.resume-header-profession {
+	margin: 5px 0 8px 0;
+	font-size: 23px;
+}
+.resume-header-summary {
+  margin: 10px 0;
+  text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:300;
+}
 .top-line{
-	border: 1px solid red;
+	border: 1px solid #b0c0bc;
 	width:80%;
 }
-
 .bottom-line{
-	border: 1px solid red;
+	border: 1px solid #b0c0bc;
 	width:100%;
 }
 .section-title-line{
 	width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-width: 96%;
-align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 96%;
+	align-items: flex-start;
 }
-
-
-
 .section-preview{
 	display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
   align-items: flex-start;
-
+	margin-top: 10px;
 }
 .titles{
-	color: white;
-	background-color: red;
+	color: #263D42;
+	background-color: #b0c0bc;
 	text-align: left;
-
 }
-
-
 
 /*Footer*/
 footer {
@@ -298,17 +268,13 @@ iframe{
 	width: 250px;
 	height: 150px;
 }
-/*.feedback:hover{
-	background-color: #C1EDCC;
-	color: #263D42;
-	border-radius: 10px;
-}*/
 
 
 /*Cuestionario feeback*/
-form {
+.formfeedback {
 	padding: 20px;
-	text-align: justify;
+	border: 1px solid #022F40;
+	margin: 20px;
 }
 .fields{
 	display: flex;
@@ -317,7 +283,13 @@ form {
 .options{
 	display: flex;
 }
-
+.formfeedback textarea{
+	margin-top: 2px;
+}
+.sendfeedback{
+	width: 25%;
+	height: 30px;
+}
 
 @media all and (min-width: 481px){
 	iframe{
@@ -332,7 +304,23 @@ form {
 
 .cover{
 	background-position: center 2%;
+	height: 70%;
+	margin-bottom: 20px;
 }
+
+/*Formulario*/
+.formfeedback{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-left: 25%;
+
+}
+.formfeedback h1{
+	margin-bottom: 20px;
+}
+.formfeedback{
+	width: 50%;
 }
 
 @media all and (min-width: 769px){
@@ -340,27 +328,22 @@ form {
 	.split-div{
 		display: flex;
 		flex-direction: row;
-
 	}
-
 	.resume-form {
     padding: 20px 0;
-    width: 45%;
+    width: 50%;
 		margin-left: 0;
     min-width: 500px;
 	}
-
 	.preview {
     padding: 39px 0;
-    width: 45%;
+    width: 50%;
 	}
-
 	.showpreview {
 	    display: flex;
 	    flex-direction: column;
 	    align-items: center;
 	    margin: 0 auto;
-	    border: 1px solid black;
 	    padding-top: 20px;
 	}
 
@@ -373,6 +356,12 @@ form {
 		color: white;
 		align-items: flex-end;
 		padding-bottom: 20px;
+		height: 85%;
+	}
+	.create h1{
+		font-size: 35px;
+		margin-top: 30%;
+		margin-bottom: 50px;
 	}
 	iframe{
 		width: auto;
@@ -384,15 +373,3 @@ form {
 		    text-align: center;
 	}
 }
-/*
-@media all and (min-width: 500px){
-	iframe{
-		width: 400px;
-		height: 300px;
-	}
-	footer{
-		flex-direction: row;
-	}
-
-	}
-}*/
