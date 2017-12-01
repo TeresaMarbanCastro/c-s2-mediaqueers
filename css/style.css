@@ -304,7 +304,8 @@ iframe{
 /*Cuestionario feeback*/
 form {
 	padding: 20px;
-	text-align: justify;
+	border: 1px solid #022F40;
+	margin: 20px;
 }
 .fields{
 	display: flex;
@@ -313,7 +314,13 @@ form {
 .options{
 	display: flex;
 }
-
+form textarea{
+	margin-top: 2px;
+}
+.sendfeedback{
+	width: 25%;
+	height: 30px;
+}
 
 @media all and (min-width: 481px){
 	iframe{
@@ -329,6 +336,17 @@ form {
 .cover{
 	background-position: center 2%;
 }
+/*Formulario*/
+form main{
+	display: flex;
+	justify-content: center;
+}
+form h1{
+	margin-bottom: 20px;
+}
+form{
+	width: 50%;
+
 }
 
 @media all and (min-width: 769px){
