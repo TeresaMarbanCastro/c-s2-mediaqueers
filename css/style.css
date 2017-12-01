@@ -341,9 +341,12 @@ form textarea{
 }
 
 /*Formulario*/
-form main{
+.formfeedback{
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	margin-left: 25%;
+
 }
 form h1{
 	margin-bottom: 20px;
