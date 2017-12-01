@@ -111,8 +111,3 @@ more.onclick = function () {
 	s.src = "images/more.png";
 	document.querySelector ("education").appenChild (s);
 }
-
-//función para desplegar vista previa
-function vistaPrevia(idContent){
-document.getElementById(idContent).style.display = 'block';
-}

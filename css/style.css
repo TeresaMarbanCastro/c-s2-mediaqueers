@@ -72,12 +72,12 @@ body{
 	text-align: center;
 	color: white;
 	padding-top: 50px;
+	height: 100%;
 }
 .create h1{
 font-family: 'Share Tech Mono', monospace;
-/*font-family: 'css/fuente/TravelingTypewriter.txt';*/
 }
-.button-create{
+.create a{
 	width: 40%;
 	border-radius: 4px;
 	background-color: #E3C18B;
@@ -116,7 +116,6 @@ font-family: 'Share Tech Mono', monospace;
 }
 .section{
 	margin-bottom: 20px;
-	/*border: 1px solid grey;*/
 }
 .info{
 	background-color: #B0C0BC;
@@ -268,9 +267,10 @@ iframe{
 
 
 /*Cuestionario feeback*/
-form {
+.formfeedback {
 	padding: 20px;
-	text-align: justify;
+	border: 1px solid #022F40;
+	margin: 20px;
 }
 .fields{
 	display: flex;
@@ -279,7 +279,13 @@ form {
 .options{
 	display: flex;
 }
-
+.formfeedback textarea{
+	margin-top: 2px;
+}
+.sendfeedback{
+	width: 25%;
+	height: 30px;
+}
 
 @media all and (min-width: 481px){
 	iframe{
@@ -294,7 +300,23 @@ form {
 
 .cover{
 	background-position: center 2%;
+	height: 70%;
+	margin-bottom: 20px;
 }
+
+/*Formulario*/
+.formfeedback{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-left: 25%;
+
+}
+.formfeedback h1{
+	margin-bottom: 20px;
+}
+.formfeedback{
+	width: 50%;
 }
 
 @media all and (min-width: 769px){
@@ -302,27 +324,22 @@ form {
 	.split-div{
 		display: flex;
 		flex-direction: row;
-
 	}
-
 	.resume-form {
     padding: 20px 0;
     width: 50%;
 		margin-left: 0;
     min-width: 500px;
 	}
-
 	.preview {
     padding: 39px 0;
     width: 50%;
 	}
-
 	.showpreview {
 	    display: flex;
 	    flex-direction: column;
 	    align-items: center;
 	    margin: 0 auto;
-	    border: 1px solid black;
 	    padding-top: 20px;
 	}
 
@@ -335,6 +352,12 @@ form {
 		color: white;
 		align-items: flex-end;
 		padding-bottom: 20px;
+		height: 85%;
+	}
+	.create h1{
+		font-size: 35px;
+		margin-top: 30%;
+		margin-bottom: 50px;
 	}
 	iframe{
 		width: auto;

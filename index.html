@@ -31,13 +31,12 @@
 			<div class="cover">
 				<div class="create">
 					<h1>Crea tu propio CV</h1>
-					<input type="button" class="button-create" value="Empezar" onclick="Create()">
+					<a href="#empezar">Empezar</a>
 				</div>
 			</div>
 
-			<div class="resume-container"> <!--container formulario-->
-				<div class="split-div"><!--bloque form y preview-->
-
+			<div class="resume-container" id="empezar"> <!--container formulario-->
+				<div class="split-div">
 					<form class="resume-form" action="/signup" method="post">
 						<div class="profile section">
 							<div class="info">
@@ -57,8 +56,7 @@
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-profile')">
 							</div>
-
-						</div><!--end profile section-->
+						</div>
 
 						<div class="summary section">
 							<div class="info">
@@ -76,7 +74,7 @@
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-summary')">
 							</div>
-						</div><!--end summary section-->
+						</div>
 
 						<div class="contact-information section">
 							<div class="info">
@@ -95,7 +93,7 @@
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-contact-info')">
 							</div>
-						</div><!--end content contact section-->
+						</div>
 
 						<div class="experience section">
 							<div class="info">
@@ -119,7 +117,7 @@
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-experience')">
 							</div>
-						</div><!--end experience section-->
+						</div>
 
 						<div class="additional section">
 							<div class="info">
@@ -144,30 +142,30 @@
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-additional')">
 							</div>
+
 						</div><!--end additional section-->
 					</form>
 
 					<!-- DIV OCULTO VISTA PREVIA-->
 					<div class="preview" id="preview">
 						<div class="showpreview">
+
 							<img class="hide" src="images/cancel.png" alt="boton cerrar" onclick="cerrar('preview')">
 							<div class="resume-header">
 								<h2 class="resume-title" id="datos-perfil"></h2>
 							</div>
+
 							<div class="resume-header-profession">
 								<span id="datos-profesion"></span>
 							</div>
 							<hr class="top-line">
-
 							<div class="resume-header-summary">
 								<span id="datos-extracto"></span>
 							</div>
 
 							<div class="section-preview">
 								<div class="section-title-line">
-									<div class="titles">
-										<h3>Datos de contacto</h3>
-									</div>
+									<div class="titles"><h3>Datos de contacto</h3></div>
 									<hr class="bottom-line">
 								</div>
 								<div>
@@ -180,14 +178,12 @@
 
 							<div class="section-preview">
 								<div class="section-title-line">
-									<div class="titles">
-										<h3>Experiencia laboral</h3>
-									</div>
+									<div class="titles"><h3>Experiencia laboral</h3></div>
 									<hr class="bottom-line">
 								</div>
 								<div>
-									<span>Cargo:</span> <span id="datos-cargo"></span>
-								</div>
+									 <span>Cargo:</span> <span id="datos-cargo"></span>
+								 </div>
 								<div>
 									<span>Empresa:</span> <span id="datos-empresa"></span>
 								</div>
@@ -197,34 +193,33 @@
 								<div>
 									<span>Periodo de fin:</span> <span id="datos-fin"></span>
 								</div>
+						</div>
+
+						<div class="section-preview">
+							<div class="section-title-line">
+								<div class="titles"><h3>Más información</h3></div>
+								<hr class="bottom-line">
 							</div>
 
-							<div class="section-preview">
-								<div class="section-title-line">
-									<div class="titles">
-										<h3>Más información</h3>
-									</div>
-									<hr class="bottom-line">
-								</div>
+							<div>
+								<span>Estudios:</span> <span id="datos-estudios"></span>
+							</div>
+							<div>
+								<span>Idiomas:</span> <span id="datos-idiomas"></span>
+							</div>
+							<div>
+								<span>Nivel:</span> <span id="datos-nivel"></span>
+							</div>
+							<div>
+								<span>Habilidades:</span> <span id="datos-habilidades"></span>
+							</div>
+						</div>
 
-								<div>
-									<span>Estudios:</span> <span id="datos-estudios"></span>
-								</div>
-								<div>
-									<span>Idiomas:</span> <span id="datos-idiomas"></span>
-								</div>
-								<div>
-									<span>Nivel:</span> <span id="datos-nivel"></span>
-								</div>
-								<div>
-									<span>Habilidades:</span> <span id="datos-habilidades"></span>
-								</div>
-							</div><!--section-preview-->
+					</div> <!--end showpreview-->
+				</div>  <!--end preview-->
 
-						</div><!--end showpreview-->
-					</div>  <!--end preview-->
+			</div><!--split-div-->
 
-				</div><!--bloque form y preview split-div-->
 			</div><!--fin container formulario-->
 		</main>
 

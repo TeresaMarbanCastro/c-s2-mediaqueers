@@ -13,13 +13,13 @@
 	</header>
 
 	<main>
-		<form method="post">
+		<form class="formfeedback" method="post">
 			<h1>Cuéntanos qué tal lo hemos hecho</h1>
 			<p>Queremos mejorar, así que te agradeceríamos que contestases a estas preguntas para poder trabajar sobre ellas</p>
 			<div class="fields">
 				<p><br> Por favor, valora las siguientes características de la página:</p>
 				<p> <br>Cómo de fácil te ha parecido usar la herramienta de CV:</p>
-				<div class="options">
+				<br><div class="options">
 					<label for="1">Difícil</label>
 					<input id="1" name="option" type="radio">
 					<label for="2">Neutro</label>
@@ -27,8 +27,8 @@
 					<label for="3">Fácil</label>
 					<input id="3" name="option" type="radio">
 				</div>
-				<p> Cómo de útil te ha parecido la herramienta de creación de CV:</p>
-				<div class="options">
+				<br><p> Cómo de útil te ha parecido la herramienta de creación de CV:</p>
+				<br><div class="options">
 					<label for="1">Nada útil</label>
 					<input id="1" name="option" type="radio">
 					<label for="2">Algo útil</label>
@@ -36,7 +36,8 @@
 					<label for="3">Muy útil</label>
 					<input id="3" name="option" type="radio">
 				</div>
-				<textarea name="comments" placeholder="Escribe aquí tus sugerencias, comentarios y tu experiencia al usar nuestra herramienta" rows="4" cols="5"></textarea>
+				<br><textarea name="comments" placeholder="Escribe aquí tus sugerencias, comentarios y tu experiencia al usar nuestra herramienta" rows="4" cols="5"></textarea>
+				<br><input type="button" class="sendfeedback" name="submit" value="Enviar">
 			</div>
 		</form>
 	</main>
