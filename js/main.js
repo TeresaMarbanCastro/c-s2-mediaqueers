@@ -101,15 +101,18 @@ var options = options + '<option value ="C2">C2</option>';
 
 document.querySelector('#level').innerHTML = options;
 
-
+var idModifier = 1;
 //función añadir mas información
-var education = document.getElementById ("education");
-var more = document.getElementById ("more");
+function addMore(){
 
-more.onclick = function () {
-	var s = document.createElement("education");
-	s.src = "images/more.png";
-	document.querySelector ("education").appenChild (s);
+	var itemRepeat = '<div class="newbutton"><input id="education" ' + idModifier + ' type="text" name="name" placeholder="Estudios">';
+		itemRepeat += '<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
+		itemRepeat += '</div>';
+
+
+	var additional = document.querySelector('#content-additional-prev');
+	additional.insertAdjacentHTML('beforeend', itemRepeat);
+	idModifier++;
 }
 
 //función para desplegar vista previa

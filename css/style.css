@@ -202,6 +202,10 @@ select {
 	display: flex;
 	align-self: flex-end;
 }
+.newbutton:hover {
+	boder-color: grey;
+	background: grey;
+}
 
 /*preview*/
 
