@@ -91,13 +91,13 @@ body{
 	text-align: center;
 	color: white;
 	padding-top: 50px;
-
+	height: 100%;
 }
 .create h1{
 font-family: 'Share Tech Mono', monospace;
 /*font-family: 'css/fuente/TravelingTypewriter.txt';*/
 }
-.button-create{
+.create a{
 	width: 40%;
 	border-radius: 4px;
 	background-color: #E3C18B;
@@ -105,6 +105,7 @@ font-family: 'Share Tech Mono', monospace;
 	text-align: center;
 	margin-top: 20px;
 	color: black;
+	text-decoration: none;
 
 }
 .create h1{
@@ -335,7 +336,10 @@ form textarea{
 
 .cover{
 	background-position: center 2%;
+	height: 70%;
+	margin-bottom: 20px;
 }
+
 /*Formulario*/
 form main{
 	display: flex;
@@ -354,21 +358,17 @@ form{
 	.split-div{
 		display: flex;
 		flex-direction: row;
-
 	}
-
 	.resume-form {
     padding: 20px 0;
     width: 45%;
 		margin-left: 0;
     min-width: 500px;
 	}
-
 	.preview {
     padding: 39px 0;
     width: 45%;
 	}
-
 	.showpreview {
 	    display: flex;
 	    flex-direction: column;
@@ -387,6 +387,12 @@ form{
 		color: white;
 		align-items: flex-end;
 		padding-bottom: 20px;
+		height: 85%;
+	}
+	.create h1{
+		font-size: 35px;
+		margin-top: 30%;
+		margin-bottom: 50px;
 	}
 	iframe{
 		width: auto;
