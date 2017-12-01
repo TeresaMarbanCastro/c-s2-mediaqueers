@@ -110,7 +110,7 @@ function addMore(){
 		itemRepeat += '</div>';
 
 
-	var additional = document.querySelector('#content-additional-prev');
+	var additional = document.querySelector('#addMore');
 	additional.insertAdjacentHTML('beforeend', itemRepeat);
 	idModifier++;
 }
