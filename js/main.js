@@ -41,55 +41,37 @@ function rellenarcontacto(){
 }
 
 
-//función para periodo de incio
-var options = '<option value="Enero">Enero</option>';
-options = options + '<option value="Febrero"> Febrero</option>';
-options = options + '<option value="Marzo">Marzo</option>';
-options = options + '<option value="Abril">Abril</option>';
-options = options + '<option value="Mayo">Mayo</option>';
-options = options + '<option value="Junio">Junio</option>';
-options = options + '<option value="Julio">Julio</option>';
-options = options + '<option value="Agosto">Agosto</option>';
-options = options + '<option value="Septiembre">Septiembre</option>';
-options = options + '<option value="Octubre">Octubre</option>';
-options = options + '<option value="Noviembre">Noviembre</option>';
-options = options + '<option value="Diciembre">Diciembre</option>';
+//función para periodo de incio y periodo de fin
 
-document.querySelector('#month').innerHTML = options;
+var monthOptions = '<option value="Enero">Enero</option>';
+monthOptions = monthOptions + '<option value="febrero"> Febrero</option>';
+monthOptions = monthOptions + '<option value="marzo">Marzo</option>';
+monthOptions = monthOptions + '<option value="abril">Abril</option>';
+monthOptions = monthOptions + '<option value="mayo">Mayo</option>';
+monthOptions = monthOptions + '<option value="junio">Junio</option>';
+monthOptions = monthOptions + '<option value="julio">Julio</option>';
+monthOptions = monthOptions + '<option value="agosto">Agosto</option>';
+monthOptions = monthOptions + '<option value="septiembre">Septiembre</option>';
+monthOptions = monthOptions + '<option value="octubre">Octubre</option>';
+monthOptions = monthOptions + '<option value="noviembre">Noviembre</option>';
+monthOptions = monthOptions + '<option value="diciembre">Diciembre</option>';
 
-var initialYear = 1950;
-var years = 100;
-var options = ''; //almacena options de html que van en el select
 
-for (var i=0; i<years; i++) {
-  options = options + '<option value=">' + (initialYear+i) + '</option>';
+var months = document.querySelectorAll('.month');
+for (var i = 0; i < months.length; i++) {
+	months[i].innerHTML = monthOptions;
 }
-document.querySelector('#year').innerHTML = options;
 
-//función para periodo de fin
-var options = '<option value="Enero">Enero</option>';
-options = options + '<option value="Febrero"> Febrero</option>';
-options = options + '<option value="Marzo">Marzo</option>';
-options = options + '<option value="Abril">Abril</option>';
-options = options + '<option value="Mayo">Mayo</option>';
-options = options + '<option value="Junio">Junio</option>';
-options = options + '<option value="Julio">Julio</option>';
-options = options + '<option value="Agosto">Agosto</option>';
-options = options + '<option value="Septiembre">Septiembre</option>';
-options = options + '<option value="Octubre">Octubre</option>';
-options = options + '<option value="Noviembre">Noviembre</option>';
-options = options + '<option value="Diciembre">Diciembre</option>';
+var years = 2052;
+var yearOptions = ''; //almacena options de html que van en el select
 
-document.querySelector('#months').innerHTML = options;
-
-var initialYear = 1950;
-var years = 100;
-var options = ''; //almacena options de html que van en el select
-
-for (var i=0; i<years; i++) {
-  options = options + '<option value=">' + (initialYear+i) + '</option>';
+for (var initialYear=1949; initialYear<years; initialYear++) {
+  yearOptions = yearOptions + '<option value=">' + (initialYear) + '</option>';
 }
-document.querySelector('#years').innerHTML = options;
+var yearsAll = document.querySelectorAll('.year');
+for (var i = 0; i < yearsAll.length; i++) {
+	yearsAll[i].innerHTML = yearOptions;
+}
 
 //función para nivel de idiomas
 var options = '<option value ="A1">A1</option>';
@@ -102,6 +84,7 @@ var options = options + '<option value ="C2">C2</option>';
 document.querySelector('#level').innerHTML = options;
 
 var idModifier = 1;
+
 //función añadir mas información
 function addMore(){
 

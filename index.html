@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -106,12 +106,24 @@
 							<div id="content-experience" class="content"><!--SECCION OCULTA-->
 								<input id="position" type="text" name="name" placeholder="Cargo">
 								<input id="experience" type="text" name="name" placeholder="Empresa">
-								<label for="period">Periodo de inicio</label>
-								<select class="month" name="month" id="month"></select>
-								<select class="year" name="year" id="year"></select>
-								<label for="period">Periodo de fín</label>
-								<select class="months" name="months" id="months"></select>
-								<select class="years" name="years" id="years"></select>
+								<div class="period-initial">
+									<label>Periodo de inicio</label>
+									<div class="initial">
+										<select class="month" name="start-month" id="month-star"></select>
+										<select class="year" name="start-year" id="year"></select>
+									</div>
+								</div>
+								<div class="period-end">
+									<label>Periodo de fín</label>
+									<div class="end">
+										<select class="month" name="end-month" id="month-end"></select>
+										<select class="year" name="end-year" id="year-end"></select>
+									</div>
+								</div>
+								<div class="act">
+									<label>Actualmente</label>
+									<input id="actuality" type="checkbox" value="" name="actual">
+								</div>
 								<input type="button" name="save" value="Guardar">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
@@ -137,7 +149,7 @@
 								<input id="languages" type="text" name="name" placeholder="Idiomas">
 								<label for="level">Nivel</label>
 								<select class=" level" id="level" name="level"></select>
-								<input for="skills" type="text" name="name" placeholder="Habilidades">
+								<input type="text" name="name" placeholder="Habilidades">
 								<input id="interest" type="text" name="name" placeholder="Intereses">
 								<input type="button" name="save" value="Guardar">
 								<input type="button" name="cancel" value="Cancelar">

@@ -239,6 +239,22 @@ select {
 	text-align: left;
 }
 
+.period-initial, .period-end {
+	display: flex;
+	flex-direction: column;
+}
+
+.initial, .end {
+	display: flex;
+	flex-direction: row;
+}
+
+.act {
+	display: flex;
+	flex-direction: column;
+}
+
+
 /*Footer*/
 footer {
 	display:flex;
