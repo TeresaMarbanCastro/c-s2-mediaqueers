@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="js/main.js">	</script>
+
 	<title>Feedback</title>
 </head>
 <body>
@@ -15,9 +15,9 @@
 	<main>
 		<form class="formfeedback" method="post">
 			<h1>Cuéntanos qué tal lo hemos hecho</h1>
-			<p>Queremos mejorar, así que te agradeceríamos que contestases a estas preguntas para poder trabajar sobre ellas</p>
+			<br><p>Queremos mejorar, así que te agradeceríamos que contestases a estas preguntas para poder trabajar sobre ellas</p>
 			<div class="fields">
-				<p><br> Por favor, valora las siguientes características de la página:</p>
+				<br><p> Por favor, valora las siguientes características de la página:</p>
 				<p> <br>Cómo de fácil te ha parecido usar la herramienta de CV:</p>
 				<br><div class="options">
 					<label for="1">Difícil</label>
@@ -37,7 +37,7 @@
 					<input id="3" name="option" type="radio">
 				</div>
 				<br><textarea name="comments" placeholder="Escribe aquí tus sugerencias, comentarios y tu experiencia al usar nuestra herramienta" rows="4" cols="5"></textarea>
-				<br><input type="button" class="sendfeedback" name="submit" value="Enviar">
+				<br><input type="button" class="sendfeedback" name="submit" value="Enviar" onclick="gracias()">
 			</div>
 		</form>
 	</main>
@@ -58,5 +58,6 @@
 				<a href="formulario.html" class="form" target="_blank">¿Qué tal lo hemos hecho?</a>
 			</div>
 		</footer>
+<script type="text/javascript" src="js/main.js">	</script>
 </body>
 </html>
