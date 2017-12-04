@@ -15,34 +15,29 @@ function vistaPrevia(idContent){
 document.getElementById(idContent).style.display = 'block';
 }
 
+//Rellenar formulario
 function rellenar(){
     var datosNombre = prompt("Nombre:");
     var datosApellido = prompt("Apellido:");
 		var datosProfesion = prompt("Profesión:");
 		vistaPrevia("preview");
-
     document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
     document.querySelector("#datos-profesion").innerHTML = datosProfesion;
 }
 
 function rellenarextracto(){
 	var datosExtracto = prompt("Escribe una pequeña descripción:");
-
 	document.querySelector("#datos-extracto").innerHTML = datosExtracto;
-
 }
 
 function rellenarcontacto(){
 	var datosTelefono = prompt("Teléfono:");
 	var datosEmail = prompt("email:");
-
 	document.querySelector("#datos-telefono").innerHTML = datosTelefono;
 	document.querySelector("#datos-email").innerHTML = datosEmail;
 }
 
-
 //función para periodo de incio y periodo de fin
-
 var monthOptions = '<option value="Enero">Enero</option>';
 monthOptions = monthOptions + '<option value="febrero"> Febrero</option>';
 monthOptions = monthOptions + '<option value="marzo">Marzo</option>';
@@ -55,7 +50,6 @@ monthOptions = monthOptions + '<option value="septiembre">Septiembre</option>';
 monthOptions = monthOptions + '<option value="octubre">Octubre</option>';
 monthOptions = monthOptions + '<option value="noviembre">Noviembre</option>';
 monthOptions = monthOptions + '<option value="diciembre">Diciembre</option>';
-
 
 var months = document.querySelectorAll('.month');
 for (var i = 0; i < months.length; i++) {
@@ -80,18 +74,14 @@ var options = options + '<option value ="B1">B1</option>';
 var options = options + '<option value ="B2">B2</option>';
 var options = options + '<option value ="C1">C1</option>';
 var options = options + '<option value ="C2">C2</option>';
-
 document.querySelector('#level').innerHTML = options;
-
 var idModifier = 1;
 
 //función añadir mas información
 function addMore(){
-
 	var itemRepeat = '<div class="newbutton"><input id="education" ' + idModifier + ' type="text" name="name" placeholder="Estudios">';
 		itemRepeat += '<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
 		itemRepeat += '</div>';
-
 
 	var additional = document.querySelector('#addMore');
 	additional.insertAdjacentHTML('beforeend', itemRepeat);
