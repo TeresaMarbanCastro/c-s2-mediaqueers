@@ -16,26 +16,72 @@ document.getElementById(idContent).style.display = 'block';
 }
 
 //Rellenar formulario
-function rellenar(){
-    var datosNombre = prompt("Nombre:");
-    var datosApellido = prompt("Apellido:");
-		var datosProfesion = prompt("Profesión:");
+function fillProfile(){
+		var datosNombre = document.querySelector("#name").value;
+		var datosApellido = document.querySelector("#lastname").value;
+		var datosProfesion = document.querySelector("#profession").value;
+
 		vistaPrevia("preview");
     document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
     document.querySelector("#datos-profesion").innerHTML = datosProfesion;
 }
+var saveProfile = document.querySelector('.saveProfile');
+saveProfile.addEventListener('click', fillProfile);
 
-function rellenarextracto(){
-	var datosExtracto = prompt("Escribe una pequeña descripción:");
+function fillSummary(){
+	var datosExtracto = document.querySelector("#summary").value;
+		vistaPrevia("preview");
 	document.querySelector("#datos-extracto").innerHTML = datosExtracto;
 }
+var saveSumary = document.querySelector('.saveSumary');
+saveSumary.addEventListener('click', fillSummary);
 
-function rellenarcontacto(){
-	var datosTelefono = prompt("Teléfono:");
-	var datosEmail = prompt("email:");
+
+function fillContact(){
+	var datosTelefono = document.querySelector("#telephone").value;
+	var datosEmail = document.querySelector("#email").value;
+		vistaPrevia("preview");
 	document.querySelector("#datos-telefono").innerHTML = datosTelefono;
 	document.querySelector("#datos-email").innerHTML = datosEmail;
 }
+var saveContact = document.querySelector('.saveContact');
+saveContact.addEventListener('click', fillContact);
+
+function fillExperience(){
+	var datosCargo = document.querySelector("#position").value;
+	var datosEmpresa = document.querySelector("#experience").value;
+	var datosInicioMes = document.querySelector("#month-start").value;
+	var datosInicioAno = document.querySelector("#year").value;
+	var datosFinMes = document.querySelector("#month-end").value;
+	var datosFinAno = document.querySelector("#year-end").value;
+
+	document.querySelector("#datos-cargo").innerHTML = datosCargo;
+	document.querySelector("#datos-empresa").innerHTML = datosEmpresa;
+	document.querySelector("#datos-inicio").innerHTML = datosInicioMes+ " " +datosInicioAno;
+	document.querySelector("#datos-fin").innerHTML = datosFinMes+ " " +datosFinAno;
+}
+var saveExperience = document.querySelector('.saveExperience');
+saveExperience.addEventListener('click', fillExperience);
+
+
+function fillMore(){
+	var datosEstudios = document.querySelector("#education").value;
+	var datosIdiomas = document.querySelector("#languages").value;
+	var datosNivel = document.querySelector("#level").value;
+	var datosHabilidades = document.querySelector("#skills").value;
+	var datosIntereses = document.querySelector("#interest").value;
+
+	document.querySelector("#datos-estudios").innerHTML = datosEstudios;
+	document.querySelector("#datos-idiomas").innerHTML = datosIdiomas;
+	document.querySelector("#datos-nivel").innerHTML = datosNivel;
+	document.querySelector("#datos-habilidades").innerHTML = datosHabilidades;
+	document.querySelector("#datos-intereses").innerHTML = datosIntereses;
+}
+var saveMore = document.querySelector('.saveMore');
+saveMore.addEventListener('click', fillMore);
+
+
+
 
 //función para periodo de incio y periodo de fin
 var monthOptions = '<option value="Enero">Enero</option>';
@@ -59,8 +105,8 @@ for (var i = 0; i < months.length; i++) {
 var years = 2052;
 var yearOptions = ''; //almacena options de html que van en el select
 
-for (var initialYear=1949; initialYear<years; initialYear++) {
-  yearOptions = yearOptions + '<option value=">' + (initialYear) + '</option>';
+for (var initialYear=1950; initialYear<years; initialYear++) {
+  yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
 }
 var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {

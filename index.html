@@ -43,7 +43,7 @@
 								<h2 class="section-title">Perfil</h2>
 								<div class="section-buttons">
 									<input type="button" class="button-info" value="Editar" onclick="editar('content-profile')">
-									<input type="button" class="button-info" value="Rellenar" onclick="rellenar()">
+									<!-- <input type="button" class="button-info" value="Rellenar" onclick="fillProfile()"> -->
 								</div>
 							</div>
 
@@ -51,7 +51,7 @@
 								<input type="text" name="name" id="name" placeholder="Nombre">
 								<input type="text" name="lastname" id="lastname" placeholder="Apellidos">
 								<input type="text" name="profession" id="profession" placeholder="Profesión">
-								<input type="button" name="save" value="Guardar">
+								<input type="button" name="save" class="saveProfile" value="Guardar" onclick="fillProfile()">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-profile')">
@@ -63,13 +63,13 @@
 								<h2 class="section-title">Extracto</h2>
 								<div class="section-buttons">
 									<input type="button" class="button-info" value="Editar" onclick="editar('content-summary')">
-									<input type="button" class="button-info" value="Rellenar" onclick="rellenarextracto()">
+									<!-- <input type="button" class="button-info" value="Rellenar" onclick="fillSummary()"> -->
 								</div>
 							</div>
 
 							<div id="content-summary" class="content"><!--SECCION OCULTA-->
 								<textarea name="summary" id="summary" rows="8" cols="80" placeholder="Introduce una pequeña descripción"></textarea>
-								<input type="button" name="save" value="Guardar">
+								<input type="button" name="save" value="Guardar" class="saveSumary">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-summary')">
@@ -81,14 +81,14 @@
 								<h2 class="section-title">Datos de contacto</h2>
 								<div class="section-buttons">
 									<input type="button" class="button-info" value="Editar" onclick="editar('content-contact-info')">
-									<input type="button" class="button-info" value="Rellenar" onclick="rellenarcontacto()">
+									<!-- <input type="button" class="button-info" value="Rellenar" onclick="fillContact()"> -->
 								</div>
 							</div>
 
 							<div id="content-contact-info" class="content"><!--SECCION OCULTA-->
 								<input type="tel" name="telephone" id="telephone" placeholder="Teléfono">
 								<input type="email" name="email" id="email" placeholder="Email">
-								<input type="button" name="save" value="Guardar">
+								<input type="button" name="save" value="Guardar" class="saveContact">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-contact-info')">
@@ -109,7 +109,7 @@
 								<div class="period-initial">
 									<label>Periodo de inicio</label>
 									<div class="initial">
-										<select class="month" name="start-month" id="month-star"></select>
+										<select class="month" name="start-month" id="month-start"></select>
 										<select class="year" name="start-year" id="year"></select>
 									</div>
 								</div>
@@ -124,7 +124,7 @@
 									<label>Actualmente</label>
 									<input id="actuality" type="checkbox" value="" name="actual">
 								</div>
-								<input type="button" name="save" value="Guardar">
+								<input type="button" name="save" value="Guardar" class="saveExperience">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-experience')">
@@ -149,9 +149,9 @@
 								<input id="languages" type="text" name="name" placeholder="Idiomas">
 								<label for="level">Nivel</label>
 								<select class=" level" id="level" name="level"></select>
-								<input type="text" name="name" placeholder="Habilidades">
+								<input type="text" id="skills" name="name" placeholder="Habilidades">
 								<input id="interest" type="text" name="name" placeholder="Intereses">
-								<input type="button" name="save" value="Guardar">
+								<input type="button" name="save" value="Guardar" class="saveMore">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-additional')">
@@ -214,7 +214,6 @@
 								<div class="titles"><h3>Más información</h3></div>
 								<hr class="bottom-line">
 							</div>
-
 							<div>
 								<span>Estudios:</span> <span id="datos-estudios"></span>
 							</div>
@@ -226,6 +225,9 @@
 							</div>
 							<div>
 								<span>Habilidades:</span> <span id="datos-habilidades"></span>
+							</div>
+							<div>
+								<span>Intereses:</span> <span id="datos-intereses"></span>
 							</div>
 						</div>
 
