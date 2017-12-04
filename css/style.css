@@ -170,7 +170,39 @@ select {
 	boder-color: grey;
 	background: grey;
 }
+.period-initial, .period-end {
+	display: flex;
+	flex-direction: column;
+}
 
+.initial, .end {
+	display: flex;
+	flex-direction: row;
+}
+
+.act {
+	display: flex;
+	flex-direction: column;
+}
+
+/*Estilos botones de color*/
+.color-buttons {
+	display: flex;
+}
+
+.botoncito{
+	border-radius: 5px;
+	color: white;
+}
+.rojo{
+	background-color: red;
+}
+.azul{
+	background-color: blue;
+}
+.verde {
+	background-color: green;
+}
 
 /*preview*/
 #preview div, #preview span {
@@ -238,22 +270,6 @@ select {
 	background-color: #b0c0bc;
 	text-align: left;
 }
-
-.period-initial, .period-end {
-	display: flex;
-	flex-direction: column;
-}
-
-.initial, .end {
-	display: flex;
-	flex-direction: row;
-}
-
-.act {
-	display: flex;
-	flex-direction: column;
-}
-
 
 /*Footer*/
 footer {
