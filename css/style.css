@@ -127,8 +127,12 @@ font-family: 'Share Tech Mono', monospace;
 	display: flex;
 	justify-content: center;
 }
+label{
+    font-size: 15px;
+}
+
 input{
-	width: 96%;
+	width: 93%;
 	border: none;
 }
 textarea#summary {
@@ -158,6 +162,8 @@ input.button-info {
 	display: none;
 	background-color: rgba(226, 226, 226, 0.72);
 }
+
+
 select {
 	display: flex;
 	flex-direction: column;
@@ -178,11 +184,17 @@ select {
 .initial, .end {
 	display: flex;
 	flex-direction: row;
+	padding: 0;
+  margin: 0;
 }
 
 .act {
 	display: flex;
 	flex-direction: column;
+}
+
+input#actuality {
+		width: 30px;
 }
 
 /*Estilos botones de color*/
@@ -366,13 +378,31 @@ iframe{
 	}
 	.resume-form {
     padding: 20px 0;
-    width: 50%;
-		margin-left: 0;
+    width: 45%;
+		margin-left: 10px;
     min-width: 500px;
 	}
+
+	input {
+	    width: 95%;
+	    border: none;
+	}
+
+	input.button-info {
+  	width: 41%;
+  }
+
+	input#actuality {
+	    width: 30px;
+	}
+
+	.act{
+	    margin-bottom: 20px;
+	}
+
 	.preview {
     padding: 39px 0;
-    width: 50%;
+    width: 58%;
 	}
 	.showpreview {
 	    display: flex;
