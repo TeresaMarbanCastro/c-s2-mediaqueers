@@ -139,21 +139,3 @@ function gracias(idContent){
 	alert("Su respuesta ha sido enviada. ¡Muchas gracias!");
 document.getElementById("gracias").style.color = "blue";
 }
-
-
-
-var datosEstudios = document.querySelector("#education").value;
- 		datosEstudios= [];
-var i;
-  for (i = 0; i < 3; i++) {
-
-        }
-
-
-
-
-
-
-
-
-				

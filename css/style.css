@@ -380,6 +380,7 @@ iframe{
 .formfeedback{
 	width: 50%;
 }
+}
 
 @media all and (min-width: 769px){
 
@@ -393,24 +394,19 @@ iframe{
 		margin-left: 10px;
     min-width: 500px;
 	}
-
 	input {
 	    width: 95%;
 	    border: none;
 	}
-
 	input.button-info {
   	width: 41%;
   }
-
 	input#actuality {
 	    width: 30px;
 	}
-
 	.act{
 	    margin-bottom: 20px;
 	}
-
 	.preview {
     padding: 39px 0;
     width: 58%;
@@ -422,7 +418,6 @@ iframe{
 	    margin: 0 auto;
 	    padding-top: 20px;
 	}
-
 	.horizontal-line{
 		width: 100%;
 		color:red;
