@@ -53,6 +53,7 @@ body{
 .vista {
   position: relative;
 }
+/*Cover*/
 .cover{
 	background: url('../images/cover.jpg');
 	background-size: cover;
@@ -338,10 +339,9 @@ iframe{
 	}
 
 .cover{
-	background-position: center 2%;
-	height: 70%;
-	margin-bottom: 20px;
+	padding-bottom:
 }
+
 
 /*Formulario*/
 .formfeedback{
@@ -388,14 +388,16 @@ iframe{
 	}
 	.cover{
 		background-position: center 2%;
-		color: white;
 		align-items: flex-end;
 		padding-bottom: 20px;
 		height: 85%;
 	}
+	.create{
+		justify-content: flex-end;
+	}
 	.create h1{
 		font-size: 35px;
-		margin-top: 30%;
+		margin-top: 80%;
 		margin-bottom: 50px;
 	}
 	iframe{
