@@ -4,49 +4,87 @@
 function editar(idContent){
 document.getElementById(idContent).style.display = 'block';
 }
-
 //función para cerrar sección
 function cerrar(idContent){
 	document.getElementById(idContent).style.display = 'none';
 }
-
 //función para desplegar vista previa
 function vistaPrevia(idContent){
 document.getElementById(idContent).style.display = 'block';
 }
 
-//Rellenar formulario
-function fillProfile(){
-		var datosNombre = document.querySelector("#name").value;
-		var datosApellido = document.querySelector("#lastname").value;
-		var datosProfesion = document.querySelector("#profession").value;
 
-		vistaPrevia("preview");
-    document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
+//Rellenar formulario Datos Perfil
+function fillProfile(){
+	vistaPrevia("preview");
+	var datosNombre = document.querySelector("#name").value;
+	var datosApellido = document.querySelector("#lastname").value;
+	var datosProfesion = document.querySelector("#profession").value;
+
+	datosNombre = datosNombre.toUpperCase();
+	datosApellido = datosApellido.toUpperCase();
+   
+	document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
     document.querySelector("#datos-profesion").innerHTML = datosProfesion;
 }
+
 var saveProfile = document.querySelector('.saveProfile');
 saveProfile.addEventListener('click', fillProfile);
 
+//formulario Datos extracto
 function fillSummary(){
 	var datosExtracto = document.querySelector("#summary").value;
-		vistaPrevia("preview");
+	vistaPrevia("preview");
 	document.querySelector("#datos-extracto").innerHTML = datosExtracto;
 }
 var saveSumary = document.querySelector('.saveSumary');
 saveSumary.addEventListener('click', fillSummary);
 
+//validar email
+function validateEmail(email) {
+    var regex = /\b[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,20}\b/gi;
+    if( regex.test(email) ) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
+//funcion validar Email
+function checkEmail() {
+    var email = document.getElementById( "email" ).value;
+    if( validateEmail(email) === false ) {
+        document.querySelector(".error_email" ).innerHTML = "Introduce un email válido";
+    } else{
+    	document.querySelector(".error_email" ).innerHTML = " ";
+    }
+}
+
+//funcion validar Telefono
+function validatePhone(telephone) {
+    var regexPhone = /^([0-9]+){9}$/
+    if( regexPhone.test(telephone) ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//formulario Datos contacto
 function fillContact(){
+	checkEmail();
+	checkTelephone();
+
 	var datosTelefono = document.querySelector("#telephone").value;
 	var datosEmail = document.querySelector("#email").value;
-		vistaPrevia("preview");
+	vistaPrevia("preview");
 	document.querySelector("#datos-telefono").innerHTML = datosTelefono;
 	document.querySelector("#datos-email").innerHTML = datosEmail;
 }
 var saveContact = document.querySelector('.saveContact');
 saveContact.addEventListener('click', fillContact);
 
+//formulario Datos experiencia laboral
 function fillExperience(){
 	var datosCargo = document.querySelector("#position").value;
 	var datosEmpresa = document.querySelector("#experience").value;
@@ -63,7 +101,7 @@ function fillExperience(){
 var saveExperience = document.querySelector('.saveExperience');
 saveExperience.addEventListener('click', fillExperience);
 
-
+//formulario Datos más
 function fillMore(){
 	var datosEstudios = document.querySelector("#education").value;
 	var datosIdiomas = document.querySelector("#languages").value;
@@ -79,9 +117,6 @@ function fillMore(){
 }
 var saveMore = document.querySelector('.saveMore');
 saveMore.addEventListener('click', fillMore);
-
-
-
 
 //función para periodo de incio y periodo de fin
 var monthOptions = '<option value="Enero">Enero</option>';
@@ -123,7 +158,7 @@ var options = options + '<option value ="C2">C2</option>';
 document.querySelector('#level').innerHTML = options;
 var idModifier = 1;
 
-//función añadir mas información
+//función boton añadir mas 
 function addMore(){
 	var itemRepeat = '<div class="newbutton"><input id="education" ' + idModifier + ' type="text" name="name" placeholder="Estudios">';
 		itemRepeat += '<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
@@ -139,3 +174,22 @@ function gracias(idContent){
 	alert("Su respuesta ha sido enviada. ¡Muchas gracias!");
 document.getElementById("gracias").style.color = "blue";
 }
+
+
+
+
+
+function checkTelephone() {
+    var telephone = document.getElementById( "telephone" ).value;
+    if( validatePhone(telephone) === false ) {
+        document.querySelector(".error_telephone" ).innerHTML = "Introduce un número telefónico válido";
+    } else{
+    	document.querySelector(".error_telephone" ).innerHTML = " ";
+    }
+}
+
+
+
+
+
+
