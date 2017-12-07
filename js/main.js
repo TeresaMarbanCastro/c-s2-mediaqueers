@@ -23,7 +23,7 @@ function fillProfile(){
 
 	datosNombre = datosNombre.toUpperCase();
 	datosApellido = datosApellido.toUpperCase();
-   
+
 	document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
     document.querySelector("#datos-profesion").innerHTML = datosProfesion;
 }
@@ -158,7 +158,7 @@ var options = options + '<option value ="C2">C2</option>';
 document.querySelector('#level').innerHTML = options;
 var idModifier = 1;
 
-//función boton añadir mas 
+//función boton añadir mas
 function addMore(){
 	var itemRepeat = '<div class="newbutton"><input id="education" ' + idModifier + ' type="text" name="name" placeholder="Estudios">';
 		itemRepeat += '<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
@@ -175,8 +175,15 @@ function gracias(idContent){
 document.getElementById("gracias").style.color = "blue";
 }
 
+function checkTelephone() {
+    var telephone = document.getElementById( "telephone" ).value;
+    if( validatePhone(telephone) === false ) {
+        document.querySelector(".error_telephone" ).innerHTML = "Introduce un número telefónico válido";
+    } else{
+    	document.querySelector(".error_telephone" ).innerHTML = " ";
+    }
+}
 
-<<<<<<< HEAD
 //botones
 var themes = document.querySelectorAll('.botoncito');
 var showPreview = document.querySelector('.showpreview');
@@ -192,22 +199,3 @@ function applyTheme(event){
 for (var i = 0; i < themes.length; i++) {
   themes[i].addEventListener('click', applyTheme);
 }
-=======
-
-
-
-function checkTelephone() {
-    var telephone = document.getElementById( "telephone" ).value;
-    if( validatePhone(telephone) === false ) {
-        document.querySelector(".error_telephone" ).innerHTML = "Introduce un número telefónico válido";
-    } else{
-    	document.querySelector(".error_telephone" ).innerHTML = " ";
-    }
-}
-
-
-
-
-
-
->>>>>>> f28807fa0514b4b381230f00dc6853b8452ea962
