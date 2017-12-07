@@ -141,10 +141,29 @@ input{
 .error{
 	color: red;
 }
+.skill_container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
 
 
+.barSkillsSection {
+	background-color: #eeeeee;
+	margin-bottom: 1em;
+}
 
+.skillName {
+	text-align: left;
+	color: #263d42;
+	line-height: 20px;
+    padding-left: 10px;
+}
 
+.levelSkill {
+    width: 0;
+    background-color: #b0c0bc;
+}
 
 textarea#summary {
   	width: 90%;
@@ -447,7 +466,7 @@ iframe{
 	    padding: 9px;
 	    text-align: center;
 	    margin-top: 20px;
-	    color: white;
+	    color: #263d42;
 	    text-decoration: none;
 	    font-weight: bold;
 	    font-size: 23px;
