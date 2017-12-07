@@ -23,15 +23,10 @@ function fillProfile(){
 
 	datosNombre = datosNombre.toUpperCase();
 	datosApellido = datosApellido.toUpperCase();
-<<<<<<< HEAD
-   
+ 
 	document.querySelector("#data-profile").innerHTML = datosNombre + ' ' + datosApellido;
     document.querySelector("#data-profession").innerHTML = datosProfesion;
-=======
 
-	document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
-    document.querySelector("#datos-profesion").innerHTML = datosProfesion;
->>>>>>> bc74e042404d3ff0dbdb0806fc73e29e4b2c2631
 }
 
 var saveProfile = document.querySelector('.saveProfile');
