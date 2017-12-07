@@ -139,3 +139,20 @@ function gracias(idContent){
 	alert("Su respuesta ha sido enviada. ¡Muchas gracias!");
 document.getElementById("gracias").style.color = "blue";
 }
+
+
+//botones
+var themes = document.querySelectorAll('.botoncito');
+var showPreview = document.querySelector('.showpreview');
+
+
+function applyTheme(event){
+	var themeSelected = event.currentTarget.getAttribute('data-theme-class');
+	showPreview.classList.remove('theme1', 'theme2', 'theme3');
+  showPreview.classList.add(themeSelected);
+
+}
+
+for (var i = 0; i < themes.length; i++) {
+  themes[i].addEventListener('click', applyTheme);
+}
