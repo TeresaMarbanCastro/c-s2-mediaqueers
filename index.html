@@ -43,15 +43,14 @@
 								<h2 class="section-title">Perfil</h2>
 								<div class="section-buttons">
 									<input type="button" class="button-info" value="Editar" onclick="editar('content-profile')">
-									<!-- <input type="button" class="button-info" value="Rellenar" onclick="fillProfile()"> -->
 								</div>
 							</div>
 
 							<div id="content-profile" class="content"> <!--SECCION OCULTA-->
 								<input type="text" name="name" id="name" placeholder="Nombre">
-								<input type="text" name="lastname" id="lastname" placeholder="Apellidos">
+								<input type="text" name="lastname" id="lastname" placeholder="Apellidos" >
 								<input type="text" name="profession" id="profession" placeholder="Profesión">
-								<input type="button" name="save" class="saveProfile" value="Guardar" onclick="fillProfile()">
+								<input type="button" name="save" class="saveProfile" value="Guardar">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-profile')">
@@ -81,13 +80,14 @@
 								<h2 class="section-title">Datos de contacto</h2>
 								<div class="section-buttons">
 									<input type="button" class="button-info" value="Editar" onclick="editar('content-contact-info')">
-									<!-- <input type="button" class="button-info" value="Rellenar" onclick="fillContact()"> -->
 								</div>
 							</div>
 
 							<div id="content-contact-info" class="content"><!--SECCION OCULTA-->
 								<input type="tel" name="telephone" id="telephone" placeholder="Teléfono">
+								<span class="error error_telephone"></span>
 								<input type="email" name="email" id="email" placeholder="Email">
+								<span class="error error_email"></span>
 								<input type="button" name="save" value="Guardar" class="saveContact">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
@@ -142,7 +142,7 @@
 							<div id="content-additional" class="content">
 								<div id="addMore">
 									<div class="newbutton">
-										<input id="education" type="text" name="name" placeholder="Estudios">
+										<input id="education" class="education" type="text" name="name" placeholder="Estudios">
 										<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">
 									</div>
 								</div>
