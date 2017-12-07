@@ -23,9 +23,15 @@ function fillProfile(){
 
 	datosNombre = datosNombre.toUpperCase();
 	datosApellido = datosApellido.toUpperCase();
+<<<<<<< HEAD
    
 	document.querySelector("#data-profile").innerHTML = datosNombre + ' ' + datosApellido;
     document.querySelector("#data-profession").innerHTML = datosProfesion;
+=======
+
+	document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
+    document.querySelector("#datos-profesion").innerHTML = datosProfesion;
+>>>>>>> bc74e042404d3ff0dbdb0806fc73e29e4b2c2631
 }
 
 var saveProfile = document.querySelector('.saveProfile');
@@ -179,7 +185,7 @@ var options = options + '<option value ="C2">C2</option>';
 document.querySelector('#level').innerHTML = options;
 var classModifier = 1;
 
-//función boton añadir mas 
+//función boton añadir mas
 function addMore(){
 	var itemRepeat = '<div class="newbutton"><input id="education" ' + classModifier + ' type="text" name="name" placeholder="Estudios">';
 		itemRepeat += '<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
@@ -241,3 +247,19 @@ document.getElementById("gracias").style.color = "blue";
     }
 
 })();
+
+var themes = document.querySelectorAll('.botoncito');
+var showPreview = document.querySelector('.showpreview');
+
+
+function applyTheme(event){
+	var themeSelected = event.currentTarget.getAttribute('data-theme-class');
+	showPreview.classList.remove('theme1', 'theme2', 'theme3');
+  showPreview.classList.add(themeSelected);
+
+}
+
+for (var i = 0; i < themes.length; i++) {
+  themes[i].addEventListener('click', applyTheme);
+}
+

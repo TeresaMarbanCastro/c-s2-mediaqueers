@@ -233,15 +233,57 @@ input#actuality {
 	border-radius: 5px;
 	color: white;
 }
-.rojo{
-	background-color: red;
+.button_green{
+	background-color: #04724D;
 }
-.azul{
-	background-color: blue;
+.button_purple{
+	background-color: #7A6174;
 }
-.verde {
-	background-color: green;
+.button_yellow{
+	background-color: #F6E27F;
 }
+/*Estilos dinámicos para preview*/
+/* Theme 1 */
+.theme1 .titles{
+  background-color: #04724D;
+	color: white;
+}
+
+.theme1 .bottom-line {
+	border: 1px solid #04724D;
+}
+
+.theme1 .top-line{
+  border: 1px solid #04724D;
+}
+
+/* Theme 2 */
+.theme2 .titles{
+  background-color: #7A6174;
+	color: white;
+}
+
+.theme2 .bottom-line {
+	border: 1px solid #7A6174;
+}
+
+.theme2 .top-line{
+  border: 1px solid #7A6174;
+}
+
+/* Theme 3 */
+.theme3 .titles{
+  background-color: #F6E27F;
+}
+
+.theme3 .bottom-line {
+	border: 1px solid #F6E27F;
+}
+
+.theme3 .top-line{
+  border: 1px solid #F6E27F;
+}
+
 
 /*preview*/
 #preview div, #preview span {
@@ -256,7 +298,7 @@ input#actuality {
 	align-items: center;
 	width: 80%;
 	margin: 0 auto;
-	border: 1px solid #b0c0bc!important;
+	border: 1px solid #b0c0bc;
 	padding-top: 20px;
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	margin-bottom: 20px;
