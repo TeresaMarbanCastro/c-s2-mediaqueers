@@ -142,8 +142,8 @@
 							<div id="content-additional" class="content">
 								<div id="addMore">
 									<div class="newbutton">
-										<input id="education" class="education" type="text" name="education" placeholder="Estudios">
-										<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">
+										<input class="education" type="text" name="education" placeholder="Estudios">
+										<img class="more" src="images/more.png" alt="boton suma" onclick="addMore()">
 									</div>
 								</div>
 								<input id="languages" type="text" name="languages" placeholder="Idiomas">
@@ -236,7 +236,8 @@
 								<hr class="bottom-line">
 							</div>
 							<div>
-								<span>Estudios:</span> <span id="data-studies"></span>
+								<span>Estudios:</span> <br> <!-- <span id="data-studies"></span> -->
+								<ul id="data-studies" class="data-studies"></ul>
 							</div>
 							<div>
 								<span>Idiomas:</span> <span id="data-languages"></span>

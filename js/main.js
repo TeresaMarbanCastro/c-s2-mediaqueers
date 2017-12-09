@@ -108,9 +108,27 @@ var saveExperience = document.querySelector('.saveExperience');
 saveExperience.addEventListener('click', fillExperience);
 
 //formulario Datos más
+// function fillEducation(){
+// 	var studyName = document.querySelector(".education");
+// 	var studyList = document.querySelector(".data-studies");
+// 	var studyNameData = studyName.value;
+//   	studyList.innerHTML += '<li>' + studyNameData + '</li>';
+//   	addMore();
+// }
+
+// var addStudy = document.querySelector('.more');
+// addStudy.addEventListener('click', fillEducation);
+
+
 function fillMore(){
-	vistaPrevia("preview");
-	var datosEstudios = document.querySelector("#education").value;
+	var studyName = document.querySelector(".education");
+	var studyList = document.querySelector(".data-studies");
+	var studyNameData = studyName.value;
+  	studyList.innerHTML += '<li>' + studyNameData + '</li>';	
+  	
+
+	// var datosEstudios = document.querySelector("#education").value;
+
 	var datosIdiomas = document.querySelector("#languages").value;
 	var datosNivel = document.querySelector("#level").value;
 	var datosHabilidades1 = document.querySelector("#skills1").value;
@@ -118,11 +136,11 @@ function fillMore(){
 	var datosHabilidades3 = document.querySelector("#skills3").value;
 	var datosIntereses = document.querySelector("#interest").value;
 
-	document.querySelector("#data-studies").innerHTML = datosEstudios;
+	// document.querySelector("#data-studies").innerHTML = datosEstudios;
+
 	document.querySelector("#data-languages").innerHTML = datosIdiomas;
 	document.querySelector("#data-level").innerHTML = datosNivel;
 	document.querySelector("#data-interest").innerHTML = datosIntereses;
-
 	var newSkill= document.querySelectorAll('.skillName'); 
 	var inputSkill = document.querySelectorAll('.skills');
 	var inputLevel = document.querySelectorAll('.level_skills');
@@ -131,7 +149,6 @@ function fillMore(){
     	newSkill[i].innerHTML = inputSkill[i].value;
     	newSkill[i].parentElement.style.width = inputLevel[i].value + '%';
   	}
-
   	document.querySelector("#skillName1").innerHTML = datosHabilidades1;
   	document.querySelector("#skillName2").innerHTML = datosHabilidades2;
   	document.querySelector("#skillName3").innerHTML = datosHabilidades3;
@@ -182,8 +199,8 @@ var classModifier = 1;
 
 //función boton añadir mas
 function addMore(){
-	var itemRepeat = '<div class="newbutton"><input id="education" ' + classModifier + ' type="text" name="name" placeholder="Estudios">';
-		itemRepeat += '<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
+	var itemRepeat = '<div class="newbutton"><input class="education" ' + classModifier + ' type="text" name="education" placeholder="Estudios">';
+		itemRepeat += '<img class="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
 		itemRepeat += '</div>';
 
 	var additional = document.querySelector('#addMore');
