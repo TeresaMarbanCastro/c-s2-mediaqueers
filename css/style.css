@@ -417,6 +417,23 @@ iframe{
 		border-radius: 10px;
 		padding: 25px;
 	}
+.thanks{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #599675;
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	transition: all .3s;
+	text-align: center;
+	padding-top: 200px;
+}
+.show{
+	display: block;
+}
 }
 @media all and (min-width: 481px){
 	iframe{
@@ -440,7 +457,6 @@ iframe{
 	justify-content: center;
 	flex-direction: column;
 	margin-left: 25%;
-
 }
 .formfeedback h1{
 	margin-bottom: 20px;

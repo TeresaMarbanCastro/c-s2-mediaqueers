@@ -23,7 +23,7 @@ function fillProfile(){
 
 	datosNombre = datosNombre.toUpperCase();
 	datosApellido = datosApellido.toUpperCase();
- 
+
 	document.querySelector("#data-profile").innerHTML = datosNombre + ' ' + datosApellido;
     document.querySelector("#data-profession").innerHTML = datosProfesion;
 
@@ -124,8 +124,8 @@ function fillMore(){
 	var studyName = document.querySelector(".education");
 	var studyList = document.querySelector(".data-studies");
 	var studyNameData = studyName.value;
-  	studyList.innerHTML += '<li>' + studyNameData + '</li>';	
-  	
+  	studyList.innerHTML += '<li>' + studyNameData + '</li>';
+
 
 	// var datosEstudios = document.querySelector("#education").value;
 
@@ -141,7 +141,7 @@ function fillMore(){
 	document.querySelector("#data-languages").innerHTML = datosIdiomas;
 	document.querySelector("#data-level").innerHTML = datosNivel;
 	document.querySelector("#data-interest").innerHTML = datosIntereses;
-	var newSkill= document.querySelectorAll('.skillName'); 
+	var newSkill= document.querySelectorAll('.skillName');
 	var inputSkill = document.querySelectorAll('.skills');
 	var inputLevel = document.querySelectorAll('.level_skills');
 
@@ -152,7 +152,7 @@ function fillMore(){
   	document.querySelector("#skillName1").innerHTML = datosHabilidades1;
   	document.querySelector("#skillName2").innerHTML = datosHabilidades2;
   	document.querySelector("#skillName3").innerHTML = datosHabilidades3;
-	
+
 }
 var saveMore = document.querySelector('.saveMore');
 saveMore.addEventListener('click', fillMore);
@@ -240,7 +240,7 @@ document.getElementById("gracias").style.color = "blue";
         			if ( travelled <= (endLocation || 0) ) {
         			clearInterval(runAnimation);
 	    			}
-				};	
+				};
 			}
 	    	var runAnimation = setInterval(animateScroll, 16);
 		};
@@ -275,3 +275,6 @@ for (var i = 0; i < themes.length; i++) {
   themes[i].addEventListener('click', applyTheme);
 }
 
+//función alert
+var show = document.querySelector('.thanks');
+show.classList.add('click', 'show')
