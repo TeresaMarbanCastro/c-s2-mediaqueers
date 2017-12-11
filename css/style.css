@@ -141,7 +141,33 @@ input{
 .error{
 	color: red;
 }
+.skill_container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
 
+<<<<<<< HEAD
+=======
+
+.barSkillsSection {
+	background-color: #eeeeee;
+	margin-bottom: 1em;
+}
+
+.skillName {
+	text-align: left;
+	color: #263d42;
+	line-height: 20px;
+    padding-left: 10px;
+}
+
+.levelSkill {
+    width: 0;
+    background-color: #b0c0bc;
+}
+
+>>>>>>> 5633c794bc1e77666b97cee54a662edf10f1ca50
 textarea#summary {
   	width: 90%;
 	border: none;
@@ -410,6 +436,23 @@ iframe{
 		border-radius: 10px;
 		padding: 25px;
 	}
+.thanks{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #599675;
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	transition: all .3s;
+	text-align: center;
+	padding-top: 200px;
+}
+.show{
+	display: block;
+}
 }
 @media all and (min-width: 481px){
 	iframe{
@@ -433,7 +476,6 @@ iframe{
 	justify-content: center;
 	flex-direction: column;
 	margin-left: 25%;
-
 }
 .formfeedback h1{
 	margin-bottom: 20px;
@@ -501,7 +543,7 @@ iframe{
 	    padding: 9px;
 	    text-align: center;
 	    margin-top: 20px;
-	    color: white;
+	    color: #263d42;
 	    text-decoration: none;
 	    font-weight: bold;
 	    font-size: 23px;

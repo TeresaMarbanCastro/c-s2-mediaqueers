@@ -31,7 +31,7 @@
 			<div class="cover">
 				<div class="create">
 					<h1>Crea tu propio CV</h1>
-					<a href="#empezar">Empezar</a>
+					<a href="#empezar" class="scroll" data-speed="1000">Empezar</a>
 				</div>
 			</div>
 
@@ -142,26 +142,37 @@
 							<div id="content-additional" class="content">
 								<div id="addMore">
 									<div class="newbutton">
-										<input id="education" class="education" type="text" name="name" placeholder="Estudios">
-										<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">
+										<input class="education" type="text" name="education" placeholder="Estudios">
+										<img class="more" src="images/more.png" alt="boton suma" onclick="addMore()">
 									</div>
 								</div>
-								<input id="languages" type="text" name="name" placeholder="Idiomas">
+								<input id="languages" type="text" name="languages" placeholder="Idiomas">
 								<label for="level">Nivel</label>
 								<select class=" level" id="level" name="level"></select>
-								<input type="text" id="skills" name="name" placeholder="Habilidades">
-								<input id="interest" type="text" name="name" placeholder="Intereses">
+
+								<div class="input-skill">
+									<input type="text" id="skills1" class="skills" name="skills1" placeholder="Habilidades">
+							    	<input class="level_skills" type="text" name="level_skills1" value="" placeholder="Nivel del 1 al 100">
+							    	<input type="text" id="skills2" class="skills" name="skills2" placeholder="Habilidades">
+							    	<input class="level_skills" type="text" name="level_skills2" value="" placeholder="Nivel del 1 al 100">
+							    	<input type="text" id="skills3" class="skills" name="skills3" placeholder="Habilidades">
+							    	<input class="level_skills" type="text" name="level_skills3" value="" placeholder="Nivel del 1 al 100">
+								</div>
+
+								<!-- <input type="text" id="skills" name="skills" placeholder="Habilidades"> -->
+								<input id="interest" type="text" name="interest" placeholder="Intereses">
 								<input type="button" name="save" value="Guardar" class="saveMore">
 								<input type="button" name="cancel" value="Cancelar">
 								<input type="button" name="delete" value="Borrar">
 								<input type="button" value="cerrar" onclick="cerrar('content-additional')">
 							</div>
 						</div><!--end additional section-->
-<!-- BOTONES DE COLORES -->
-					<div class="personalize section">
-    					<div class="info">
-									<h2 class="section-title">Personaliza tu CV</h2>
-									<div class="color-buttons">
+
+					<!-- BOTONES DE COLORES -->
+						<div class="personalize section">
+    						<div class="info">
+								<h2 class="section-title">Personaliza tu CV</h2>
+								<div class="color-buttons">
 	   								<input class="botoncito button_green" type="button" data-theme-class="theme1">
 	   								<input class="botoncito button_purple" type="button" data-theme-class="theme2">
 	   								<input class="botoncito button_yellow" type="button" data-theme-class="theme3">
@@ -178,15 +189,15 @@
 
 							<img class="hide" src="images/cancel.png" alt="boton cerrar" onclick="cerrar('preview')">
 							<div class="resume-header">
-								<h2 class="resume-title" id="datos-perfil"></h2>
+								<h2 class="resume-title" id="data-profile"></h2>
 							</div>
 
 							<div class="resume-header-profession">
-								<span id="datos-profesion"></span>
+								<span id="data-profession"></span>
 							</div>
 							<hr class="top-line">
 							<div class="resume-header-summary">
-								<span id="datos-extracto"></span>
+								<span id="data-summary"></span>
 							</div>
 
 							<div class="section-preview">
@@ -195,10 +206,10 @@
 									<hr class="bottom-line">
 								</div>
 								<div>
-									<span>Teléfono:</span> <span id="datos-telefono"></span>
+									<span>Teléfono:</span> <span id="data-telephone"></span>
 								</div>
 								<div>
-									<span>Email:</span> <span id="datos-email"></span>
+									<span>Email:</span> <span id="data-email"></span>
 								</div>
 							</div>
 
@@ -208,16 +219,16 @@
 									<hr class="bottom-line">
 								</div>
 								<div>
-									 <span>Cargo:</span> <span id="datos-cargo"></span>
+									 <span>Cargo:</span> <span id="data-position"></span>
 								 </div>
 								<div>
-									<span>Empresa:</span> <span id="datos-empresa"></span>
+									<span>Empresa:</span> <span id="data-company"></span>
 								</div>
 								<div>
-									<span>Periodo de inicio:</span> <span id="datos-inicio"></span>
+									<span>Periodo de inicio:</span> <span id="data-start"></span>
 								</div>
 								<div>
-									<span>Periodo de fin:</span> <span id="datos-fin"></span>
+									<span>Periodo de fin:</span> <span id="data-end"></span>
 								</div>
 						</div>
 
@@ -227,19 +238,37 @@
 								<hr class="bottom-line">
 							</div>
 							<div>
-								<span>Estudios:</span> <span id="datos-estudios"></span>
+								<span>Estudios:</span> <br> <!-- <span id="data-studies"></span> -->
+								<ul id="data-studies" class="data-studies"></ul>
 							</div>
 							<div>
-								<span>Idiomas:</span> <span id="datos-idiomas"></span>
+								<span>Idiomas:</span> <span id="data-languages"></span>
 							</div>
 							<div>
-								<span>Nivel:</span> <span id="datos-nivel"></span>
+								<span>Nivel:</span> <span id="data-level"></span>
 							</div>
+
+							<div class="skill_container">
+								<span>Habilidades:</span>
+								<div class="barSkillsSection">
+									<div class="levelSkill">
+										<p id="skillName1" class="skillName"></p>
+									</div>
+								</div>
+								<div class="barSkillsSection">
+									<div class="levelSkill">
+										<p id="skillName2" class="skillName"></p>
+									</div>
+								</div>
+								<div class="barSkillsSection">
+									<div class="levelSkill">
+										<p id="skillName3" class="skillName"></p>
+									</div>
+								</div>
+    						</div>
+
 							<div>
-								<span>Habilidades:</span> <span id="datos-habilidades"></span>
-							</div>
-							<div>
-								<span>Intereses:</span> <span id="datos-intereses"></span>
+								<span>Intereses:</span> <span id="data-interest"></span>
 							</div>
 						</div>
 

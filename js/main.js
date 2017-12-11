@@ -24,8 +24,9 @@ function fillProfile(){
 	datosNombre = datosNombre.toUpperCase();
 	datosApellido = datosApellido.toUpperCase();
 
-	document.querySelector("#datos-perfil").innerHTML = datosNombre + ' ' + datosApellido;
-    document.querySelector("#datos-profesion").innerHTML = datosProfesion;
+	document.querySelector("#data-profile").innerHTML = datosNombre + ' ' + datosApellido;
+    document.querySelector("#data-profession").innerHTML = datosProfesion;
+
 }
 
 var saveProfile = document.querySelector('.saveProfile');
@@ -35,12 +36,12 @@ saveProfile.addEventListener('click', fillProfile);
 function fillSummary(){
 	var datosExtracto = document.querySelector("#summary").value;
 	vistaPrevia("preview");
-	document.querySelector("#datos-extracto").innerHTML = datosExtracto;
+	document.querySelector("#data-summary").innerHTML = datosExtracto;
 }
 var saveSumary = document.querySelector('.saveSumary');
 saveSumary.addEventListener('click', fillSummary);
 
-//validar email
+//funciones validar email
 function validateEmail(email) {
     var regex = /\b[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,20}\b/gi;
     if( regex.test(email) ) {
@@ -49,8 +50,6 @@ function validateEmail(email) {
         return false;
     }
 }
-
-//funcion validar Email
 function checkEmail() {
     var email = document.getElementById( "email" ).value;
     if( validateEmail(email) === false ) {
@@ -59,8 +58,7 @@ function checkEmail() {
     	document.querySelector(".error_email" ).innerHTML = " ";
     }
 }
-
-//funcion validar Telefono
+//funciones validar Telefono
 function validatePhone(telephone) {
     var regexPhone = /^([0-9]+){9}$/
     if( regexPhone.test(telephone) ) {
@@ -69,23 +67,31 @@ function validatePhone(telephone) {
         return false;
     }
 }
+function checkTelephone() {
+    var telephone = document.getElementById( "telephone" ).value;
+    if( validatePhone(telephone) === false ) {
+        document.querySelector(".error_telephone" ).innerHTML = "Introduce un número telefónico válido";
+    } else{
+    	document.querySelector(".error_telephone" ).innerHTML = " ";
+    }
+}
 
 //formulario Datos contacto
 function fillContact(){
 	checkEmail();
 	checkTelephone();
-
 	var datosTelefono = document.querySelector("#telephone").value;
 	var datosEmail = document.querySelector("#email").value;
 	vistaPrevia("preview");
-	document.querySelector("#datos-telefono").innerHTML = datosTelefono;
-	document.querySelector("#datos-email").innerHTML = datosEmail;
+	document.querySelector("#data-telephone").innerHTML = datosTelefono;
+	document.querySelector("#data-email").innerHTML = datosEmail;
 }
 var saveContact = document.querySelector('.saveContact');
 saveContact.addEventListener('click', fillContact);
 
 //formulario Datos experiencia laboral
 function fillExperience(){
+	vistaPrevia("preview");
 	var datosCargo = document.querySelector("#position").value;
 	var datosEmpresa = document.querySelector("#experience").value;
 	var datosInicioMes = document.querySelector("#month-start").value;
@@ -93,44 +99,77 @@ function fillExperience(){
 	var datosFinMes = document.querySelector("#month-end").value;
 	var datosFinAno = document.querySelector("#year-end").value;
 
-	document.querySelector("#datos-cargo").innerHTML = datosCargo;
-	document.querySelector("#datos-empresa").innerHTML = datosEmpresa;
-	document.querySelector("#datos-inicio").innerHTML = datosInicioMes+ " " +datosInicioAno;
-	document.querySelector("#datos-fin").innerHTML = datosFinMes+ " " +datosFinAno;
+	document.querySelector("#data-position").innerHTML = datosCargo;
+	document.querySelector("#data-company").innerHTML = datosEmpresa;
+	document.querySelector("#data-start").innerHTML = datosInicioMes+ " " +datosInicioAno;
+	document.querySelector("#data-end").innerHTML = datosFinMes+ " " +datosFinAno;
 }
 var saveExperience = document.querySelector('.saveExperience');
 saveExperience.addEventListener('click', fillExperience);
 
 //formulario Datos más
+// function fillEducation(){
+// 	var studyName = document.querySelector(".education");
+// 	var studyList = document.querySelector(".data-studies");
+// 	var studyNameData = studyName.value;
+//   	studyList.innerHTML += '<li>' + studyNameData + '</li>';
+//   	addMore();
+// }
+
+// var addStudy = document.querySelector('.more');
+// addStudy.addEventListener('click', fillEducation);
+
+
 function fillMore(){
-	var datosEstudios = document.querySelector("#education").value;
+	var studyName = document.querySelector(".education");
+	var studyList = document.querySelector(".data-studies");
+	var studyNameData = studyName.value;
+  	studyList.innerHTML += '<li>' + studyNameData + '</li>';
+
+
+	// var datosEstudios = document.querySelector("#education").value;
+
 	var datosIdiomas = document.querySelector("#languages").value;
 	var datosNivel = document.querySelector("#level").value;
-	var datosHabilidades = document.querySelector("#skills").value;
+	var datosHabilidades1 = document.querySelector("#skills1").value;
+	var datosHabilidades2 = document.querySelector("#skills2").value;
+	var datosHabilidades3 = document.querySelector("#skills3").value;
 	var datosIntereses = document.querySelector("#interest").value;
 
-	document.querySelector("#datos-estudios").innerHTML = datosEstudios;
-	document.querySelector("#datos-idiomas").innerHTML = datosIdiomas;
-	document.querySelector("#datos-nivel").innerHTML = datosNivel;
-	document.querySelector("#datos-habilidades").innerHTML = datosHabilidades;
-	document.querySelector("#datos-intereses").innerHTML = datosIntereses;
+	// document.querySelector("#data-studies").innerHTML = datosEstudios;
+
+	document.querySelector("#data-languages").innerHTML = datosIdiomas;
+	document.querySelector("#data-level").innerHTML = datosNivel;
+	document.querySelector("#data-interest").innerHTML = datosIntereses;
+	var newSkill= document.querySelectorAll('.skillName');
+	var inputSkill = document.querySelectorAll('.skills');
+	var inputLevel = document.querySelectorAll('.level_skills');
+
+  	for (var i = 0; i < newSkill.length; i++) {
+    	newSkill[i].innerHTML = inputSkill[i].value;
+    	newSkill[i].parentElement.style.width = inputLevel[i].value + '%';
+  	}
+  	document.querySelector("#skillName1").innerHTML = datosHabilidades1;
+  	document.querySelector("#skillName2").innerHTML = datosHabilidades2;
+  	document.querySelector("#skillName3").innerHTML = datosHabilidades3;
+
 }
 var saveMore = document.querySelector('.saveMore');
 saveMore.addEventListener('click', fillMore);
 
 //función para periodo de incio y periodo de fin
 var monthOptions = '<option value="Enero">Enero</option>';
-monthOptions = monthOptions + '<option value="febrero"> Febrero</option>';
-monthOptions = monthOptions + '<option value="marzo">Marzo</option>';
-monthOptions = monthOptions + '<option value="abril">Abril</option>';
-monthOptions = monthOptions + '<option value="mayo">Mayo</option>';
-monthOptions = monthOptions + '<option value="junio">Junio</option>';
-monthOptions = monthOptions + '<option value="julio">Julio</option>';
-monthOptions = monthOptions + '<option value="agosto">Agosto</option>';
-monthOptions = monthOptions + '<option value="septiembre">Septiembre</option>';
-monthOptions = monthOptions + '<option value="octubre">Octubre</option>';
-monthOptions = monthOptions + '<option value="noviembre">Noviembre</option>';
-monthOptions = monthOptions + '<option value="diciembre">Diciembre</option>';
+monthOptions = monthOptions + '<option value="Febrero"> Febrero</option>';
+monthOptions = monthOptions + '<option value="Marzo">Marzo</option>';
+monthOptions = monthOptions + '<option value="Abril">Abril</option>';
+monthOptions = monthOptions + '<option value="Mayo">Mayo</option>';
+monthOptions = monthOptions + '<option value="Junio">Junio</option>';
+monthOptions = monthOptions + '<option value="Julio">Julio</option>';
+monthOptions = monthOptions + '<option value="Agosto">Agosto</option>';
+monthOptions = monthOptions + '<option value="Septiembre">Septiembre</option>';
+monthOptions = monthOptions + '<option value="Octubre">Octubre</option>';
+monthOptions = monthOptions + '<option value="Noviembre">Noviembre</option>';
+monthOptions = monthOptions + '<option value="Diciembre">Diciembre</option>';
 
 var months = document.querySelectorAll('.month');
 for (var i = 0; i < months.length; i++) {
@@ -156,17 +195,17 @@ var options = options + '<option value ="B2">B2</option>';
 var options = options + '<option value ="C1">C1</option>';
 var options = options + '<option value ="C2">C2</option>';
 document.querySelector('#level').innerHTML = options;
-var idModifier = 1;
+var classModifier = 1;
 
 //función boton añadir mas
 function addMore(){
-	var itemRepeat = '<div class="newbutton"><input id="education" ' + idModifier + ' type="text" name="name" placeholder="Estudios">';
-		itemRepeat += '<img class="much" id="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
+	var itemRepeat = '<div class="newbutton"><input class="education" ' + classModifier + ' type="text" name="education" placeholder="Estudios">';
+		itemRepeat += '<img class="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
 		itemRepeat += '</div>';
 
 	var additional = document.querySelector('#addMore');
 	additional.insertAdjacentHTML('beforeend', itemRepeat);
-	idModifier++;
+	classModifier++;
 }
 
 //función formulario gracias no funciona
@@ -175,16 +214,52 @@ function gracias(idContent){
 document.getElementById("gracias").style.color = "blue";
 }
 
-function checkTelephone() {
-    var telephone = document.getElementById( "telephone" ).value;
-    if( validatePhone(telephone) === false ) {
-        document.querySelector(".error_telephone" ).innerHTML = "Introduce un número telefónico válido";
-    } else{
-    	document.querySelector(".error_telephone" ).innerHTML = " ";
+//smooth scroll function
+(function() {
+	if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
+	    var smoothScroll = function (anchor, duration) {
+        	var startLocation = window.pageYOffset;
+        	var endLocation = anchor.offsetTop;
+        	var distance = endLocation - startLocation;
+        	var increments = distance/(duration/16);
+        	var stopAnimation;
+        		var animateScroll = function () {
+            		window.scrollBy(0, increments);
+            		stopAnimation();
+        		};
+	        if ( increments >= 0 ) {
+            	stopAnimation = function () {
+            		var travelled = window.pageYOffset;
+            		if ( (travelled >= (endLocation - increments)) || ((window.innerHeight + travelled) >= document.body.offsetHeight) ) {
+            		clearInterval(runAnimation);
+            		}
+        		};
+    		} else {
+        		stopAnimation = function () {
+        			var travelled = window.pageYOffset;
+        			if ( travelled <= (endLocation || 0) ) {
+        			clearInterval(runAnimation);
+	    			}
+				};
+			}
+	    	var runAnimation = setInterval(animateScroll, 16);
+		};
+	 	var scrollToggle = document.querySelectorAll('.scroll');
+    	[].forEach.call(scrollToggle, function (toggle) {
+    		toggle.addEventListener('click', function(e) {
+			    e.preventDefault();
+			    var dataID = toggle.getAttribute('href');
+                var dataTarget = document.querySelector(dataID);
+                var dataSpeed = toggle.getAttribute('data-speed');
+                if (dataTarget) {
+                    smoothScroll(dataTarget, dataSpeed || 1000);
+                }
+            }, false);
+        });
     }
-}
 
-//botones
+})();
+
 var themes = document.querySelectorAll('.botoncito');
 var showPreview = document.querySelector('.showpreview');
 
@@ -199,3 +274,7 @@ function applyTheme(event){
 for (var i = 0; i < themes.length; i++) {
   themes[i].addEventListener('click', applyTheme);
 }
+
+//función alert
+var show = document.querySelector('.thanks');
+show.classList.add('click', 'show')
