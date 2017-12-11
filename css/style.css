@@ -370,7 +370,11 @@ input#actuality {
 	background-color: #b0c0bc;
 	text-align: left;
 }
-
+.data-studies{
+	list-style-type: none;
+	margin-top: 10px;
+    margin-left: 5px;
+}
 /*Footer*/
 footer {
 	display:flex;
@@ -527,6 +531,8 @@ iframe{
 		width: 100%;
 		color:red;
 	}
+
+
 	.cover{
 		background-position: center 2%;
     	padding-bottom: 300px;

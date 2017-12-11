@@ -13,7 +13,6 @@ function vistaPrevia(idContent){
 document.getElementById(idContent).style.display = 'block';
 }
 
-
 //Rellenar formulario Datos Perfil
 function fillProfile(){
 	vistaPrevia("preview");
@@ -107,28 +106,34 @@ function fillExperience(){
 var saveExperience = document.querySelector('.saveExperience');
 saveExperience.addEventListener('click', fillExperience);
 
-//formulario Datos más
-// function fillEducation(){
-// 	var studyName = document.querySelector(".education");
-// 	var studyList = document.querySelector(".data-studies");
-// 	var studyNameData = studyName.value;
-//   	studyList.innerHTML += '<li>' + studyNameData + '</li>';
-//   	addMore();
-// }
+//SECCION EDUCACION//////////////////////////////////////////////////////
+var studyName = document.querySelector(".education");
+var studyInstitution = document.querySelector('.education_university');
+var studyList = [];
+var studyListPreview = document.querySelector(".data-studies");
 
-// var addStudy = document.querySelector('.more');
-// addStudy.addEventListener('click', fillEducation);
+function addStudy() {
+  var study = {
+    name: studyName.value,
+		insti:studyInstitution.value
+  };
+  studyList.push(study);
+  var allStudyList = '';
+  for (var i = 0; i < studyList.length; i++) {
+    allStudyList += '<li>' + studyList[i].name + ' - ' +studyList[i].insti +'</li>';
+  }
+  studyListPreview.innerHTML = allStudyList;
+ 	document.querySelector(".education").value = '';
+	document.querySelector('.education_university').value = '';
+	vistaPrevia("preview");
+}
+
+var botonPrueba = document.querySelector('.prueba');
+botonPrueba.addEventListener('click', addStudy)
 
 
 function fillMore(){
-	var studyName = document.querySelector(".education");
-	var studyList = document.querySelector(".data-studies");
-	var studyNameData = studyName.value;
-  	studyList.innerHTML += '<li>' + studyNameData + '</li>';
-
-
-	// var datosEstudios = document.querySelector("#education").value;
-
+	vistaPrevia("preview");
 	var datosIdiomas = document.querySelector("#languages").value;
 	var datosNivel = document.querySelector("#level").value;
 	var datosHabilidades1 = document.querySelector("#skills1").value;
@@ -152,6 +157,7 @@ function fillMore(){
   	document.querySelector("#skillName1").innerHTML = datosHabilidades1;
   	document.querySelector("#skillName2").innerHTML = datosHabilidades2;
   	document.querySelector("#skillName3").innerHTML = datosHabilidades3;
+		addStudy();
 
 }
 var saveMore = document.querySelector('.saveMore');
@@ -269,14 +275,14 @@ function applyTheme(event){
 for (var i = 0; i < themes.length; i++) {
   themes[i].addEventListener('click', applyTheme);
 }
-
-//función alert
-var shower = document.getElementById('fd');
-var eva = document.querySelector('.thanks');
-function x (){
-	 eva.classList.add('show');
-}
-shower.addEventListener('click', x);
+//
+// //función alert
+// var shower = document.getElementById('fd');
+// var eva = document.querySelector('.thanks');
+// function x (){
+// 	 eva.classList.add('show');
+// }
+// shower.addEventListener('click', x);
 
 
 
