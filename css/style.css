@@ -47,13 +47,8 @@ body{
 	color: #263D42;
 	border-radius: 10px;
 }
-<<<<<<< HEAD
-
-
-.logo-menu{
-=======
 .logen{
->>>>>>> 8b10f47164eb0084b20b159e6c8c7115ae1868ad
+
 	display: block;
 	width: 150px;
 	height: 150px;
@@ -156,8 +151,6 @@ input{
     width: 90%;
 }
 
-<<<<<<< HEAD
-=======
 
 .barSkillsSection {
 	background-color: #eeeeee;
@@ -176,7 +169,6 @@ input{
     background-color: #b0c0bc;
 }
 
->>>>>>> 5633c794bc1e77666b97cee54a662edf10f1ca50
 textarea#summary {
   	width: 90%;
 	border: none;
