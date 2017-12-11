@@ -208,11 +208,6 @@ function addMore(){
 	classModifier++;
 }
 
-//función formulario gracias no funciona
-function gracias(idContent){
-	alert("Su respuesta ha sido enviada. ¡Muchas gracias!");
-document.getElementById("gracias").style.color = "blue";
-}
 
 //smooth scroll function
 (function() {
@@ -276,5 +271,19 @@ for (var i = 0; i < themes.length; i++) {
 }
 
 //función alert
-var show = document.querySelector('.thanks');
-show.classList.add('click', 'show')
+var shower = document.getElementById('fd');
+var eva = document.querySelector('.thanks');
+function x (){
+	 eva.classList.add('show');
+}
+shower.addEventListener('click', x);
+
+
+
+
+
+/*unción formulario gracias no funciona
+function gracias(idContent){
+	alert("Su respuesta ha sido enviada. ¡Muchas gracias!");
+document.getElementById("gracias").style.color = "blue";
+}*/

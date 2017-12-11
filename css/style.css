@@ -47,10 +47,17 @@ body{
 	color: #263D42;
 	border-radius: 10px;
 }
+<<<<<<< HEAD
 
 
 .logo-menu{
+=======
+.logen{
+>>>>>>> 8b10f47164eb0084b20b159e6c8c7115ae1868ad
 	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 20px;
 }
 .vista {
   	position: relative;
@@ -149,6 +156,8 @@ input{
     width: 90%;
 }
 
+<<<<<<< HEAD
+=======
 
 .barSkillsSection {
 	background-color: #eeeeee;
@@ -167,6 +176,7 @@ input{
     background-color: #b0c0bc;
 }
 
+>>>>>>> 5633c794bc1e77666b97cee54a662edf10f1ca50
 textarea#summary {
   	width: 90%;
 	border: none;
@@ -232,7 +242,7 @@ input#actuality {
 
 .botoncito{
 	border-radius: 5px;
-	color: white;
+	border: 1px solid white;
 }
 .button_green{
 	background-color: #04724D;
@@ -243,7 +253,11 @@ input#actuality {
 .button_yellow{
 	background-color: #F6E27F;
 }
-/*Estilos dinámicos para preview*/
+.button_blue{
+	background-color: #B0C0BC;
+}
+
+/*Estilos dinámicos de color para preview*/
 /* Theme 1 */
 .theme1 .titles{
   background-color: #04724D;
@@ -285,6 +299,18 @@ input#actuality {
   border: 1px solid #F6E27F;
 }
 
+/* Theme 4 */
+.theme4 .titles{
+  background-color: #B0C0BC;
+}
+
+.theme4 .bottom-line {
+	border: 1px solid #B0C0BC;
+}
+
+.theme4 .top-line{
+  border: 1px solid #B0C0BC;
+}
 
 /*preview*/
 #preview div, #preview span {
@@ -436,7 +462,7 @@ iframe{
 }
 .show{
 	display: block;
-}
+	}
 }
 @media all and (min-width: 481px){
 	iframe{
