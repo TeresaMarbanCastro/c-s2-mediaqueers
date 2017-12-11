@@ -276,5 +276,6 @@ for (var i = 0; i < themes.length; i++) {
 }
 
 //función alert
+
 var show = document.querySelector('.thanks');
 show.classList.add('click', 'show')

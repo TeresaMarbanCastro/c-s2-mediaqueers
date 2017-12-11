@@ -47,8 +47,11 @@ body{
 	color: #263D42;
 	border-radius: 10px;
 }
-.logo-menu{
+.logen{
 	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 20px;
 }
 .vista {
   	position: relative;
