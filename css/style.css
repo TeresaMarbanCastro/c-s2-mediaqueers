@@ -47,6 +47,8 @@ body{
 	color: #263D42;
 	border-radius: 10px;
 }
+
+
 .logo-menu{
 	display: block;
 }
@@ -200,7 +202,6 @@ select {
 	align-self: flex-end;
 }
 .newbutton:hover {
-	boder-color: grey;
 	background: grey;
 }
 .period-initial, .period-end {
@@ -375,6 +376,9 @@ footer {
 	color: #263D42;
 	border-radius: 10px;
 }
+.itemsfooter a:hover {
+    color: #263D42;
+}
 .map{
 	padding: 15px;
 }
@@ -382,7 +386,6 @@ iframe{
 	width: 250px;
 	height: 150px;
 }
-
 
 /*Cuestionario feeback*/
 .formfeedback {
