@@ -436,7 +436,7 @@ iframe{
 }
 .show{
 	display: block;
-}
+	}
 }
 @media all and (min-width: 481px){
 	iframe{
