@@ -19,11 +19,11 @@ body{
 
 /*HEADER*/
 .cabecera {
-  	background-color: #599675;
-  	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
+    background-color: #599675;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 .menu{
   	display: flex;
@@ -42,18 +42,23 @@ body{
 	text-decoration: none;
 	color: white;
 }
+
+.seccion a:hover{
+	color: #263D42;
+}
 .seccion:hover {
 	background-color: #C1EDCC;
 	color: #263D42;
 	border-radius: 10px;
 }
-.logen{
 
-	display: block;
-	width: 150px;
-	height: 150px;
-	border-radius: 20px;
+.logen {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
 }
+
 .vista {
   	position: relative;
 }
@@ -370,11 +375,21 @@ input#actuality {
 	background-color: #b0c0bc;
 	text-align: left;
 }
-.data-studies{
+
+.span-titles{
+	font-weight: 500;
+	font-size: 18px;
+}
+.data-list {
 	list-style-type: none;
 	margin-top: 10px;
     margin-left: 5px;
 }
+
+.data-list li {
+    margin: 6px 0;
+}
+
 /*Footer*/
 footer {
 	display:flex;
@@ -387,7 +402,7 @@ footer {
 	text-align: center;
 }
 .itemsfooter{
-	padding: 8px 0;
+	padding: 5px 0;
 }
 .itemsfooter a{
 	text-decoration: none;
@@ -493,6 +508,9 @@ iframe{
 
 @media all and (min-width: 769px){
 
+	.logen{
+       margin-left: 82%;
+	}
 	.split-div{
 		display: flex;
 		flex-direction: row;
@@ -563,6 +581,10 @@ iframe{
 	footer{
 		flex-direction: row;
 		align-items: flex-start;
-		    text-align: center;
+		 text-align: center;
+	}
+	.itemsfooter img {
+    margin: 0 auto;
+    margin-bottom: 15px;
 	}
 }
