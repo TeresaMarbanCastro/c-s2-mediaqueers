@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
- 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 	<link href="css/fuente/TravelingTypewriter.txt" rel="stylesheet">
 
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,281 +13,281 @@
 <body>
 	<div class="overflow">
 		<header class="cabecera">
-      		<a href="#home"><img src="images/Mediaqueers.png" class="logen" alt="logo-menu"></a>
-		    <nav>
-		        <ul class="menu">
-		          <li class="seccion home"><a href="#home">Home</a></li>
-		          <li class="seccion vista"><a href="#vista" onclick="vistaPrevia('preview')">Vista previa</a>
-		          <li class="seccion print"><a href="#imprimir"><img src="images/printer.png" alt ="impresora"></a></li>
-		        </ul>
-		    </nav>
-    	</header>
+			<a href="#home"><img src="images/Mediaqueers.png" class="logen" alt="logo-menu"></a>
+			<nav>
+				<ul class="menu">
+					<li class="seccion home"><a href="#home">Home</a></li>
+					<li class="seccion vista"><a href="#vista" onclick="vistaPrevia('preview')">Vista previa</a>
+						<li class="seccion print"><a href="#imprimir"><img src="images/printer.png" alt ="impresora"></a></li>
+					</ul>
+				</nav>
+			</header>
 
-		<main>
-			<div class="cover">
-				<div class="create">
-					<h1>Crea tu propio CV</h1>
-					<a href="#empezar" class="scroll" data-speed="1000">Empezar</a>
+			<main>
+				<div class="cover">
+					<div class="create">
+						<h1>Crea tu propio CV</h1>
+						<a href="#empezar" class="scroll" data-speed="1000">Empezar</a>
+					</div>
 				</div>
-			</div>
 
-			<div class="resume-container" id="empezar"> <!--container formulario-->
-				<div class="split-div">
-					<form class="resume-form" action="/signup" method="post">
-						
-						<div class="profile section">
-							<div class="info">
-								<h2 class="section-title">Perfil</h2>
-								<div class="section-buttons">
-									<input type="button" class="button-info" value="Editar" onclick="editar('content-profile')">
-								</div>
-							</div>
-							<div id="content-profile" class="content"> <!--SECCION OCULTA-->
-								<input type="text" name="name" id="name" placeholder="Nombre">
-								<input type="text" name="lastname" id="lastname" placeholder="Apellidos" >
-								<input type="text" name="profession" id="profession" placeholder="Profesión">
-								<input type="button" name="save" class="saveProfile" value="Guardar">
-								<input type="button" name="cancel" value="Cancelar">
-								<input type="button" name="delete" value="Borrar">
-								<input type="button" value="cerrar" onclick="cerrar('content-profile')">
-							</div>
-						</div>
+				<div class="resume-container" id="empezar"> <!--container formulario-->
+					<div class="split-div">
+						<form class="resume-form" action="/signup" method="post">
 
-						<div class="summary section">
-							<div class="info">
-								<h2 class="section-title">Extracto</h2>
-								<div class="section-buttons">
-									<input type="button" class="button-info" value="Editar" onclick="editar('content-summary')">
-								</div>
-							</div>
-							<div id="content-summary" class="content"><!--SECCION OCULTA-->
-								<textarea name="summary" id="summary" rows="8" cols="80" placeholder="Introduce una pequeña descripción"></textarea>
-								<input type="button" name="save" value="Guardar" class="saveSumary">
-								<input type="button" name="cancel" value="Cancelar">
-								<input type="button" name="delete" value="Borrar">
-								<input type="button" value="cerrar" onclick="cerrar('content-summary')">
-							</div>
-						</div>
-
-						<div class="contact-information section">
-							<div class="info">
-								<h2 class="section-title">Datos de contacto</h2>
-								<div class="section-buttons">
-									<input type="button" class="button-info" value="Editar" onclick="editar('content-contact-info')">
-								</div>
-							</div>
-							<div id="content-contact-info" class="content"><!--SECCION OCULTA-->
-								<input type="tel" name="telephone" id="telephone" placeholder="Teléfono">
-								<span class="error error_telephone"></span>
-								<input type="email" name="email" id="email" placeholder="Email">
-								<span class="error error_email"></span>
-								<input type="button" name="save" value="Guardar" class="saveContact">
-								<input type="button" name="cancel" value="Cancelar">
-								<input type="button" name="delete" value="Borrar">
-								<input type="button" value="cerrar" onclick="cerrar('content-contact-info')">
-							</div>
-						</div>
-
-						<div class="experience section">
-							<div class="info">
-								<h2 class="section-title">Experiencia laboral</h2>
-								<div class="section-buttons">
-									<input type="button" class="button-info" value="Editar" onclick="editar('content-experience')">
-								</div>
-							</div>
-							<div id="content-experience" class="content"><!--SECCION OCULTA-->
-								<input id="position" type="text" name="name" placeholder="Cargo">
-								<input id="experience" type="text" name="name" placeholder="Empresa">
-								<div class="period-initial">
-									<label>Periodo de inicio</label>
-									<div class="initial">
-										<select class="month" name="start-month" id="month-start"></select>
-										<select class="year" name="start-year" id="year"></select>
+							<div class="profile section">
+								<div class="info">
+									<h2 class="section-title">Perfil</h2>
+									<div class="section-buttons">
+										<input type="button" class="button-info" value="Editar" onclick="editar('content-profile')">
 									</div>
 								</div>
-								<div class="period-end">
-									<label>Periodo de fín</label>
-									<div class="end">
-										<select class="month" name="end-month" id="month-end"></select>
-										<select class="year" name="end-year" id="year-end"></select>
-									</div>
-								</div>
-								<div class="act">
-									<label>Actualmente</label>
-									<input id="actuality" type="checkbox" value="" name="actual">
-								</div>
-								<input type="button" name="save" value="Guardar" class="saveExperience">
-								<input type="button" name="cancel" value="Cancelar">
-								<input type="button" name="delete" value="Borrar">
-								<input type="button" value="cerrar" onclick="cerrar('content-experience')">
-							</div>
-						</div>
-
-						<div class="additional section">
-							<div class="info">
-								<h2 class="section-title">Más información</h2>
-								<div class="section-buttons">
-									<input type="button" class="button-info" value="Editar" onclick="editar('content-additional')">
+								<div id="content-profile" class="content"> <!--SECCION OCULTA-->
+									<input type="text" name="name" id="name" placeholder="Nombre">
+									<input type="text" name="lastname" id="lastname" placeholder="Apellidos" >
+									<input type="text" name="profession" id="profession" placeholder="Profesión">
+									<input type="button" name="save" class="saveProfile" value="Guardar">
+									<input type="button" name="cancel" value="Cancelar">
+									<input type="button" name="delete" value="Borrar">
+									<input type="button" value="cerrar" onclick="cerrar('content-profile')">
 								</div>
 							</div>
-							<div id="content-additional" class="content">
-								<div id="addMore">
-									<div class="newbutton">
-										<input class="education" type="text" name="education" placeholder="Estudios">
-										<input class="education_university" type="text" name="education_university" placeholder="Institucion">
-										<img class="prueba" src="images/more.png" alt="botonprueba" title="prueba">
-										<!-- <img class="more" src="images/more.png" alt="boton suma" onclick="addMore()"> -->
-									</div>
-									<span class="error error_estudio"></span>
-								</div>
-								<div id="addMore">
-									<div class="newbutton">
-										<input class="languages" type="text" name="languages" placeholder="Idiomas">
-										<label for="level">Nivel</label>
-										<select class=" level" id="level" name="level"></select>
-										<img class="prueba_language" src="images/more.png" alt="botonprueba" title="prueba">
+
+							<div class="summary section">
+								<div class="info">
+									<h2 class="section-title">Extracto</h2>
+									<div class="section-buttons">
+										<input type="button" class="button-info" value="Editar" onclick="editar('content-summary')">
 									</div>
 								</div>
-
-								<div class="input-skill">
-									<input type="text" id="skills1" class="skills" name="skills1" placeholder="Habilidades">
-							    	<input class="level_skills" type="text" name="level_skills1" value="" placeholder="Nivel del 1 al 100">
-							    	<!-- <img class="prueba_skill" src="images/more.png" alt="botonskill" title="prueba"> -->
-							    	<input type="text" id="skills2" class="skills" name="skills2" placeholder="Habilidades">
-							    	<input class="level_skills" type="text" name="level_skills2" value="" placeholder="Nivel del 1 al 100">
-							    	<input type="text" id="skills3" class="skills" name="skills3" placeholder="Habilidades">
-							    	<input class="level_skills" type="text" name="level_skills3" value="" placeholder="Nivel del 1 al 100">
+								<div id="content-summary" class="content"><!--SECCION OCULTA-->
+									<textarea name="summary" id="summary" rows="8" cols="80" placeholder="Introduce una pequeña descripción"></textarea>
+									<input type="button" name="save" value="Guardar" class="saveSumary">
+									<input type="button" name="cancel" value="Cancelar">
+									<input type="button" name="delete" value="Borrar">
+									<input type="button" value="cerrar" onclick="cerrar('content-summary')">
 								</div>
-
-								<input id="interest" type="text" name="interest" placeholder="Intereses">
-								<input type="button" name="save" value="Guardar" class="saveMore">
-								<input type="button" name="cancel" value="Cancelar">
-								<input type="button" name="delete" value="Borrar">
-								<input type="button" value="cerrar" onclick="cerrar('content-additional')">
 							</div>
-						</div><!--end additional section-->
 
-					<!-- BOTONES DE COLORES -->
-						<div class="personalize section">
-    						<div class="info">
+							<div class="contact-information section">
+								<div class="info">
+									<h2 class="section-title">Datos de contacto</h2>
+									<div class="section-buttons">
+										<input type="button" class="button-info" value="Editar" onclick="editar('content-contact-info')">
+									</div>
+								</div>
+								<div id="content-contact-info" class="content"><!--SECCION OCULTA-->
+									<input type="tel" name="telephone" id="telephone" placeholder="Teléfono">
+									<span class="error error_telephone"></span>
+									<input type="email" name="email" id="email" placeholder="Email">
+									<span class="error error_email"></span>
+									<input type="button" name="save" value="Guardar" class="saveContact">
+									<input type="button" name="cancel" value="Cancelar">
+									<input type="button" name="delete" value="Borrar">
+									<input type="button" value="cerrar" onclick="cerrar('content-contact-info')">
+								</div>
+							</div>
+
+							<div class="experience section">
+								<div class="info">
+									<h2 class="section-title">Experiencia laboral</h2>
+									<div class="section-buttons">
+										<input type="button" class="button-info" value="Editar" onclick="editar('content-experience')">
+									</div>
+								</div>
+								<div id="content-experience" class="content"><!--SECCION OCULTA-->
+									<input id="position" type="text" name="name" placeholder="Cargo">
+									<input id="experience" type="text" name="name" placeholder="Empresa">
+									<div class="period-initial">
+										<label>Periodo de inicio</label>
+										<div class="initial">
+											<select class="month" name="start-month" id="month-start"></select>
+											<select class="year" name="start-year" id="year"></select>
+										</div>
+									</div>
+									<div class="period-end">
+										<label>Periodo de fín</label>
+										<div class="end">
+											<select class="month" name="end-month" id="month-end"></select>
+											<select class="year" name="end-year" id="year-end"></select>
+										</div>
+									</div>
+									<div class="act">
+										<label>Actualmente</label>
+										<input id="actuality" type="checkbox" value="" name="actual">
+									</div>
+									<input type="button" name="save" value="Guardar" class="saveExperience">
+									<input type="button" name="cancel" value="Cancelar">
+									<input type="button" name="delete" value="Borrar">
+									<input type="button" value="cerrar" onclick="cerrar('content-experience')">
+								</div>
+							</div>
+
+							<div class="additional section">
+								<div class="info">
+									<h2 class="section-title">Más información</h2>
+									<div class="section-buttons">
+										<input type="button" class="button-info" value="Editar" onclick="editar('content-additional')">
+									</div>
+								</div>
+								<div id="content-additional" class="content">
+									<div id="addMore">
+										<div class="newbutton">
+											<input class="education" type="text" name="education" placeholder="Estudios">
+											<input class="education_university" type="text" name="education_university" placeholder="Institucion">
+											<img class="prueba" src="images/more.png" alt="botonprueba" title="prueba">
+											<!-- <img class="more" src="images/more.png" alt="boton suma" onclick="addMore()"> -->
+										</div>
+										<span class="error error_estudio"></span>
+									</div>
+									<div id="addMore">
+										<div class="newbutton">
+											<input class="languages" type="text" name="languages" placeholder="Idiomas">
+											<label for="level">Nivel</label>
+											<select class=" level" id="level" name="level"></select>
+											<img class="prueba_language" src="images/more.png" alt="botonprueba" title="prueba">
+										</div>
+									</div>
+
+									<div class="input-skill">
+										<input type="text" id="skills1" class="skills" name="skills1" placeholder="Habilidades">
+										<input class="level_skills" type="text" name="level_skills1" value="" placeholder="Nivel del 1 al 100">
+										<!-- <img class="prueba_skill" src="images/more.png" alt="botonskill" title="prueba"> -->
+										<input type="text" id="skills2" class="skills" name="skills2" placeholder="Habilidades">
+										<input class="level_skills" type="text" name="level_skills2" value="" placeholder="Nivel del 1 al 100">
+										<input type="text" id="skills3" class="skills" name="skills3" placeholder="Habilidades">
+										<input class="level_skills" type="text" name="level_skills3" value="" placeholder="Nivel del 1 al 100">
+									</div>
+
+									<input id="interest" type="text" name="interest" placeholder="Intereses">
+									<input type="button" name="save" value="Guardar" class="saveMore">
+									<input type="button" name="cancel" value="Cancelar">
+									<input type="button" name="delete" value="Borrar">
+									<input type="button" value="cerrar" onclick="cerrar('content-additional')">
+								</div>
+							</div><!--end additional section-->
+
+							<!-- BOTONES DE COLORES -->
+							<div class="personalize section">
+								<div class="info">
 									<h2 class="section-title">Personaliza tu CV</h2>
 									<div class="color-buttons">
-	   								<input class="botoncito button_green" type="button" data-theme-class="theme1">
-	   								<input class="botoncito button_purple" type="button" data-theme-class="theme2">
-	   								<input class="botoncito button_yellow" type="button" data-theme-class="theme3">
+										<input class="botoncito button_green" type="button" data-theme-class="theme1">
+										<input class="botoncito button_purple" type="button" data-theme-class="theme2">
+										<input class="botoncito button_yellow" type="button" data-theme-class="theme3">
 										<input class="botoncito button_blue" type="button" data-theme-class="theme4">
 									</div>
-    						</div>
-						</div>
-		</form>
-
-					<!-- DIV OCULTO VISTA PREVIA-->
-					<div class="preview" id="preview">
-						<div class="showpreview">
-
-							<img class="hide" src="images/cancel.png" alt="boton cerrar" onclick="cerrar('preview')">
-							<div class="resume-header">
-								<h2 class="resume-title" id="data-profile"></h2>
-							</div>
-
-							<div class="resume-header-profession">
-								<span id="data-profession"></span>
-							</div>
-							<hr class="top-line">
-							<div class="resume-header-summary">
-								<span id="data-summary"></span>
-							</div>
-
-							<div class="section-preview">
-								<div class="section-title-line">
-									<div class="titles"><h3>Datos de contacto</h3></div>
-									<hr class="bottom-line">
-								</div>
-								<div>
-									<span class="span-titles">Teléfono:</span> <span id="data-telephone"></span>
-								</div>
-								<div>
-									<span class="span-titles">Email:</span> <span id="data-email"></span>
 								</div>
 							</div>
+						</form>
 
-							<div class="section-preview">
-								<div class="section-title-line">
-									<div class="titles"><h3>Experiencia laboral</h3></div>
-									<hr class="bottom-line">
-								</div>
-								<div>
-									 <span class="span-titles">Cargo:</span> <span id="data-position"></span>
-								 </div>
-								<div>
-									<span class="span-titles">Empresa:</span> <span id="data-company"></span>
-								</div>
-								<div>
-									<span class="span-titles">Periodo de inicio:</span> <span id="data-start"></span>
-								</div>
-								<div>
-									<span class="span-titles">Periodo de fin:</span> <span id="data-end"></span>
-								</div>
-						</div>
+						<!-- DIV OCULTO VISTA PREVIA-->
+						<div class="preview" id="preview">
+							<div class="showpreview">
 
-						<div class="section-preview">
-							<div class="section-title-line">
-								<div class="titles"><h3>Más información</h3></div>
-								<hr class="bottom-line">
-							</div>
-							<div>
-								<span class="span-titles">Estudios:</span> <br>
-								<ul id="data-studies" class="data-list data-studies"></ul>
-							</div>
-							<div>
-								<span class="span-titles">Idiomas:</span>
-								<ul id="data-languages" class="data-list data-languages"></ul>
-							</div>
-							<!-- <div>
-								<span>Nivel:</span> <span id="data-level"></span>
-							</div> -->
+								<img class="hide" src="images/cancel.png" alt="boton cerrar" onclick="cerrar('preview')">
+								<div class="resume-header">
+									<h2 class="resume-title" id="data-profile"></h2>
+								</div>
 
-							<div class="skill_container">
-								<span class="span-titles">Habilidades:</span>								
-								<div class="barSkillsSection">
-									<div class="levelSkill">
-										<p id="skillName1" class="skillName"></p>
+								<div class="resume-header-profession">
+									<span id="data-profession"></span>
+								</div>
+								<hr class="top-line">
+								<div class="resume-header-summary">
+									<span id="data-summary"></span>
+								</div>
+
+								<div class="section-preview">
+									<div class="section-title-line">
+										<div class="titles"><h3>Datos de contacto</h3></div>
+										<hr class="bottom-line">
+									</div>
+									<div>
+										<span class="span-titles">Teléfono:</span> <span id="data-telephone"></span>
+									</div>
+									<div>
+										<span class="span-titles">Email:</span> <span id="data-email"></span>
 									</div>
 								</div>
-								<div class="barSkillsSection">
-									<div class="levelSkill">
-										<p id="skillName2" class="skillName"></p>
-									</div>
-								</div>
-								<div class="barSkillsSection">
-									<div class="levelSkill">
-										<p id="skillName3" class="skillName"></p>
-									</div>
-								</div>
-    						</div>
 
-							<div>
-								<span class="span-titles">Intereses:</span> <span id="data-interest"></span>
+								<div class="section-preview">
+									<div class="section-title-line">
+										<div class="titles"><h3>Experiencia laboral</h3></div>
+										<hr class="bottom-line">
+									</div>
+									<div>
+										<span class="span-titles">Cargo:</span> <span id="data-position"></span>
+									</div>
+									<div>
+										<span class="span-titles">Empresa:</span> <span id="data-company"></span>
+									</div>
+									<div>
+										<span class="span-titles">Periodo de inicio:</span> <span id="data-start"></span>
+									</div>
+									<div>
+										<span class="span-titles">Periodo de fin:</span> <span id="data-end"></span>
+									</div>
+								</div>
+
+								<div class="section-preview">
+									<div class="section-title-line">
+										<div class="titles"><h3>Más información</h3></div>
+										<hr class="bottom-line">
+									</div>
+									<div>
+										<span class="span-titles">Estudios:</span> <br>
+										<ul id="data-studies" class="data-list data-studies"></ul>
+									</div>
+									<div>
+										<span class="span-titles">Idiomas:</span>
+										<ul id="data-languages" class="data-list data-languages"></ul>
+									</div>
+									<!-- <div>
+									<span>Nivel:</span> <span id="data-level"></span>
+								</div> -->
+
+								<div class="skill_container">
+									<span class="span-titles">Habilidades:</span>
+									<div class="barSkillsSection">
+										<div class="levelSkill">
+											<p id="skillName1" class="skillName"></p>
+										</div>
+									</div>
+									<div class="barSkillsSection">
+										<div class="levelSkill">
+											<p id="skillName2" class="skillName"></p>
+										</div>
+									</div>
+									<div class="barSkillsSection">
+										<div class="levelSkill">
+											<p id="skillName3" class="skillName"></p>
+										</div>
+									</div>
+								</div>
+
+								<div>
+									<span class="span-titles">Intereses:</span> <span id="data-interest"></span>
+								</div>
 							</div>
-						</div>
 
-					</div> <!--end showpreview-->
-				</div>  <!--end preview-->
+						</div> <!--end showpreview-->
+					</div>  <!--end preview-->
 
-			</div><!--split-div-->
+				</div><!--split-div-->
 
 			</div><!--fin container formulario-->
 		</main>
 
-	<footer>
-		<div class="itemsfooter">
-			<img src="images/Mediaqueers.png" class="logen"  alt="logo">
-			<p> Copyright &copy; 2017 </p>
-		</div>
+		<footer>
+			<div class="itemsfooter">
+				<img src="images/Mediaqueers.png" class="logen"  alt="logo">
+				<p> Copyright &copy; 2017 </p>
+			</div>
 
-		<div class="itemsfooter">
-			<p>¿Dónde estamos? </p>
-			<div class="map"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.8243883784326!2d-3.708031684604198!3d40.412740979365644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4227d58772a6e1%3A0xf3b5fc75d6a7b133!2sutopic_US!5e0!3m2!1ses!2ses!4v1511432618667" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<div class="itemsfooter">
+				<p>¿Dónde estamos? </p>
+				<div class="map"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.8243883784326!2d-3.708031684604198!3d40.412740979365644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4227d58772a6e1%3A0xf3b5fc75d6a7b133!2sutopic_US!5e0!3m2!1ses!2ses!4v1511432618667" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 			</div>
 
