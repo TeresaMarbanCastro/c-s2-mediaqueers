@@ -119,13 +119,13 @@ function addStudy() {
   var allStudyList = '';
 
   for (var i = 0; i < studyList.length; i++) {
-    allStudyList += '<li>' + studyList[i].name +'</li>'; 
-    allStudyList += '<li>' + studyList[i].insti +'</li><hr class="line">'; 
+    allStudyList += '<li>' + studyList[i].name +'</li>';
+    allStudyList += '<li>' + studyList[i].insti +'</li><hr class="line">';
     studyListPreview.innerHTML = allStudyList;
     document.querySelector(".education").value = '';
     document.querySelector('.education_university').value = '';
     vistaPrevia("preview");
-  } 
+  }
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////REVISAR
@@ -150,14 +150,14 @@ function addLanguage() {
   var allLanguageList = '';
 
   for (var i = 0; i < languageList.length; i++) {
-    allLanguageList += '<li>' + languageList[i].name +'</li>'; 
-    allLanguageList += '<li>' + languageList[i].lvl +'</li><hr class="line">'; 
+    allLanguageList += '<li>' + languageList[i].name +'</li>';
+    allLanguageList += '<li>' + languageList[i].lvl +'</li><hr class="line">';
     languageListPreview.innerHTML = allLanguageList;
 
     document.querySelector(".languages").value = '';
     document.querySelector('.level').value = '';
     vistaPrevia("preview");
-  } 
+  }
 }
 var botonIdioma = document.querySelector('.prueba_language');
 botonIdioma.addEventListener('click', addLanguage);
@@ -234,7 +234,7 @@ var options = options + '<option value ="C2">C2</option>';
 document.querySelector('#level').innerHTML = options;
 
 
-var classModifier = 1;
+/*var classModifier = 1;
 
 //función boton añadir mas
 function addMore(){
@@ -246,7 +246,7 @@ function addMore(){
 	additional.insertAdjacentHTML('beforeend', itemRepeat);
 	classModifier++;
 }
-
+*/
 
 //smooth scroll function
 (function() {
