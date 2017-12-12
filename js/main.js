@@ -138,6 +138,8 @@ var botonPrueba = document.querySelector('.prueba');
 botonPrueba.addEventListener('click', addStudy);
 
 //SECCION IDIOMAS//////////////////////////////////////////////////////
+
+
 var languageName = document.querySelector(".languages");
 var languageLevel = document.querySelector("#level");
 var languageList = [];
@@ -165,33 +167,44 @@ var botonIdioma = document.querySelector('.prueba_language');
 botonIdioma.addEventListener('click', addLanguage);
 
 
+///////SKILSSSS////////////////////////////////
+function addMoreSkill(){
+	var itemRepeat = '<div class="barSkillsSection"><div class="levelSkill"><p class="skillName"></p></div></div>';
+
+	var additional = document.querySelector('.hidden');
+	additional.insertAdjacentHTML('beforeend', itemRepeat);
+}
+var newSkill= document.querySelector('.skillName');
+var inputSkill = document.querySelector('.skills');
+var inputLevel = document.querySelector('.level_skills');
+
+function addSkill(){
+	if((inputSkill == '') ||(inputLevel =='') ){
+		document.querySelector('.hidden').style.display ='none';
+	} else{
+	newSkill.innerHTML = inputSkill.value;
+  newSkill.parentElement.style.width = inputLevel.value + '%';
+	document.querySelector(".skills").value = '';
+	document.querySelector('.level_skills').value = '';
+	document.querySelector('.hidden').style.display ='block';
+	vistaPrevia("preview");
+	}
+}
+var botonSkills = document.querySelector('.prueba_skill');
+botonSkills.addEventListener('click', addSkill);
+
 function fillMore(){
 	vistaPrevia("preview");
-	//var datosIdiomas = document.querySelector("#languages").value;
-	//var datosNivel = document.querySelector("#level").value;
-	var datosHabilidades1 = document.querySelector("#skills1").value;
-	var datosHabilidades2 = document.querySelector("#skills2").value;
-	var datosHabilidades3 = document.querySelector("#skills3").value;
+
+	// var datosHabilidades2 = document.querySelector("#skills2").value;
+	// var datosHabilidades3 = document.querySelector("#skills3").value;
 	var datosIntereses = document.querySelector("#interest").value;
-
-	// document.querySelector("#data-studies").innerHTML = datosEstudios;
-
-	//document.querySelector("#data-languages").innerHTML = datosIdiomas;
-	//document.querySelector("#data-level").innerHTML = datosNivel;
 	document.querySelector("#data-interest").innerHTML = datosIntereses;
-	var newSkill= document.querySelectorAll('.skillName');
-	var inputSkill = document.querySelectorAll('.skills');
-	var inputLevel = document.querySelectorAll('.level_skills');
-
-  	for (var i = 0; i < newSkill.length; i++) {
-    	newSkill[i].innerHTML = inputSkill[i].value;
-    	newSkill[i].parentElement.style.width = inputLevel[i].value + '%';
-  	}
-  	document.querySelector("#skillName1").innerHTML = datosHabilidades1;
-  	document.querySelector("#skillName2").innerHTML = datosHabilidades2;
-  	document.querySelector("#skillName3").innerHTML = datosHabilidades3;
 
 
+
+  	// document.querySelector("#skillName2").innerHTML = datosHabilidades2;
+  	// document.querySelector("#skillName3").innerHTML = datosHabilidades3;
 }
 var saveMore = document.querySelector('.saveMore');
 saveMore.addEventListener('click', fillMore);
