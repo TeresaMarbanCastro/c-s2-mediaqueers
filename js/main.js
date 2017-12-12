@@ -113,30 +113,28 @@ var studyList = [];
 var studyListPreview = document.querySelector(".data-studies");
 
 function addStudy() {
-  var study = {
-    name: studyName.value,
-		insti:studyInstitution.value
-  };
-  studyList.push(study);
-  var allStudyList = '';
-  for (var i = 0; i < studyList.length; i++) {
+    var study = {
+        name: studyName.value,
+        insti:studyInstitution.value
+    };
+    studyList.push(study);
+    var allStudyList = '';
 
-    allStudyList += '<li>' + studyList[i].name +'</li>';
-    allStudyList += '<li>' + studyList[i].insti +'</li><hr class="line">';
-    studyListPreview.innerHTML = allStudyList;
-    document.querySelector(".education").value = '';
-    document.querySelector('.education_university').value = '';
-    vistaPrevia("preview");
-  }
+    for (var i = 0; i < studyList.length; i++) {
+        allStudyList += '<li>' + studyList[i].name +'</li>';
+        allStudyList += '<li>' + studyList[i].insti +'</li><hr class="line">';
+        studyListPreview.innerHTML = allStudyList;
+        document.querySelector(".education").value = '';
+        document.querySelector('.education_university').value = '';
+        vistaPrevia("preview");
+    }
+}
 
-    allStudyList += '<li>' + studyList[i].name + ' - ' +studyList[i].insti +'</li>';
-  }
-
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////REVISAR
+//if(study.name == 0 || study.insti == 0)
+//document.querySelector(".error_estudio");
 
 var botonPrueba = document.querySelector('.prueba');
-
 botonPrueba.addEventListener('click', addStudy);
 
 //SECCION IDIOMAS//////////////////////////////////////////////////////
@@ -146,34 +144,31 @@ var languageList = [];
 var languageListPreview = document.querySelector(".data-languages");
 
 function addLanguage() {
-  var language = {
-    name: languageName.value,
-    lvl:languageLevel.value
-  };
-  languageList.push(language);
-  var allLanguageList = '';
+    var language = {
+        name: languageName.value,
+        lvl:languageLevel.value
+    };
+    languageList.push(language);
+    var allLanguageList = '';
 
-  for (var i = 0; i < languageList.length; i++) {
-    allLanguageList += '<li>' + languageList[i].name +'</li>';
-    allLanguageList += '<li>' + languageList[i].lvl +'</li><hr class="line">';
-    languageListPreview.innerHTML = allLanguageList;
+    for (var i = 0; i < languageList.length; i++) {
+        allLanguageList += '<li>' + languageList[i].name +'</li>';
+        allLanguageList += '<li>' + languageList[i].lvl +'</li><hr class="line">';
+        languageListPreview.innerHTML = allLanguageList;
 
-    document.querySelector(".languages").value = '';
-    document.querySelector('.level').value = '';
-    vistaPrevia("preview");
-  }
+        document.querySelector(".languages").value = '';
+        document.querySelector('.level').value = '';
+        vistaPrevia("preview");
+    }
 }
 var botonIdioma = document.querySelector('.prueba_language');
 botonIdioma.addEventListener('click', addLanguage);
 
 
-
-
-
 function fillMore(){
 	vistaPrevia("preview");
-	var datosIdiomas = document.querySelector("#languages").value;
-	var datosNivel = document.querySelector("#level").value;
+	//var datosIdiomas = document.querySelector("#languages").value;
+	//var datosNivel = document.querySelector("#level").value;
 	var datosHabilidades1 = document.querySelector("#skills1").value;
 	var datosHabilidades2 = document.querySelector("#skills2").value;
 	var datosHabilidades3 = document.querySelector("#skills3").value;
@@ -181,8 +176,8 @@ function fillMore(){
 
 	// document.querySelector("#data-studies").innerHTML = datosEstudios;
 
-	document.querySelector("#data-languages").innerHTML = datosIdiomas;
-	document.querySelector("#data-level").innerHTML = datosNivel;
+	//document.querySelector("#data-languages").innerHTML = datosIdiomas;
+	//document.querySelector("#data-level").innerHTML = datosNivel;
 	document.querySelector("#data-interest").innerHTML = datosIntereses;
 	var newSkill= document.querySelectorAll('.skillName');
 	var inputSkill = document.querySelectorAll('.skills');
@@ -195,7 +190,7 @@ function fillMore(){
   	document.querySelector("#skillName1").innerHTML = datosHabilidades1;
   	document.querySelector("#skillName2").innerHTML = datosHabilidades2;
   	document.querySelector("#skillName3").innerHTML = datosHabilidades3;
-		addStudy();
+
 
 }
 var saveMore = document.querySelector('.saveMore');
