@@ -145,6 +145,10 @@ input{
 .error{
 	color: red;
 }
+.work {
+	display: flex;
+	flex-direction: column;
+}
 .skill_container {
     display: flex;
     flex-direction: column;
@@ -227,6 +231,12 @@ select {
 	flex-direction: column;
 }
 
+.buttonrelative {
+	position: relative;
+}
+.prueba_experience {
+	position: absolute;
+}
 input#actuality {
 		width: 30px;
 }
@@ -523,6 +533,9 @@ iframe{
 	}
 	.act{
 	    margin-bottom: 20px;
+	}
+	.act img {
+		/*right: 500px;*/
 	}
 	.preview {
     padding: 39px 0;
