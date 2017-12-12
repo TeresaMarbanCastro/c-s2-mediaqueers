@@ -88,23 +88,70 @@ function fillContact(){
 var saveContact = document.querySelector('.saveContact');
 saveContact.addEventListener('click', fillContact);
 
-//formulario Datos experiencia laboral
-function fillExperience(){
-	vistaPrevia("preview");
-	var datosCargo = document.querySelector("#position").value;
-	var datosEmpresa = document.querySelector("#experience").value;
-	var datosInicioMes = document.querySelector("#month-start").value;
-	var datosInicioAno = document.querySelector("#year").value;
-	var datosFinMes = document.querySelector("#month-end").value;
-	var datosFinAno = document.querySelector("#year-end").value;
+// //formulario Datos experiencia laboral
+// function fillExperience(){
+// 	// vistaPrevia("preview");
+// 	// var datosCargo = document.querySelector("#position").value;
+// 	// var datosEmpresa = document.querySelector("#experience").value;
+// 	// var datosInicioMes = document.querySelector("#month-start").value;
+// 	// var datosInicioAno = document.querySelector("#year").value;
+// 	// var datosFinMes = document.querySelector("#month-end").value;
+// 	// var datosFinAno = document.querySelector("#year-end").value;
+// 	//
+// 	// document.querySelector("#data-position").innerHTML = datosCargo;
+// 	// document.querySelector("#data-company").innerHTML = datosEmpresa;
+// 	// document.querySelector("#data-start").innerHTML = datosInicioMes+ " " +datosInicioAno;
+// 	// document.querySelector("#data-end").innerHTML = datosFinMes+ " " +datosFinAno;
+// }
+// var saveExperience = document.querySelector('.saveExperience');
+// saveExperience.addEventListener('click', fillExperience);
 
-	document.querySelector("#data-position").innerHTML = datosCargo;
-	document.querySelector("#data-company").innerHTML = datosEmpresa;
-	document.querySelector("#data-start").innerHTML = datosInicioMes+ " " +datosInicioAno;
-	document.querySelector("#data-end").innerHTML = datosFinMes+ " " +datosFinAno;
+//SECCION EXPERIENCIA LABORAL//////////////////////////////////////////////////////
+var jobTitle = document.querySelector("#position");
+var jobExperience = document.querySelector('#experience');
+var startPeriod = document.querySelector('.initial');
+var endPeriod = document.querySelector('.end')
+var jobList = [];
+var jobListPreview = document.querySelector(".span-experience");
+var companyListPreview = document.querySelector(".span-company");
+var startListPreview = document.querySelector(".span-start");
+var endListPreview = document.querySelector(".span-end");
+
+function addJob() {
+    var job = {
+        cargo: jobTitle.value,
+        empresa:jobExperience.value,
+				periodoInicio: startPeriod.value,
+				periodoFin: endPeriod.value
+    };
+    jobList.push(job);
+    var allJobList = '';
+
+    for (var i = 0; i < jobList.length; i++) {
+        allJobList += '<li>' + jobList[i].cargo +'</li>';
+        allJobList += '<li>' + jobList[i].empresa +'</li><hr class="line">';
+				allJobList += '<li>' + jobList[i].periodoInicio +'</li><hr class="line">';
+				allJobList += '<li>' + jobList[i].periodoFin +'</li><hr class="line">';
+        jobListPreview.innerHTML = allJobList;
+				companyListPreview.innerHTML = allJobList;
+				startListPreview.innerHTML = allJobList;
+				endListPreview.innerHTML = allJobList;
+        document.querySelector("#position").value = '';
+        document.querySelector('#experience').value = '';
+				document.querySelector('.initial').value = '';
+				document.querySelector('.end').value = '';
+
+        vistaPrevia("preview");
+    }
 }
-var saveExperience = document.querySelector('.saveExperience');
-saveExperience.addEventListener('click', fillExperience);
+
+/////////////////////////////////////////////////////////////////////////////////////////////REVISAR
+//if(study.name == 0 || study.insti == 0)
+//document.querySelector(".error_estudio");
+
+var botonPruebaEx = document.querySelector('.prueba_experience');
+botonPruebaEx.addEventListener('click', addJob);
+
 
 //SECCION EDUCACION//////////////////////////////////////////////////////
 var studyName = document.querySelector(".education");
