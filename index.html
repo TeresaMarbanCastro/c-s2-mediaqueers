@@ -19,8 +19,7 @@
 				<ul class="menu">
 					<li class="seccion home"><a href="#home">Home</a></li>
 					<li class="seccion vista"><a href="#vista" onclick="vistaPrevia('preview')">Vista previa</a>
-						<li class="seccion print"><a href="#imprimir"><img src="images/printer.png" alt ="impresora"></a></li>
-					</ul>
+				</ul>
 				</nav>
 			</header>
 
@@ -50,8 +49,7 @@
 									<input type="text" name="lastname" id="lastname" placeholder="Apellidos" >
 									<input type="text" name="profession" id="profession" placeholder="Profesión">
 									<input type="button" name="save" class="saveProfile" value="Guardar">
-									<input type="button" name="cancel" value="Cancelar">
-									<input type="button" name="delete" value="Borrar">
+									<input type="button" name="delete" value="Borrar" class="delete-profile">
 									<input type="button" value="cerrar" onclick="cerrar('content-profile')">
 								</div>
 							</div>
@@ -67,8 +65,7 @@
 								<div id="content-summary" class="content"><!--SECCION OCULTA-->
 									<textarea name="summary" id="summary" rows="8" cols="80" placeholder="Introduce una pequeña descripción"></textarea>
 									<input type="button" name="save" value="Guardar" class="saveSumary">
-									<input type="button" name="cancel" value="Cancelar">
-									<input type="button" name="delete" value="Borrar">
+									<input type="button" name="delete" value="Borrar" class="delete-summary">
 									<input type="button" value="cerrar" onclick="cerrar('content-summary')">
 								</div>
 							</div><!--end summary section-->
@@ -86,8 +83,7 @@
 									<input type="email" name="email" id="email" placeholder="Email">
 									<span class="error error_email"></span>
 									<input type="button" name="save" value="Guardar" class="saveContact">
-									<input type="button" name="cancel" value="Cancelar">
-									<input type="button" name="delete" value="Borrar">
+									<input type="button" name="delete" value="Borrar" class="delete-contact">
 									<input type="button" value="cerrar" onclick="cerrar('content-contact-info')">
 								</div>
 							</div> <!--end contact-information-->
@@ -108,14 +104,14 @@
 												<input id="position" type="text" name="name" placeholder="Cargo">
 												<input id="experience" type="text" name="name" placeholder="Empresa">
 												<div class="period-initial">
-													<label>Periodo de inicio</label>
+													<label>Fecha de inicio</label>
 													<div class="initial">
 														<select class="month" name="start-month" id="month-start"></select>
 														<select class="year" name="start-year" id="year"></select>
 													</div>
 												</div>
 												<div class="period-end">
-													<label>Periodo de fin</label>
+													<label>Fecha de fin</label>
 													<div class="end">
 														<select class="month" name="end-month" id="month-end"></select>
 														<select class="year" name="end-year" id="year-end"></select>
@@ -134,8 +130,7 @@
 									</div>
 
 											<input type="button" name="save" value="Guardar" class="saveExperience">
-											<input type="button" name="cancel" value="Cancelar">
-											<input type="button" name="delete" value="Borrar">
+											<input type="button" name="delete" value="Borrar" class="delete-experience">
 											<input type="button" value="cerrar" onclick="cerrar('content-experience')">
 										</div> <!-- end content-experience-->
 									</div><!--end experience section-->
@@ -169,20 +164,23 @@
 									</div>
 
 									<div class="input-skill">
-										<input type="text" id="skills1" class="skills" name="skills1" placeholder="Habilidades">
+										<input type="text" id="skills1" class="skills" name="skills1" placeholder="Habilidad">
 										<input class="level_skills" type="text" name="level_skills1" value="" placeholder="Nivel del 1 al 100">
-										<img class="prueba_skill" src="images/more.png" alt="botonskill" title="prueba">
-										<!-- <input type="text" id="skills2" class="skills" name="skills2" placeholder="Habilidades">
+										<input type="text" id="skills2" class="skills" name="skills2" placeholder="Habilidad">
 										<input class="level_skills" type="text" name="level_skills2" value="" placeholder="Nivel del 1 al 100">
-										<input type="text" id="skills3" class="skills" name="skills3" placeholder="Habilidades">
-										<input class="level_skills" type="text" name="level_skills3" value="" placeholder="Nivel del 1 al 100"> -->
+										<input type="text" id="skills3" class="skills" name="skills3" placeholder="Habilidad">
+										<input class="level_skills" type="text" name="level_skills3" value="" placeholder="Nivel del 1 al 100">
 									</div>
+									<div class="addMore">
+										<div class="newbutton">
+											<input id="interest" type="text" name="interest" placeholder="Intereses">
+											<img class="prueba_interest" src="images/more.png" alt="botonprueba" title="prueba">
+										</div>
+									</div>
+											<input type="button" name="save" value="Guardar" class="saveMore">
+											<input type="button" name="delete" value="Borrar" class="delete-additional">
+											<input type="button" value="cerrar" onclick="cerrar('content-additional')">
 
-									<input id="interest" type="text" name="interest" placeholder="Intereses">
-									<input type="button" name="save" value="Guardar" class="saveMore">
-									<input type="button" name="cancel" value="Cancelar">
-									<input type="button" name="delete" value="Borrar">
-									<input type="button" value="cerrar" onclick="cerrar('content-additional')">
 								</div>
 							</div><!--end additional section-->
 
@@ -239,15 +237,6 @@
 
 										 <span id="data-position" class="span-experience"></span>
 									</div>
-									<div>
-									<span id="data-company" class="span-company"></span>
-									</div>
-									<div>
-									<span id="data-start"  class="span-start"></span>
-									</div>
-									<div>
-									<span id="data-end" class="span-end"></span>
-									</div>
 								</div>
 
 								<div class="section-preview">
@@ -269,17 +258,30 @@
 
 								<div class="skill_container">
 									<span class="span-titles">Habilidades:</span>
-									<div class="hidden">
+
 										<div class="barSkillsSection">
 											<div class="levelSkill">
 												<p id="skillName1" class="skillName"></p>
 											</div>
 										</div>
-									</div>
+										<div class="barSkillsSection">
+											<div class="levelSkill">
+												<p id="skillName2" class="skillName"></p>
+											</div>
+										</div>
+										<div class="barSkillsSection">
+											<div class="levelSkill">
+												<p id="skillName3" class="skillName"></p>
+											</div>
+										</div>
+
+
 								</div>
 
 								<div>
-									<span class="span-titles">Intereses:</span> <span id="data-interest"></span>
+									<span class="span-titles">Intereses:</span>
+									<ul id="data-interest" class="data-list data-interest"></ul>
+
 								</div>
 							</div>
 

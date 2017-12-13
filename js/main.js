@@ -24,9 +24,17 @@ function fillProfile(){
 	datosApellido = datosApellido.toUpperCase();
 
 	document.querySelector("#data-profile").innerHTML = datosNombre + ' ' + datosApellido;
-    document.querySelector("#data-profession").innerHTML = datosProfesion;
+  document.querySelector("#data-profession").innerHTML = datosProfesion;
 
 }
+
+function deleteProfile() {
+	document.querySelector("#data-profile").innerHTML = '';
+	document.querySelector("#data-profession").innerHTML = '';
+}
+
+var profileDelete = document.querySelector('.delete-profile');
+profileDelete.addEventListener('click', deleteProfile);
 
 var saveProfile = document.querySelector('.saveProfile');
 saveProfile.addEventListener('click', fillProfile);
@@ -39,6 +47,14 @@ function fillSummary(){
 }
 var saveSumary = document.querySelector('.saveSumary');
 saveSumary.addEventListener('click', fillSummary);
+
+function deleteSummary() {
+	document.querySelector("#data-summary").innerHTML = '';
+
+}
+
+var summaryDelete = document.querySelector('.delete-summary');
+summaryDelete.addEventListener('click', deleteSummary);
 
 //funciones validar email
 function validateEmail(email) {
@@ -88,23 +104,14 @@ function fillContact(){
 var saveContact = document.querySelector('.saveContact');
 saveContact.addEventListener('click', fillContact);
 
-// //formulario Datos experiencia laboral
-// function fillExperience(){
-// 	// vistaPrevia("preview");
-// 	// var datosCargo = document.querySelector("#position").value;
-// 	// var datosEmpresa = document.querySelector("#experience").value;
-// 	// var datosInicioMes = document.querySelector("#month-start").value;
-// 	// var datosInicioAno = document.querySelector("#year").value;
-// 	// var datosFinMes = document.querySelector("#month-end").value;
-// 	// var datosFinAno = document.querySelector("#year-end").value;
-// 	//
-// 	// document.querySelector("#data-position").innerHTML = datosCargo;
-// 	// document.querySelector("#data-company").innerHTML = datosEmpresa;
-// 	// document.querySelector("#data-start").innerHTML = datosInicioMes+ " " +datosInicioAno;
-// 	// document.querySelector("#data-end").innerHTML = datosFinMes+ " " +datosFinAno;
-// }
-// var saveExperience = document.querySelector('.saveExperience');
-// saveExperience.addEventListener('click', fillExperience);
+function deleteContact() {
+	document.querySelector("#data-telephone").innerHTML = '';
+	document.querySelector("#data-email").innerHTML = '';
+
+}
+
+var contactDelete = document.querySelector('.delete-contact');
+contactDelete.addEventListener('click', deleteContact);
 
 //SECCION EXPERIENCIA LABORAL//////////////////////////////////////////////////////
 var jobTitle = document.querySelector("#position");
@@ -115,16 +122,12 @@ var endMonth = document.querySelector('#month-end');
 var endYear = document.querySelector('#year-end');
 var jobList = [];
 var jobListPreview = document.querySelector(".span-experience");
-// var companyListPreview = document.querySelector(".span-company");
-// var startListPreview = document.querySelector(".span-start");
-// var endListPreview = document.querySelector(".span-end");
+
 
 function addJob() {
     var job = {
         cargo: jobTitle.value,
         empresa:jobExperience.value,
-				// periodoInicio: startPeriod.value,
-				// periodoFin: endPeriod.value
 				mesIni:startMonth.value,
 				anoIni:startYear.value,
 				mesFin:endMonth.value,
@@ -135,28 +138,30 @@ function addJob() {
 
     for (var i = 0; i < jobList.length; i++) {
         allJobList += '<li>Cargo: ' + jobList[i].cargo +'</li>';
-        allJobList += '<li>Empresa: ' + jobList[i].empresa +'</li><hr class="line">';
-				allJobList += '<li>Fecha de inicio: ' + jobList[i].mesIni + ' - '+jobList[i].anoIni+ '</li><hr class="line">';
-				allJobList += '<li>Fecha de fin: ' + jobList[i].mesFin + ' - '+jobList[i].anoFin +'</li><hr class="line">';
-        jobListPreview.innerHTML = allJobList;
-				// companyListPreview.innerHTML = allJobList;
-				// startListPreview.innerHTML = allJobList;
-				// endListPreview.innerHTML = allJobList;
-        document.querySelector("#position").value = '';
-        document.querySelector('#experience').value = '';
-				document.querySelector('.initial').value = '';
-				document.querySelector('.end').value = '';
-
-        vistaPrevia("preview");
+        allJobList += '<li>Empresa: ' + jobList[i].empresa +'</li>';
+				allJobList += '<li>Fecha de inicio: ' + jobList[i].mesIni + ' - '+jobList[i].anoIni+ '</li>';
+				allJobList += '<li>Fecha de fin: ' + jobList[i].mesFin + ' - '+jobList[i].anoFin +'</li><hr class="line"><br>';
     }
+		jobListPreview.innerHTML = allJobList;
+		document.querySelector("#position").value = '';
+		document.querySelector('#experience').value = '';
+		document.querySelector('.initial').value = '';
+		document.querySelector('.end').value = '';
+		vistaPrevia("preview");
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////REVISAR
-//if(study.name == 0 || study.insti == 0)
-//document.querySelector(".error_estudio");
+
 
 var botonPruebaEx = document.querySelector('.prueba_experience');
 botonPruebaEx.addEventListener('click', addJob);
+
+function deleteJob() {
+	jobList = [];
+	jobListPreview.innerHTML = '';
+}
+
+var jobDelete = document.querySelector('.delete-experience');
+jobDelete.addEventListener('click', deleteJob);
 
 
 //SECCION EDUCACION//////////////////////////////////////////////////////
@@ -176,11 +181,16 @@ function addStudy() {
     for (var i = 0; i < studyList.length; i++) {
         allStudyList += '<li>' + studyList[i].name +'</li>';
         allStudyList += '<li>' + studyList[i].insti +'</li><hr class="line">';
-        studyListPreview.innerHTML = allStudyList;
-        document.querySelector(".education").value = '';
-        document.querySelector('.education_university').value = '';
-        vistaPrevia("preview");
     }
+		document.querySelector(".education").value = '';
+		document.querySelector('.education_university').value = '';
+		studyListPreview.innerHTML = allStudyList;
+		vistaPrevia("preview");
+}
+
+function deleteStudies() {
+	studyList = [];
+	studyListPreview.innerHTML = '';
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////REVISAR
@@ -209,59 +219,95 @@ function addLanguage() {
     for (var i = 0; i < languageList.length; i++) {
         allLanguageList += '<li>' + languageList[i].name +'</li>';
         allLanguageList += '<li>' + languageList[i].lvl +'</li><hr class="line">';
-        languageListPreview.innerHTML = allLanguageList;
 
-        document.querySelector(".languages").value = '';
-        document.querySelector('.level').value = '';
-        vistaPrevia("preview");
     }
+		languageListPreview.innerHTML = allLanguageList;
+		document.querySelector(".languages").value = '';
+		document.querySelector('.level').value = '';
+		vistaPrevia("preview");
 }
 var botonIdioma = document.querySelector('.prueba_language');
 botonIdioma.addEventListener('click', addLanguage);
 
-
-///////SKILSSSS////////////////////////////////
-function addMoreSkill(){
-	var itemRepeat = '<div class="barSkillsSection"><div class="levelSkill"><p class="skillName"></p></div></div>';
-
-	var additional = document.querySelector('.hidden');
-	additional.insertAdjacentHTML('beforeend', itemRepeat);
+function deleteLanguage() {
+	languageList = [];
+	languageListPreview.innerHTML = '';
 }
-var newSkill= document.querySelector('.skillName');
-var inputSkill = document.querySelector('.skills');
-var inputLevel = document.querySelector('.level_skills');
 
-function addSkill(){
-	if((inputSkill == '') ||(inputLevel =='') ){
-		document.querySelector('.hidden').style.display ='none';
-	} else{
-	newSkill.innerHTML = inputSkill.value;
-  newSkill.parentElement.style.width = inputLevel.value + '%';
-	document.querySelector(".skills").value = '';
-	document.querySelector('.level_skills').value = '';
-	document.querySelector('.hidden').style.display ='block';
-	vistaPrevia("preview");
-	}
+//SECCION INTERESES/////
+var interestName = document.querySelector("#interest");
+var interestList = [];
+var interestListPreview = document.querySelector(".data-interest");
+
+function addInterest() {
+    var interest = {
+        interes: interestName.value
+    };
+    interestList.push(interest);
+    var allInterestList = '';
+
+    for (var i = 0; i < interestList.length; i++) {
+        allInterestList += '<li>' + interestList[i].interes +'</li><hr class="line">';
+
+    }
+		interestListPreview.innerHTML = allInterestList;
+		document.querySelector("#interest").value = '';
+		vistaPrevia("preview");
 }
-var botonSkills = document.querySelector('.prueba_skill');
-botonSkills.addEventListener('click', addSkill);
+var botonInteres = document.querySelector('.prueba_interest');
+botonInteres.addEventListener('click', addInterest);
+
+function deleteInterest() {
+	interestList = [];
+	interestListPreview.innerHTML = '';
+}
 
 function fillMore(){
 	vistaPrevia("preview");
+	var datosHabilidades1 = document.querySelector("#skills1").value;
+	var datosHabilidades2 = document.querySelector("#skills2").value;
+	var datosHabilidades3 = document.querySelector("#skills3").value;
 
-	// var datosHabilidades2 = document.querySelector("#skills2").value;
-	// var datosHabilidades3 = document.querySelector("#skills3").value;
-	var datosIntereses = document.querySelector("#interest").value;
-	document.querySelector("#data-interest").innerHTML = datosIntereses;
+			var newSkill= document.querySelectorAll('.skillName');
+	    var inputSkill = document.querySelectorAll('.skills');
+	    var inputLevel = document.querySelectorAll('.level_skills');
 
-
-
-  	// document.querySelector("#skillName2").innerHTML = datosHabilidades2;
-  	// document.querySelector("#skillName3").innerHTML = datosHabilidades3;
+	     for (var i = 0; i < newSkill.length; i++) {
+	       newSkill[i].innerHTML = inputSkill[i].value;
+	       newSkill[i].parentElement.style.width = inputLevel[i].value + '%';
+	     }
+	     document.querySelector("#skillName1").innerHTML = datosHabilidades1;
+	     document.querySelector("#skillName2").innerHTML = datosHabilidades2;
+	     document.querySelector("#skillName3").innerHTML = datosHabilidades3;
 }
 var saveMore = document.querySelector('.saveMore');
 saveMore.addEventListener('click', fillMore);
 
+function deleteSkills(){
+	var newSkill= document.querySelectorAll('.skillName');
+	var inputSkill = document.querySelectorAll('.skills');
+	var inputLevel = document.querySelectorAll('.level_skills');
+	inputLevel.value= 0;
+
+	 for (var i = 0; i < newSkill.length; i++) {
+		 newSkill[i].innerHTML = inputSkill[i].value;
+		 newSkill[i].parentElement.style.width = inputLevel[i] + '%';
+	 }
+
+	document.querySelector("#skillName1").innerHTML = '';
+	document.querySelector("#skillName2").innerHTML = '';
+	document.querySelector("#skillName3").innerHTML = '';
+	document.querySelectorAll('.level_skills').innerHTML = '';
+	//inputLevel.style.width = '';
+}
+function deleteAdditional() {
+	deleteInterest();
+	deleteLanguage();
+	deleteStudies();
+	deleteSkills();
+}
+var additionalDelete = document.querySelector('.delete-additional');
+additionalDelete.addEventListener('click', deleteAdditional);
 //función para periodo de incio y periodo de fin
 var monthOptions = '<option value="Enero">Enero</option>';
 monthOptions = monthOptions + '<option value="Febrero"> Febrero</option>';
@@ -304,9 +350,6 @@ document.querySelector('#level').innerHTML = options;
 
 
 /*var classModifier = 1;
-
-
-
 
 //función boton añadir mas
 function addMore(){
