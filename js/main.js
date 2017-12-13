@@ -109,8 +109,10 @@ saveContact.addEventListener('click', fillContact);
 //SECCION EXPERIENCIA LABORAL//////////////////////////////////////////////////////
 var jobTitle = document.querySelector("#position");
 var jobExperience = document.querySelector('#experience');
-var startPeriod = document.querySelector('.initial');
-var endPeriod = document.querySelector('.end')
+var startMonth = document.querySelector('.month');
+var startYear = document.querySelector('.year');
+var endMonth = document.querySelector('#month-end');
+var endYear = document.querySelector('#year-end');
 var jobList = [];
 var jobListPreview = document.querySelector(".span-experience");
 // var companyListPreview = document.querySelector(".span-company");
@@ -121,21 +123,25 @@ function addJob() {
     var job = {
         cargo: jobTitle.value,
         empresa:jobExperience.value,
-				periodoInicio: startPeriod.value,
-				periodoFin: endPeriod.value
+				// periodoInicio: startPeriod.value,
+				// periodoFin: endPeriod.value
+				mesIni:startMonth.value,
+				anoIni:startYear.value,
+				mesFin:endMonth.value,
+				anoFin:endYear.value
     };
     jobList.push(job);
     var allJobList = '';
 
     for (var i = 0; i < jobList.length; i++) {
-        allJobList += '<li>' + jobList[i].cargo +'</li>';
-        allJobList += '<li>' + jobList[i].empresa +'</li><hr class="line">';
-				allJobList += '<li>' + jobList[i].periodoInicio +'</li><hr class="line">';
-				allJobList += '<li>' + jobList[i].periodoFin +'</li><hr class="line">';
+        allJobList += '<li>Cargo: ' + jobList[i].cargo +'</li>';
+        allJobList += '<li>Empresa: ' + jobList[i].empresa +'</li><hr class="line">';
+				allJobList += '<li>Fecha de inicio: ' + jobList[i].mesIni + ' - '+jobList[i].anoIni+ '</li><hr class="line">';
+				allJobList += '<li>Fecha de fin: ' + jobList[i].mesFin + ' - '+jobList[i].anoFin +'</li><hr class="line">';
         jobListPreview.innerHTML = allJobList;
-				companyListPreview.innerHTML = allJobList;
-				startListPreview.innerHTML = allJobList;
-				endListPreview.innerHTML = allJobList;
+				// companyListPreview.innerHTML = allJobList;
+				// startListPreview.innerHTML = allJobList;
+				// endListPreview.innerHTML = allJobList;
         document.querySelector("#position").value = '';
         document.querySelector('#experience').value = '';
 				document.querySelector('.initial').value = '';
