@@ -113,9 +113,9 @@ var startPeriod = document.querySelector('.initial');
 var endPeriod = document.querySelector('.end')
 var jobList = [];
 var jobListPreview = document.querySelector(".span-experience");
-var companyListPreview = document.querySelector(".span-company");
-var startListPreview = document.querySelector(".span-start");
-var endListPreview = document.querySelector(".span-end");
+// var companyListPreview = document.querySelector(".span-company");
+// var startListPreview = document.querySelector(".span-start");
+// var endListPreview = document.querySelector(".span-end");
 
 function addJob() {
     var job = {
@@ -366,7 +366,7 @@ var showPreview = document.querySelector('.showpreview');
 
 function applyTheme(event){
 	var themeSelected = event.currentTarget.getAttribute('data-theme-class');
-	showPreview.classList.remove('theme1', 'theme2', 'theme3');
+	showPreview.classList.remove('theme1', 'theme2', 'theme3',  'theme4');
   showPreview.classList.add(themeSelected);
 
 }
@@ -374,21 +374,3 @@ function applyTheme(event){
 for (var i = 0; i < themes.length; i++) {
   themes[i].addEventListener('click', applyTheme);
 }
-//
-// //función alert
-// var shower = document.getElementById('fd');
-// var eva = document.querySelector('.thanks');
-// function x (){
-// 	 eva.classList.add('show');
-// }
-// shower.addEventListener('click', x);
-
-
-
-
-
-/*unción formulario gracias no funciona
-function gracias(idContent){
-	alert("Su respuesta ha sido enviada. ¡Muchas gracias!");
-document.getElementById("gracias").style.color = "blue";
-}*/

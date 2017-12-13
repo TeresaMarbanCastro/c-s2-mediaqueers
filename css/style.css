@@ -50,9 +50,10 @@ body{
 .logen{
 
 	display: block;
-	width: 150px;
-	height: 150px;
-	border-radius: 20px;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	padding: 5px;
 }
 .vista {
   	position: relative;
@@ -472,11 +473,25 @@ iframe{
 	z-index: 1;
 	transition: all .3s;
 	text-align: center;
-	padding-top: 200px;
+	padding-top: 100px;
 }
 .show{
 	display: block;
 	}
+
+.show h2{
+	font-size: 34px;
+	margin-top: 34px;
+	}
+.thanks.show p {
+ font-size: 20px;
+	 margin-top: 20px;
+}
+
+.logo_thanks{
+	border-radius: 100%;
+	width: 150px;
+	margin-top: 28px;
 }
 @media all and (min-width: 481px){
 	iframe{
@@ -486,12 +501,12 @@ iframe{
 	footer{
 		flex-direction: row;
 		align-items: flex-start;
-		    text-align: center;
+		text-align: center;
 	}
 
-.cover{
+/*.cover{
 	padding-bottom:
-}
+}*/
 
 
 /*Formulario*/
@@ -510,6 +525,15 @@ iframe{
 }
 
 @media all and (min-width: 769px){
+
+	.logen {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding: 5px 0;
+		margin: 0 auto;
+	}
 
 	.split-div{
 		display: flex;
@@ -586,4 +610,38 @@ iframe{
 		align-items: flex-start;
 		    text-align: center;
 	}
+	.thanks{
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #599675;
+		color: white;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1;
+		transition: all .3s;
+		text-align: center;
+		padding-top: 100px;
+	}
+	.show{
+		display: block;
+		}
+
+	.show h2{
+		font-size: 57px;
+		}
+	.thanks.show p {
+	 font-size: 28px;
+	  margin-top: 10px;
+	}
+
+	.logo_thanks{
+		border-radius: 100%;
+		margin-top: 50px;
+		width: 250px;
+    height: auto;
+	}
+
+
 }
