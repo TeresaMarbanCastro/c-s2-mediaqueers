@@ -2,10 +2,10 @@
 // //función alert
 var shower = document.getElementById('fd');
 var eva = document.querySelector('.thanks');
-function x (){
+function alertHandler (){
 	 eva.classList.add('show');
 }
-shower.addEventListener('click', x);
+shower.addEventListener('click', alertHandler);
 
 //
 // //función formulario gracias no funciona

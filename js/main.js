@@ -119,6 +119,7 @@ var startMonth = document.querySelector('.month');
 var startYear = document.querySelector('.year');
 var endMonth = document.querySelector('#month-end');
 var endYear = document.querySelector('#year-end');
+var currentCheck = document.querySelector('#actuality');
 var jobList = [];
 var jobListPreview = document.querySelector(".span-experience");
 
@@ -129,6 +130,7 @@ function addJob() {
         empresa:jobExperience.value,
 				mesIni:startMonth.value,
 				anoIni:startYear.value,
+				actual: currentCheck.checked,
 				mesFin:endMonth.value,
 				anoFin:endYear.value
     };
@@ -139,7 +141,13 @@ function addJob() {
         allJobList += '<li>Cargo: ' + jobList[i].cargo +'</li>';
         allJobList += '<li>Empresa: ' + jobList[i].empresa +'</li>';
 				allJobList += '<li>Fecha de inicio: ' + jobList[i].mesIni + ' - '+jobList[i].anoIni+ '</li>';
-				allJobList += '<li>Fecha de fin: ' + jobList[i].mesFin + ' - '+jobList[i].anoFin +'</li><hr class="line"><br>';
+				allJobList += '<li>Fecha de fin: ';
+				if (jobList[i].actual) {
+					allJobList += 'actualmente';
+				} else {
+					allJobList += jobList[i].mesFin + ' - '+jobList[i].anoFin +'</li>';
+				}
+				allJobList += '<hr class="line"><br>'
     }
 		jobListPreview.innerHTML = allJobList;
 		document.querySelector("#position").value = '';
@@ -174,18 +182,26 @@ function addStudy() {
         name: studyName.value,
         insti:studyInstitution.value
     };
-    studyList.push(study);
+		if (study.name != '' && study.insti != ''){
+			studyList.push(study);
+			previewStudy();
+			document.querySelector(".education").value = '';
+			document.querySelector('.education_university').value = '';
+			vistaPrevia("preview");
+		}
+
+	}
+	function previewStudy(){
     var allStudyList = '';
 
     for (var i = 0; i < studyList.length; i++) {
         allStudyList += '<li>' + studyList[i].name +'</li>';
         allStudyList += '<li>' + studyList[i].insti +'</li><hr class="line">';
     }
-		document.querySelector(".education").value = '';
-		document.querySelector('.education_university').value = '';
 		studyListPreview.innerHTML = allStudyList;
-		vistaPrevia("preview");
-}
+	}
+
+
 
 function deleteStudies() {
 	studyList = [];
@@ -283,20 +299,23 @@ var saveMore = document.querySelector('.saveMore');
 saveMore.addEventListener('click', fillMore);
 
 function deleteSkills(){
-	var newSkill= document.querySelectorAll('.skillName');
-	var inputSkill = document.querySelectorAll('.skills');
-	var inputLevel = document.querySelectorAll('.level_skills');
-	inputLevel.value= 0;
+	var previewSkillNames= document.querySelectorAll('.skillName');
+	var previewSkillLevels= document.querySelectorAll('.levelSkill');
 
-	 for (var i = 0; i < newSkill.length; i++) {
-		 newSkill[i].innerHTML = inputSkill[i].value;
-		 newSkill[i].parentElement.style.width = inputLevel[i] + '%';
+	var inputSkillNames = document.querySelectorAll('.skills');
+	var inputSkillLevels = document.querySelectorAll('.level_skills');
+
+	for (var i = 0; i < previewSkillNames.length; i++) {
+		 previewSkillNames[i].innerHTML = '';
+		 previewSkillNames[i].parentElement.style.width = 0;
 	 }
 
-	document.querySelector("#skillName1").innerHTML = '';
-	document.querySelector("#skillName2").innerHTML = '';
-	document.querySelector("#skillName3").innerHTML = '';
-	document.querySelectorAll('.level_skills').innerHTML = '';
+	for (var i = 0; i < inputSkillNames.length; i++) {
+		inputSkillNames[i].value = '';
+		inputSkillLevels[i].value = '';
+	}
+
+
 	//inputLevel.style.width = '';
 }
 function deleteAdditional() {
