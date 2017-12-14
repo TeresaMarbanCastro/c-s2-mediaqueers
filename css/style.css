@@ -287,7 +287,7 @@ input#actuality {
 
 /*Estilos dinámicos de color para preview*/
 /* Theme 1 */
-.theme1 .titles, .theme1 .skillName{
+.theme1 .titles, .theme1 .skillName, .theme1 #data-interest li{
   background-color: #04724D;
 	color: white;
 }
@@ -301,7 +301,7 @@ input#actuality {
 }
 
 /* Theme 2 */
-.theme2 .titles, .theme2 .skillName {
+.theme2 .titles, .theme2 .skillName, .theme2 #data-interest li {
   background-color: #7A6174;
 	color: white;
 }
@@ -315,7 +315,7 @@ input#actuality {
 }
 
 /* Theme 3 */
-.theme3 .titles, .theme3 .skillName{
+.theme3 .titles, .theme3 .skillName, .theme3 #data-interest li{
   background-color: #F6E27F;
 }
 
@@ -328,7 +328,7 @@ input#actuality {
 }
 
 /* Theme 4 */
-.theme4 .titles, .theme4 .skillName{
+.theme4 .titles, .theme4 .skillName, .theme4 #data-interest li{
   background-color: #B0C0BC;
 }
 
