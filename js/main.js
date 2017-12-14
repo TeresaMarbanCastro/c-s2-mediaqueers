@@ -423,3 +423,16 @@ function applyTheme(event){
 for (var i = 0; i < themes.length; i++) {
   themes[i].addEventListener('click', applyTheme);
 }
+
+// /*imprimir*/
+ function printCurriculum(){
+  var divPrint = document.getElementById('preview');
+  divPrint.style.display="block";
+
+  var contenido= divPrint.innerHTML;
+  var contenidoOriginal= document.body.innerHTML;
+
+  document.body.innerHTML = contenido;
+  window.print();
+  document.body.innerHTML = contenidoOriginal;
+}
