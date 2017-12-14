@@ -393,6 +393,10 @@ input#actuality {
 .section-preview li {
 	list-style-type: none;
 }
+.span-titles{
+	font-size: 22px;
+	font-weight: 400;
+}
 .titles{
 	color: #263D42;
 	background-color: #b0c0bc;
@@ -405,8 +409,17 @@ input#actuality {
   margin-left: 5px;
 }
 
+.data-studies li{
+	margin: 5px 0;
+}
+
 ul#data-languages {
     margin-left: 5px;
+		margin-top: 10px;
+}
+
+#data-languages li {
+    margin: 5px 0;
 }
 
 ul#data-interest {
