@@ -236,7 +236,7 @@ select {
 	padding-bottom: 0px;
 }
 .newbutton:hover {
-	background: grey;
+	background: #ccc;
 }
 .period-initial, .period-end {
 	display: flex;
