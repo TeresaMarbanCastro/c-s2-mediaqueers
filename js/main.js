@@ -426,13 +426,13 @@ for (var i = 0; i < themes.length; i++) {
 
 // /*imprimir*/
  function printCurriculum(){
-  var divPrint = document.getElementById('preview');
-  divPrint.style.display="block";
+  var printer = document.getElementById('preview');
+  printer.style.display="block";
 
-  var contenido= divPrint.innerHTML;
-  var contenidoOriginal= document.body.innerHTML;
+  var content = printer.innerHTML;
+  var viewPrint= document.body.innerHTML;
 
-  document.body.innerHTML = contenido;
+  document.body.innerHTML = content;
   window.print();
-  document.body.innerHTML = contenidoOriginal;
+  document.body.innerHTML = viewPrint;
 }
