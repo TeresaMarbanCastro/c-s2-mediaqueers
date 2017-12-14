@@ -12,7 +12,6 @@ function cerrar(idContent){
 function vistaPrevia(idContent){
 document.getElementById(idContent).style.display = 'block';
 }
-
 //Rellenar formulario Datos Perfil
 function fillProfile(){
 	vistaPrevia("preview");
@@ -426,8 +425,10 @@ for (var i = 0; i < themes.length; i++) {
 
 // /*imprimir*/
  function printCurriculum(){
-  var printer = document.getElementById('preview');
+
+  var printer = document.getElementById('preview2');
   printer.style.display="block";
+
 
   var content = printer.innerHTML;
   var viewPrint= document.body.innerHTML;

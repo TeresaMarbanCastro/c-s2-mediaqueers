@@ -12,7 +12,6 @@
 </head>
 <body>
 	<div class="overflow">
-
 		<header class="cabecera">
 			<a href="#home"><img src="images/Mediaqueers.png" class="logen" alt="logo-menu"></a>
 			<nav>
@@ -25,7 +24,6 @@
 			</header>
 
 			<main>
-
 				<div class="cover">
 					<div class="create">
 						<h1>Crea tu propio CV</h1>
@@ -34,17 +32,17 @@
 				</div>
 
 				<div class="resume-container" id="empezar"><!--container formulario-->
-
 					<div class="split-div">
-
 						<form class="resume-form" action="/signup" method="post">
-							<div class="profile section">
+
+							<div class="profile section"><!--seccion perfil-->
 								<div class="info">
 									<h2 class="section-title">Perfil</h2>
 									<div class="section-buttons">
 										<input type="button" class="button-info" value="Editar" onclick="editar('content-profile')">
 									</div>
 								</div>
+
 								<div id="content-profile" class="content"> <!--SECCION OCULTA-->
 									<input type="text" name="name" id="name" placeholder="Nombre">
 									<input type="text" name="lastname" id="lastname" placeholder="Apellidos" >
@@ -53,9 +51,9 @@
 									<input type="button" name="delete" value="Borrar" class="delete-profile">
 									<input type="button" value="cerrar" onclick="cerrar('content-profile')">
 								</div>
-							</div>
+							</div><!--end seccion perfil-->
 
-							<div class="summary section">
+							<div class="summary section"> <!--summary perfil-->
 								<div class="info">
 									<h2 class="section-title">Extracto</h2>
 									<div class="section-buttons">
@@ -71,7 +69,7 @@
 								</div>
 							</div><!--end summary section-->
 
-							<div class="contact-information section">
+							<div class="contact-information section"><!--seccion contacto-->
 								<div class="info">
 									<h2 class="section-title">Datos de contacto</h2>
 									<div class="section-buttons">
@@ -89,8 +87,7 @@
 								</div>
 							</div> <!--end contact-information-->
 
-							<div class="experience section">
-
+							<div class="experience section"><!--seccion experiencia-->
 								<div class="info">
 									<h2 class="section-title">Experiencia laboral</h2>
 									<div class="section-buttons">
@@ -126,9 +123,9 @@
 														<img class="prueba_experience" src="images/more.png" alt="botonprueba" title="prueba">
 													</div>
 												</div>
-											</div>
-										</div>
-									</div>
+											</div><!--work-->
+										</div><!--newbutton-->
+									</div><!--addmore-->
 
 											<input type="button" name="save" value="Guardar" class="saveExperience">
 											<input type="button" name="delete" value="Borrar" class="delete-experience">
@@ -136,8 +133,7 @@
 										</div> <!-- end content-experience-->
 									</div><!--end experience section-->
 
-							<div class="additional section">
-
+							<div class="additional section"><!--seccion additional-->
 								<div class="info">
 									<h2 class="section-title">Más información</h2>
 									<div class="section-buttons">
@@ -181,7 +177,6 @@
 											<input type="button" name="save" value="Guardar" class="saveMore">
 											<input type="button" name="delete" value="Borrar" class="delete-additional">
 											<input type="button" value="cerrar" onclick="cerrar('content-additional')">
-
 								</div>
 							</div><!--end additional section-->
 
@@ -200,97 +195,88 @@
 				</form>
 
 						<!-- DIV OCULTO VISTA PREVIA-->
-						<div class="preview" id="preview">
+						<div class="preview printPreview" id="preview">
 							<div class="showpreview">
-
 								<img class="hide" src="images/cancel.png" alt="boton cerrar" onclick="cerrar('preview')">
-								<div class="resume-header">
-									<h2 class="resume-title" id="data-profile"></h2>
-								</div>
 
-								<div class="resume-header-profession">
-									<span id="data-profession"></span>
-								</div>
-								<hr class="top-line">
-								<div class="resume-header-summary">
-									<span id="data-summary"></span>
-								</div>
+								<div class="printPreview" id="preview2">
+									<div class="resume-header">
+										<h2 class="resume-title" id="data-profile"></h2>
+									</div>
 
-								<div class="section-preview">
-									<div class="section-title-line">
-										<div class="titles"><h3>Datos de contacto</h3></div>
-										<hr class="bottom-line">
+									<div class="resume-header-profession">
+										<span id="data-profession"></span>
 									</div>
-									<div>
-										<span class="span-titles">Teléfono:</span> <span id="data-telephone"></span>
+									<hr class="top-line">
+									<div class="resume-header-summary">
+										<span id="data-summary"></span>
 									</div>
-									<div>
-										<span class="span-titles">Email:</span> <span id="data-email"></span>
-									</div>
-								</div>
 
-								<div class="section-preview">
-									<div class="section-title-line">
-										<div class="titles"><h3>Experiencia laboral</h3></div>
-										<hr class="bottom-line">
-									</div>
-									<div>
-
-										 <span id="data-position" class="span-experience"></span>
-									</div>
-								</div>
-
-								<div class="section-preview">
-									<div class="section-title-line">
-										<div class="titles"><h3>Más información</h3></div>
-										<hr class="bottom-line">
-									</div>
-									<div>
-										<span class="span-titles">Estudios:</span> <br>
-										<ul id="data-studies" class="data-list data-studies"></ul>
-									</div>
-									<div>
-										<span class="span-titles">Idiomas:</span>
-										<ul id="data-languages" class="data-list data-languages"></ul>
-									</div>
-									<!-- <div>
-									<span>Nivel:</span> <span id="data-level"></span>
-								</div> -->
-
-								<div class="skill_container">
-									<span class="span-titles">Habilidades:</span>
-
-										<div class="barSkillsSection">
-											<div class="levelSkill">
-												<p id="skillName1" class="skillName"></p>
-											</div>
+									<div class="section-preview">
+										<div class="section-title-line">
+											<div class="titles"><h3>Datos de contacto</h3></div>
+											<hr class="bottom-line">
 										</div>
-										<div class="barSkillsSection">
-											<div class="levelSkill">
-												<p id="skillName2" class="skillName"></p>
-											</div>
+										<div>
+											<span class="span-titles">Teléfono:</span> <span id="data-telephone"></span>
 										</div>
-										<div class="barSkillsSection">
-											<div class="levelSkill">
-												<p id="skillName3" class="skillName"></p>
-											</div>
+										<div>
+											<span class="span-titles">Email:</span> <span id="data-email"></span>
+										</div>
+									</div><!--end section-preview-->
+
+									<div class="section-preview">
+										<div class="section-title-line">
+											<div class="titles"><h3>Experiencia laboral</h3></div>
+											<hr class="bottom-line">
+										</div>
+										<div>
+											 <span id="data-position" class="span-experience"></span>
+										</div>
+									</div><!--end section-preview-->
+
+									<div class="section-preview">
+										<div class="section-title-line">
+											<div class="titles"><h3>Más información</h3></div>
+											<hr class="bottom-line">
+										</div>
+										<div>
+											<span class="span-titles">Estudios:</span> <br>
+											<ul id="data-studies" class="data-list data-studies"></ul>
+										</div>
+										<div>
+											<span class="span-titles">Idiomas:</span>
+											<ul id="data-languages" class="data-list data-languages"></ul>
 										</div>
 
+										<div class="skill_container">
+											<span class="span-titles">Habilidades:</span>
+											<div class="barSkillsSection">
+												<div class="levelSkill">
+													<p id="skillName1" class="skillName"></p>
+												</div>
+											</div>
+											<div class="barSkillsSection">
+												<div class="levelSkill">
+													<p id="skillName2" class="skillName"></p>
+												</div>
+											</div>
+											<div class="barSkillsSection">
+												<div class="levelSkill">
+													<p id="skillName3" class="skillName"></p>
+												</div>
+											</div>
+									</div><!--end skill section-->
 
-								</div>
-
-								<div>
-									<span class="span-titles">Intereses:</span>
-									<ul id="data-interest" class="data-list data-interest"></ul>
-
-								</div>
-							</div>
-
-						</div> <!--end showpreview-->
+									<div>
+										<span class="span-titles">Intereses:</span>
+										<ul id="data-interest" class="data-list data-interest"></ul>
+									</div>
+								</div><!--end section-preview-->
+						</div> <!--end print preview-->
+					</div> <!--end showpreview-->
 					</div>  <!--end preview-->
-
 				</div><!--split-div-->
-
 			</div><!--fin container formulario-->
 		</main>
 
