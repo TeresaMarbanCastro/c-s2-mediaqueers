@@ -247,7 +247,7 @@ function addInterest() {
     var allInterestList = '';
 
     for (var i = 0; i < interestList.length; i++) {
-        allInterestList += '<li>' + interestList[i].interes +'</li><hr class="line">';
+        allInterestList += '<li>' + interestList[i].interes +'</li>';
 
     }
 		interestListPreview.innerHTML = allInterestList;

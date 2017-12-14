@@ -405,12 +405,19 @@ input#actuality {
   margin-left: 5px;
 }
 
+ul#data-languages {
+    margin-left: 5px;
+}
+
 ul#data-interest {
     display: flex;
 }
 
 #data-interest li {
-    padding: 5px;
+  padding: 5px;
+	background: #b0c0bc;
+	border-radius: 3px;
+	margin: 0 5px;
 }
 
 .data-list{
