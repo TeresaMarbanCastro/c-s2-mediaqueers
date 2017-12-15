@@ -366,21 +366,6 @@ var options = options + '<option value ="C2">C2</option>';
 document.querySelector('#level').innerHTML = options;
 
 
-
-/*var classModifier = 1;
-
-//función boton añadir mas
-function addMore(){
-var itemRepeat = '<div class="newbutton"><input class="education" ' + classModifier + ' type="text" name="education" placeholder="Estudios">';
-itemRepeat += '<img class="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
-itemRepeat += '</div>';
-
-var additional = document.querySelector('#addMore');
-additional.insertAdjacentHTML('beforeend', itemRepeat);
-classModifier++;
-}
-*/
-
 //smooth scroll function
 (function() {
 	if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
