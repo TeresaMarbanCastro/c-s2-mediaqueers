@@ -2,7 +2,7 @@
 
 //función para desplegar sección
 function editar(idContent){
-document.getElementById(idContent).style.display = 'block';
+	document.getElementById(idContent).style.display = 'block';
 }
 //función para cerrar sección
 function cerrar(idContent){
@@ -10,7 +10,7 @@ function cerrar(idContent){
 }
 //función para desplegar vista previa
 function vistaPrevia(idContent){
-document.getElementById(idContent).style.display = 'block';
+	document.getElementById(idContent).style.display = 'block';
 }
 //Rellenar formulario Datos Perfil
 function fillProfile(){
@@ -23,7 +23,7 @@ function fillProfile(){
 	datosApellido = datosApellido.toUpperCase();
 
 	document.querySelector("#data-profile").innerHTML = datosNombre + ' ' + datosApellido;
-  document.querySelector("#data-profession").innerHTML = datosProfesion;
+	document.querySelector("#data-profession").innerHTML = datosProfesion;
 
 }
 
@@ -57,37 +57,37 @@ summaryDelete.addEventListener('click', deleteSummary);
 
 //funciones validar email
 function validateEmail(email) {
-    var regex = /\b[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,20}\b/gi;
-    if( regex.test(email) ) {
-        return true;
-    } else {
-        return false;
-    }
+	var regex = /\b[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,20}\b/gi;
+	if( regex.test(email) ) {
+		return true;
+	} else {
+		return false;
+	}
 }
 function checkEmail() {
-    var email = document.getElementById( "email" ).value;
-    if( validateEmail(email) === false ) {
-        document.querySelector(".error_email" ).innerHTML = "Introduce un email válido";
-    } else{
-    	document.querySelector(".error_email" ).innerHTML = " ";
-    }
+	var email = document.getElementById( "email" ).value;
+	if( validateEmail(email) === false ) {
+		document.querySelector(".error_email" ).innerHTML = "Introduce un email válido";
+	} else{
+		document.querySelector(".error_email" ).innerHTML = " ";
+	}
 }
 //funciones validar Telefono
 function validatePhone(telephone) {
-    var regexPhone = /^([0-9]+){9}$/
-    if( regexPhone.test(telephone) ) {
-        return true;
-    } else {
-        return false;
-    }
+	var regexPhone = /^([0-9]+){9}$/
+	if( regexPhone.test(telephone) ) {
+		return true;
+	} else {
+		return false;
+	}
 }
 function checkTelephone() {
-    var telephone = document.getElementById( "telephone" ).value;
-    if( validatePhone(telephone) === false ) {
-        document.querySelector(".error_telephone" ).innerHTML = "Introduce un número telefónico válido";
-    } else{
-    	document.querySelector(".error_telephone" ).innerHTML = " ";
-    }
+	var telephone = document.getElementById( "telephone" ).value;
+	if( validatePhone(telephone) === false ) {
+		document.querySelector(".error_telephone" ).innerHTML = "Introduce un número telefónico válido";
+	} else{
+		document.querySelector(".error_telephone" ).innerHTML = " ";
+	}
 }
 
 //formulario Datos contacto
@@ -125,36 +125,36 @@ var jobListPreview = document.querySelector(".span-experience");
 
 
 function addJob() {
-    var job = {
-        cargo: jobTitle.value,
-        empresa:jobExperience.value,
-				mesIni:startMonth.value,
-				anoIni:startYear.value,
-				actual: currentCheck.checked,
-				mesFin:endMonth.value,
-				anoFin:endYear.value
-    };
-    jobList.push(job);
-    var allJobList = '';
+	var job = {
+		cargo: jobTitle.value,
+		empresa:jobExperience.value,
+		mesIni:startMonth.value,
+		anoIni:startYear.value,
+		actual: currentCheck.checked,
+		mesFin:endMonth.value,
+		anoFin:endYear.value
+	};
+	jobList.push(job);
+	var allJobList = '';
 
-    for (var i = 0; i < jobList.length; i++) {
-        allJobList += '<li>Cargo: ' + jobList[i].cargo +'</li>';
-        allJobList += '<li>Empresa: ' + jobList[i].empresa +'</li>';
-				allJobList += '<li>Fecha de inicio: ' + jobList[i].mesIni + ' - '+jobList[i].anoIni+ '</li>';
-				allJobList += '<li>Fecha de fin: ';
-				if (jobList[i].actual) {
-					allJobList += 'actualmente';
-				} else {
-					allJobList += jobList[i].mesFin + ' - '+jobList[i].anoFin +'</li>';
-				}
-				allJobList += '<hr class="line"><br>'
-    }
-		jobListPreview.innerHTML = allJobList;
-		document.querySelector("#position").value = '';
-		document.querySelector('#experience').value = '';
-		document.querySelector('.initial').value = '';
-		document.querySelector('.end').value = '';
-		vistaPrevia("preview");
+	for (var i = 0; i < jobList.length; i++) {
+		allJobList += '<li>Cargo: ' + jobList[i].cargo +'</li>';
+		allJobList += '<li>Empresa: ' + jobList[i].empresa +'</li>';
+		allJobList += '<li>Fecha de inicio: ' + jobList[i].mesIni + ' - '+jobList[i].anoIni+ '</li>';
+		allJobList += '<li>Fecha de fin: ';
+		if (jobList[i].actual) {
+			allJobList += 'actualmente';
+		} else {
+			allJobList += jobList[i].mesFin + ' - '+jobList[i].anoFin +'</li>';
+		}
+		allJobList += '<hr class="line"><br>'
+	}
+	jobListPreview.innerHTML = allJobList;
+	document.querySelector("#position").value = '';
+	document.querySelector('#experience').value = '';
+	document.querySelector('.initial').value = '';
+	document.querySelector('.end').value = '';
+	vistaPrevia("preview");
 }
 
 
@@ -178,28 +178,28 @@ var studyList = [];
 var studyListPreview = document.querySelector(".data-studies");
 
 function addStudy() {
-    var study = {
-        name: studyName.value,
-        insti:studyInstitution.value
-    };
-		if (study.name != '' && study.insti != ''){
-			studyList.push(study);
-			previewStudy();
-			document.querySelector(".education").value = '';
-			document.querySelector('.education_university').value = '';
-			vistaPrevia("preview");
-		}
-
+	var study = {
+		name: studyName.value,
+		insti:studyInstitution.value
+	};
+	if (study.name != '' && study.insti != ''){
+		studyList.push(study);
+		previewStudy();
+		document.querySelector(".education").value = '';
+		document.querySelector('.education_university').value = '';
+		vistaPrevia("preview");
 	}
-	function previewStudy(){
-    var allStudyList = '';
 
-    for (var i = 0; i < studyList.length; i++) {
-        allStudyList += '<li>' + studyList[i].name +'</li>';
-        allStudyList += '<li>' + studyList[i].insti +'</li><hr class="line">';
-    }
-		studyListPreview.innerHTML = allStudyList;
+}
+function previewStudy(){
+	var allStudyList = '';
+
+	for (var i = 0; i < studyList.length; i++) {
+		allStudyList += '<li>' + studyList[i].name +'</li>';
+		allStudyList += '<li>' + studyList[i].insti +'</li><hr class="line">';
 	}
+	studyListPreview.innerHTML = allStudyList;
+}
 
 
 
@@ -224,22 +224,22 @@ var languageList = [];
 var languageListPreview = document.querySelector(".data-languages");
 
 function addLanguage() {
-    var language = {
-        name: languageName.value,
-        lvl:languageLevel.value
-    };
-    languageList.push(language);
-    var allLanguageList = '';
+	var language = {
+		name: languageName.value,
+		lvl:languageLevel.value
+	};
+	languageList.push(language);
+	var allLanguageList = '';
 
-    for (var i = 0; i < languageList.length; i++) {
-        allLanguageList += '<li>' + languageList[i].name +'</li>';
-        allLanguageList += '<li>' + languageList[i].lvl +'</li><hr class="line">';
+	for (var i = 0; i < languageList.length; i++) {
+		allLanguageList += '<li>' + languageList[i].name +'</li>';
+		allLanguageList += '<li>' + languageList[i].lvl +'</li><hr class="line">';
 
-    }
-		languageListPreview.innerHTML = allLanguageList;
-		document.querySelector(".languages").value = '';
-		document.querySelector('.level').value = '';
-		vistaPrevia("preview");
+	}
+	languageListPreview.innerHTML = allLanguageList;
+	document.querySelector(".languages").value = '';
+	document.querySelector('.level').value = '';
+	vistaPrevia("preview");
 }
 var botonIdioma = document.querySelector('.prueba_language');
 botonIdioma.addEventListener('click', addLanguage);
@@ -255,19 +255,19 @@ var interestList = [];
 var interestListPreview = document.querySelector(".data-interest");
 
 function addInterest() {
-    var interest = {
-        interes: interestName.value
-    };
-    interestList.push(interest);
-    var allInterestList = '';
+	var interest = {
+		interes: interestName.value
+	};
+	interestList.push(interest);
+	var allInterestList = '';
 
-    for (var i = 0; i < interestList.length; i++) {
-        allInterestList += '<li>' + interestList[i].interes +'</li>';
+	for (var i = 0; i < interestList.length; i++) {
+		allInterestList += '<li>' + interestList[i].interes +'</li>';
 
-    }
-		interestListPreview.innerHTML = allInterestList;
-		document.querySelector("#interest").value = '';
-		vistaPrevia("preview");
+	}
+	interestListPreview.innerHTML = allInterestList;
+	document.querySelector("#interest").value = '';
+	vistaPrevia("preview");
 }
 var botonInteres = document.querySelector('.prueba_interest');
 botonInteres.addEventListener('click', addInterest);
@@ -283,17 +283,17 @@ function fillMore(){
 	var datosHabilidades2 = document.querySelector("#skills2").value;
 	var datosHabilidades3 = document.querySelector("#skills3").value;
 
-			var newSkill= document.querySelectorAll('.skillName');
-	    var inputSkill = document.querySelectorAll('.skills');
-	    var inputLevel = document.querySelectorAll('.level_skills');
+	var newSkill= document.querySelectorAll('.skillName');
+	var inputSkill = document.querySelectorAll('.skills');
+	var inputLevel = document.querySelectorAll('.level_skills');
 
-	     for (var i = 0; i < newSkill.length; i++) {
-	       newSkill[i].innerHTML = inputSkill[i].value;
-	       newSkill[i].parentElement.style.width = inputLevel[i].value + '%';
-	     }
-	     document.querySelector("#skillName1").innerHTML = datosHabilidades1;
-	     document.querySelector("#skillName2").innerHTML = datosHabilidades2;
-	     document.querySelector("#skillName3").innerHTML = datosHabilidades3;
+	for (var i = 0; i < newSkill.length; i++) {
+		newSkill[i].innerHTML = inputSkill[i].value;
+		newSkill[i].parentElement.style.width = inputLevel[i].value + '%';
+	}
+	document.querySelector("#skillName1").innerHTML = datosHabilidades1;
+	document.querySelector("#skillName2").innerHTML = datosHabilidades2;
+	document.querySelector("#skillName3").innerHTML = datosHabilidades3;
 }
 var saveMore = document.querySelector('.saveMore');
 saveMore.addEventListener('click', fillMore);
@@ -306,9 +306,9 @@ function deleteSkills(){
 	var inputSkillLevels = document.querySelectorAll('.level_skills');
 
 	for (var i = 0; i < previewSkillNames.length; i++) {
-		 previewSkillNames[i].innerHTML = '';
-		 previewSkillNames[i].parentElement.style.width = 0;
-	 }
+		previewSkillNames[i].innerHTML = '';
+		previewSkillNames[i].parentElement.style.width = 0;
+	}
 
 	for (var i = 0; i < inputSkillNames.length; i++) {
 		inputSkillNames[i].value = '';
@@ -349,7 +349,7 @@ var years = 2052;
 var yearOptions = ''; //almacena options de html que van en el select
 
 for (var initialYear=1950; initialYear<years; initialYear++) {
-  yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
+	yearOptions = yearOptions + '<option>' + (initialYear) + '</option>';
 }
 var yearsAll = document.querySelectorAll('.year');
 for (var i = 0; i < yearsAll.length; i++) {
@@ -371,59 +371,59 @@ document.querySelector('#level').innerHTML = options;
 
 //función boton añadir mas
 function addMore(){
-	var itemRepeat = '<div class="newbutton"><input class="education" ' + classModifier + ' type="text" name="education" placeholder="Estudios">';
-		itemRepeat += '<img class="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
-		itemRepeat += '</div>';
+var itemRepeat = '<div class="newbutton"><input class="education" ' + classModifier + ' type="text" name="education" placeholder="Estudios">';
+itemRepeat += '<img class="more" src="images/more.png" alt="boton suma" onclick="addMore()">';
+itemRepeat += '</div>';
 
-	var additional = document.querySelector('#addMore');
-	additional.insertAdjacentHTML('beforeend', itemRepeat);
-	classModifier++;
+var additional = document.querySelector('#addMore');
+additional.insertAdjacentHTML('beforeend', itemRepeat);
+classModifier++;
 }
 */
 
 //smooth scroll function
 (function() {
 	if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
-	    var smoothScroll = function (anchor, duration) {
-        	var startLocation = window.pageYOffset;
-        	var endLocation = anchor.offsetTop;
-        	var distance = endLocation - startLocation;
-        	var increments = distance/(duration/16);
-        	var stopAnimation;
-        		var animateScroll = function () {
-            		window.scrollBy(0, increments);
-            		stopAnimation();
-        		};
-	        if ( increments >= 0 ) {
-            	stopAnimation = function () {
-            		var travelled = window.pageYOffset;
-            		if ( (travelled >= (endLocation - increments)) || ((window.innerHeight + travelled) >= document.body.offsetHeight) ) {
-            		clearInterval(runAnimation);
-            		}
-        		};
-    		} else {
-        		stopAnimation = function () {
-        			var travelled = window.pageYOffset;
-        			if ( travelled <= (endLocation || 0) ) {
-        			clearInterval(runAnimation);
-	    			}
+		var smoothScroll = function (anchor, duration) {
+			var startLocation = window.pageYOffset;
+			var endLocation = anchor.offsetTop;
+			var distance = endLocation - startLocation;
+			var increments = distance/(duration/16);
+			var stopAnimation;
+			var animateScroll = function () {
+				window.scrollBy(0, increments);
+				stopAnimation();
+			};
+			if ( increments >= 0 ) {
+				stopAnimation = function () {
+					var travelled = window.pageYOffset;
+					if ( (travelled >= (endLocation - increments)) || ((window.innerHeight + travelled) >= document.body.offsetHeight) ) {
+						clearInterval(runAnimation);
+					}
+				};
+			} else {
+				stopAnimation = function () {
+					var travelled = window.pageYOffset;
+					if ( travelled <= (endLocation || 0) ) {
+						clearInterval(runAnimation);
+					}
 				};
 			}
-	    	var runAnimation = setInterval(animateScroll, 16);
+			var runAnimation = setInterval(animateScroll, 16);
 		};
-	 	var scrollToggle = document.querySelectorAll('.scroll');
-    	[].forEach.call(scrollToggle, function (toggle) {
-    		toggle.addEventListener('click', function(e) {
-			    e.preventDefault();
-			    var dataID = toggle.getAttribute('href');
-                var dataTarget = document.querySelector(dataID);
-                var dataSpeed = toggle.getAttribute('data-speed');
-                if (dataTarget) {
-                    smoothScroll(dataTarget, dataSpeed || 1000);
-                }
-            }, false);
-        });
-    }
+		var scrollToggle = document.querySelectorAll('.scroll');
+		[].forEach.call(scrollToggle, function (toggle) {
+			toggle.addEventListener('click', function(e) {
+				e.preventDefault();
+				var dataID = toggle.getAttribute('href');
+				var dataTarget = document.querySelector(dataID);
+				var dataSpeed = toggle.getAttribute('data-speed');
+				if (dataTarget) {
+					smoothScroll(dataTarget, dataSpeed || 1000);
+				}
+			}, false);
+		});
+	}
 
 })();
 
@@ -434,25 +434,25 @@ var showPreview = document.querySelector('.showpreview');
 function applyTheme(event){
 	var themeSelected = event.currentTarget.getAttribute('data-theme-class');
 	showPreview.classList.remove('theme1', 'theme2', 'theme3',  'theme4');
-  showPreview.classList.add(themeSelected);
+	showPreview.classList.add(themeSelected);
 
 }
 
 for (var i = 0; i < themes.length; i++) {
-  themes[i].addEventListener('click', applyTheme);
+	themes[i].addEventListener('click', applyTheme);
 }
 
 // /*imprimir*/
- function printCurriculum(){
+function printCurriculum(){
 
-  var printer = document.getElementById('preview2');
-  printer.style.display="block";
+	var printer = document.getElementById('preview2');
+	printer.style.display="block";
 
 
-  var content = printer.innerHTML;
-  var viewPrint= document.body.innerHTML;
+	var content = printer.innerHTML;
+	var viewPrint= document.body.innerHTML;
 
-  document.body.innerHTML = content;
-  window.print();
-  document.body.innerHTML = viewPrint;
+	document.body.innerHTML = content;
+	window.print();
+	document.body.innerHTML = viewPrint;
 }
