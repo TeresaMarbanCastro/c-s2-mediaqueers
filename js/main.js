@@ -58,11 +58,7 @@ summaryDelete.addEventListener('click', deleteSummary);
 //funciones validar email
 function validateEmail(email) {
 	var regex = /\b[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,20}\b/gi;
-	if( regex.test(email) ) {
-		return true;
-	} else {
-		return false;
-	}
+	return regex.test(email);
 }
 function checkEmail() {
 	var email = document.getElementById( "email" ).value;
@@ -74,12 +70,8 @@ function checkEmail() {
 }
 //funciones validar Telefono
 function validatePhone(telephone) {
-	var regexPhone = /^([0-9]+){9}$/
-	if( regexPhone.test(telephone) ) {
-		return true;
-	} else {
-		return false;
-	}
+	var regexPhone = /^([0-9]+){9}$/;
+	return regexPhone.test(telephone);
 }
 function checkTelephone() {
 	var telephone = document.getElementById( "telephone" ).value;
