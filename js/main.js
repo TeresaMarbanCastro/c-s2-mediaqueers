@@ -208,9 +208,6 @@ function deleteStudies() {
 	studyListPreview.innerHTML = '';
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////REVISAR
-//if(study.name == 0 || study.insti == 0)
-//document.querySelector(".error_estudio");
 
 var botonPrueba = document.querySelector('.prueba');
 botonPrueba.addEventListener('click', addStudy);
